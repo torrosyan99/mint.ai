@@ -5,7 +5,7 @@ import { useMediaQuery } from '@/shared/hooks/useMediaQuery.tsx';
 import { Button } from '@/shared/ui/Button/Button.tsx';
 import { ButtonIcon } from '@/shared/ui/ButtonIcon/ButtonIcon.tsx';
 import { Dropdown } from '@/shared/ui/Dropdown/Dropdown.tsx';
-import { MobileSheet } from '@/shared/ui/MobileSheet/MobileSheet.tsx';
+// import { MobileSheet } from '@/shared/ui/MobileSheet/MobileSheet.tsx';
 import { P } from '@/shared/ui/P/P.tsx';
 import { Search } from '@/shared/ui/Search/Search.tsx';
 
@@ -47,21 +47,30 @@ export const AiSelect = () => {
         </>
     );
 
-    return !mobile ? (
-        <Dropdown
-            dropdownClass={cls.dropdown}
-            align={'start'}
-            sideOffset={10}
-            Button={MainButton}
-        >
-            {content}
-        </Dropdown>
-    ) : (
-        <>
-            {MainButton}
-            <MobileSheet opened={isMobile} setOpened={setIsMobile} border={'sm'}>
-                {content}
-            </MobileSheet>
-        </>
-    );
+
+    return   <Dropdown
+      dropdownClass={cls.dropdown}
+      align={'start'}
+      sideOffset={10}
+      Button={MainButton}
+    >
+      {content}
+    </Dropdown>
+    // return !mobile ? (
+    //     <Dropdown
+    //         dropdownClass={cls.dropdown}
+    //         align={'start'}
+    //         sideOffset={10}
+    //         Button={MainButton}
+    //     >
+    //         {content}
+    //     </Dropdown>
+    // ) : (
+    //     <>
+            {/*{MainButton}*/}
+            {/*<MobileSheet opened={isMobile} setOpened={setIsMobile} border={'sm'}>*/}
+            {/*    {content}*/}
+            {/*</MobileSheet>*/}
+        // </>
+    // );
 };
