@@ -1,0 +1,51 @@
+@import './fonts.css';
+@import './reset.css';
+@import './themes/light.css';
+@import './themes/dark.css';
+
+
+body {
+    font-family: 'Geist', sans-serif;
+    background-color: var(--main-bg);
+}
+
+a {
+    color: var(--primary-text-color);
+}
+
+svg {
+    flex-shrink: 0;
+}
+
+.app {
+    min-height: 100dvh;
+    display: flex;
+    overflow: hidden;
+
+
+    --sidebar-opened-width: 250px;
+    --sidebar-closed-width: 64px;
+    --radix-dropdown-menu-trigger-width: 0px;
+
+}
+
+.main {
+    flex-grow: 1;
+}
+
+.simplebar-track.simplebar-vertical {
+    width: 8px;
+}
+
+.dropdown [data-radix-dropdown-menu-item] {
+    outline: none;
+}
+
+[data-radix-dropdown-menu-item]:focus,
+[data-radix-dropdown-menu-item]:focus-visible,
+[data-radix-dropdown-menu-item][data-highlighted],
+[data-highlighted]:hover {
+    outline: none;
+    box-shadow: none;
+    border: none;
+}

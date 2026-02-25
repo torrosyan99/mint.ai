@@ -1,0 +1,64 @@
+.dark {
+    /*Backgrounds*/
+    --main-bg: #141415;
+    --sidebar-bg: #232425;
+    --sidebar-outline-bg: rgba(20, 20, 21, 0.70);
+    --panel-bg: #232425;
+    --primary-bg-color: #232425;
+    --secondary-bg-color: #232425;
+    --header-bg-color: #232425;
+    --green-bg: #0E7D42;
+    --opacity-bg: rgba(20, 20, 21, 0.10);
+
+    --bg-color-1: #3E3E3F;
+    --bg-color-2: #3E3E3F;
+    --bg-color-3: #232425;
+    --bg-color-4: #646567;
+    --bg-color-5: #fff;
+    --bg-color-6: #3E3E3F;
+    --bg-color-7: #232425;
+    --bg-color-8: #646567;
+    --bg-color-9: transparent;
+    --bg-color-10: #646567;
+
+    /*  Colors  */
+    --primary-text-color: #DBDFE2;
+    --secondary-text-color: #DBDFE2;
+    --white-color: #fff;
+    --cancel-color: #A1A4A9;
+    --success-color: #A1A4A9;
+    --green-color: #0E7D42 ;
+    --text-color-1: #fff;
+    --text-color-2: #fff;
+    --text-color-3: #A1A4A9;
+    --text-color-4: #232425;
+
+    /*  Borders  */
+    --sidebar-border: transparent;
+    --primary-border-color: #3E3E3F;
+    --border-color-1: #3E3E3F;
+    --border-color-2:#3E3E3F;
+
+
+    /*   Icon-colors*/
+    --cancel-icon-color-1: #A1A4A9;
+    --success-icon-color-1: #A1A4A9;
+    --icon-color-1: #A1A4A9;
+    --icon-color-2: #A1A4A9;
+    --icon-color-3: #fff;
+    --icon-color-4: #88898C;
+    --icon-color-5: #DBDFE2;
+    --icon-color-6: #DBDFE2;
+    --icon-color-7: #A1A4A9;
+    --icon-color-8: #DBDFE2;
+    --icon-color-9: #646567;
+    --icon-color-10: #232425;
+
+    /*blur */
+    --blur: blur(15px);
+
+
+    /*    others*/
+    --input-placeholder-color: #A1A4A9F
+
+}

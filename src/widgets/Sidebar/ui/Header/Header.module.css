@@ -1,0 +1,19 @@
+.header {
+    min-height: 64px;
+    display: flex;
+    align-items: center;
+    position: relative;
+    margin-bottom: 16px;
+}
+
+.button {
+    width: 20px;
+    height: 20px;
+    position: absolute;
+    top: 50%;
+}
+
+.button:hover {
+    --icon-color-1: var(--icon-color-6);
+
+}

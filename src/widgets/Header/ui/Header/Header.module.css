@@ -1,0 +1,44 @@
+.header {
+    padding: 16px 24px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 8px;
+}
+
+.countAdd {
+    width: 24px;
+    height: 24px;
+    border-radius: 50%;
+    display: grid;
+    place-items: center;
+    background-color: var(--bg-color-9);
+}
+
+
+.button:hover .countAdd {
+    background-color: var(--bg-color-1);
+}
+
+.menuButton,
+.panelButton{
+    display: none;
+}
+
+@media (max-width: 1280px) {
+    .header {
+        padding: 16px;
+        justify-content: normal;
+        background-color: var(--header-bg-color);
+    }
+    .menuButton,
+    .panelButton{
+        display: block;
+        height: 20px;
+    }
+
+    .panelButton {
+        margin-left: 8px;
+    }
+
+}

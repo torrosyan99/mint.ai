@@ -1,0 +1,143 @@
+.button {
+    font-weight: 500;
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    overflow: hidden;
+    position: relative;
+    transition: var(--opacity-transition);
+}
+
+.button.hover {
+}
+
+.button.wFull {
+    width: 100%;
+}
+
+.button.center {
+    justify-content: center;
+}
+
+/* Sizes */
+
+.button.sm {
+    height: 36px;
+}
+
+.button.md {
+    height: 40px;
+}
+
+.button.lg {
+    height: 42px;
+}
+
+.button.lgCompact {
+    height: 44px;
+}
+
+.button.xl {
+    height: 48px;
+}
+
+.button.x2l {
+    height: 56px;
+}
+
+/* Radiuses */
+
+.button.xs-radius {
+    border-radius: 12px;
+}
+
+.button.sm-radius {
+    border-radius: 16px;
+}
+
+.button.md-radius {
+    border-radius: 20px;
+}
+
+.button.lg-radius {
+    border-radius: 42px;
+}
+
+.button.pill-radius {
+    border-radius: 9999px;
+}
+
+/* Variants */
+
+
+.button.primary {
+    background-color: var(--primary-bg-color);
+    border: 1px solid var(--primary-border-color);
+}
+
+.button.primary:hover {
+    background-color: var(--bg-color-1);
+}
+
+.button.ghost:hover {
+    background-color: var(--bg-color-1);
+}
+
+
+.button.green {
+    background-color: var(--green-bg);
+    color: var(--white-color);
+}
+
+.button.green:hover {
+    opacity: .9;
+}
+
+
+/* Font Size */
+
+.button.xs-font {
+    font-size: 14px;
+}
+
+.button.sm-font {
+    font-size: 16px;
+}
+
+.button.md-font {
+    font-size: 18px;
+}
+
+/* Padding */
+
+.button.xs-padding {
+    padding: 0 8px;
+}
+
+.button.sm-padding {
+    padding: 0 12px;
+}
+
+/* Font Weight */
+
+.button.regular {
+    font-weight: 400;
+}
+
+.button.medium {
+    font-weight: 500;
+}
+
+/*Colors*/
+
+.button.success {
+    color: var(--success-color);
+}
+
+.button.cancel {
+    color: var(--cancel-color);
+}
+
+.button.hoverNone:hover {
+    background-color: inherit;
+}

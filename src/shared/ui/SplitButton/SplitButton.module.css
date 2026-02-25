@@ -1,0 +1,56 @@
+.button {
+    color: var(--text-color-3);
+}
+
+.button:hover,
+.button.button.active,
+.button.rightIconHas {
+    padding-right: 32px;
+}
+
+.button:hover,
+.button.button.active {
+    background-color: var(--bg-color-1);
+}
+
+.dotsButton {
+    position: absolute;
+    display: grid;
+    place-items: center;
+    width: 24px;
+    height: 24px;
+    right: 8px;
+    top: 50%;
+    transform: translateY(-50%);
+    opacity: 0;
+    border-radius: 8px;
+}
+
+.dotsButton:hover,
+.button.button.active .dotsButton {
+    background-color: var(--bg-color-4);
+}
+
+.rightIcon {
+    position: absolute;
+    right: 8px;
+    top: 50%;
+    transform: translateY(-50%);
+}
+
+.button:hover .dotsButton,
+.button.button.active .dotsButton {
+    opacity: 1;
+}
+
+.button:hover .rightIcon {
+    opacity: 0;
+}
+
+.buttonValue {
+    text-align: start;
+    text-wrap: nowrap;
+    overflow: hidden;
+    white-space: nowrap;
+    text-overflow: ellipsis;
+}

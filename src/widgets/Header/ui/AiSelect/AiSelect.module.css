@@ -1,0 +1,43 @@
+.top {
+    display: flex;
+    gap: 10px;
+}
+
+.dropdown {
+    min-width: 420px;
+}
+
+.button {
+    height: 64px;
+    text-align: start;
+}
+.wrapper {
+    margin-top: 16px;
+}
+.search {
+    width: 100%;
+}
+
+.list {
+    margin-top: 10px;
+}
+
+.count {
+    display: flex;
+    align-items: center;
+    gap: 4px;
+}
+
+.pin {
+    margin-left: auto;
+}
+
+.aiName{
+    display: block;
+}
+
+@media (max-width: 1280px) {
+    .aiSelectButton {
+        margin-right: auto;
+    }
+}

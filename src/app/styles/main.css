@@ -1,0 +1,72 @@
+@import './fonts.css';
+@import './reset.css';
+@import './themes/light.css';
+@import './themes/dark.css';
+
+
+body {
+    font-family: 'Geist', sans-serif;
+    color: var(--primary-text-color);
+    background-color: var(--main-bg);
+    overflow-y: auto;
+    overflow-x: hidden;
+}
+
+a {
+    color: var(--primary-text-color);
+}
+
+svg {
+    flex-shrink: 0;
+}
+
+.body-overflow {
+    height: 100dvh;
+    overflow: hidden;
+}
+
+.app {
+    min-height: 100dvh;
+    display: flex;
+    overflow-x: hidden;
+    overflow-y: auto;
+    position: relative;
+
+    --sidebar-width: 250px;
+    --sidebar-compact-width: 64px;
+    --radix-dropdown-menu-trigger-width: 0px;
+
+    --opacity-transition: .3s opacity ease-out;
+    --transform-transition: .3s transform ease-out;
+}
+
+.content {
+    flex-grow: 1;
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+
+
+.dropdown [data-radix-dropdown-menu-item] {
+    outline: none;
+}
+
+[data-radix-dropdown-menu-item]:focus,
+[data-radix-dropdown-menu-item]:focus-visible,
+[data-radix-dropdown-menu-item][data-highlighted],
+[data-highlighted]:hover {
+    outline: none;
+    box-shadow: none;
+    border: none;
+}
+
+
+@media (max-width: 1280px) {
+
+
+    .content {
+        width: 100%;
+
+    }
+}

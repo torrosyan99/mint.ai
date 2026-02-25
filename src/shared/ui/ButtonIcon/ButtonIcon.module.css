@@ -1,0 +1,74 @@
+.button {
+    display: grid;
+    place-items: center;
+    flex-shrink: 0;
+}
+
+/*Sizes*/
+
+.button.xs {
+    width: 24px;
+    height: 24px;
+}
+
+.button.sm {
+    width: 36px;
+    height: 36px;
+}
+.button.md {
+    width: 40px;
+    height: 40px;
+}
+
+.button.lg {
+    width: 42px;
+    height: 42px;
+}
+
+.button.lgCompact {
+    width:44px ;
+    height: 44px;
+}
+
+.button.xl {
+    width:48px ;
+    height: 48px;
+}
+
+.button.x2l {
+    width: 56px  ;
+    height: 56px;
+}
+
+/*Variants*/
+
+.button.primary {
+    background-color: var(--bg-color-6);
+}
+
+.button.secondary {
+    background-color: var(--bg-color-1);
+}
+
+.button.ghost:hover {
+    background-color: var(--bg-color-1);
+}
+
+
+/* Radiuses */
+
+.button.xs-radius {
+    border-radius: 8px;
+}
+
+.button.sm-radius {
+    border-radius: 12px;
+}
+
+.button.md-radius {
+    border-radius: 16px;
+}
+
+.button.full-radius {
+    border-radius: 9999px;
+}

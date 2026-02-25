@@ -1,0 +1,51 @@
+.box {
+    overflow: hidden;
+}
+
+/*Variants */
+
+.box.primary {
+    box-shadow: 0 5px 20px 0 rgba(41, 50, 43, 0.10);
+    background-color: var(--bg-color-2);
+}
+
+.box.secondary {
+
+}
+
+
+/*Padding*/
+
+.box.xs {
+    padding: 8px;
+}
+
+.box.sm {
+    padding: 8px 12px;
+}
+
+.box.md {
+    padding: 12px;
+}
+
+.box.lg {
+    padding: 16px;
+}
+
+.box .xl {
+    padding: 24px;
+}
+
+/*Radiuses*/
+
+.box.xs-radius {
+    border-radius: 12px;
+}
+
+.box.sm-radius {
+    border-radius: 16px;
+}
+
+.box.md-radius {
+    border-radius: 20px;
+}

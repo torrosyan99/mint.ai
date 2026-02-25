@@ -1,0 +1,22 @@
+.navigation {
+    display: flex;
+    flex-direction: column;
+    gap: 4px;
+    margin-top: 16px;
+}
+
+.value {
+    margin-left: 28px;
+}
+
+
+.icon {
+    height: 20px;
+    position: absolute;
+    top: 50%;
+    left: 0;
+}
+
+.topButton {
+    color: var(--text-color-2);
+}

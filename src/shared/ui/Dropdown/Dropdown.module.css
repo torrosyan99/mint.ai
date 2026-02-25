@@ -1,0 +1,9 @@
+.dropdown {
+    border-radius: 12px;
+    padding: 8px;
+    box-shadow: 0 5px 20px 0 rgba(41, 50, 43, 0.10);
+    background-color: var(--bg-color-3);
+    border: 1px solid var(--border-color-1);
+    min-width: var(--radix-dropdown-menu-trigger-width);
+    z-index: 100;
+}

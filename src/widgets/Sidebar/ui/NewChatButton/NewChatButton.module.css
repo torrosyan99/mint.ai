@@ -1,0 +1,25 @@
+.button {
+    text-wrap: nowrap;
+    padding-right: 8px;
+}
+
+.button:hover {
+    background-color: var(--bg-color-1);
+}
+
+.add {
+    margin-left: auto;
+}
+
+.value {
+    margin-left: 28px;
+}
+
+.icon {
+    height: 20px;
+    position: absolute;
+    top: 50%;
+    left: 0;
+}
+
+

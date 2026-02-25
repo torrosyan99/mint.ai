@@ -1,0 +1,29 @@
+.top {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.p {
+    text-wrap: nowrap;
+}
+
+.history {
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+}
+
+.items {
+    display: flex;
+    flex-direction: column;
+    gap: 2px;
+}
+
+.deleteButton {
+    opacity: 0;
+}
+
+.history:hover .deleteButton {
+    opacity: 1;
+}

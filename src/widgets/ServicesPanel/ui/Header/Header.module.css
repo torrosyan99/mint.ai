@@ -1,0 +1,35 @@
+.header {
+    height: 64px;
+    position: relative;
+    padding: 0 16px 0 46px;
+    display: flex;
+    align-items: center;
+    border-bottom: 1px solid var(--sidebar-border);
+}
+
+.button {
+    width: 20px;
+    height: 20px;
+    position: absolute;
+    top: 50%;
+}
+
+.button:hover {
+    --icon-color-1: var(--icon-color-6);
+}
+
+@media (max-width: 1280px) {
+    .header {
+        width: 100%;
+        position: relative;
+        padding: 0 16px 16px;
+        border-bottom: 1px solid var(--primary-border-color);
+        margin-bottom: 16px;
+    }
+
+
+    .searchWrapper {
+        width: 100%;
+    }
+}
+

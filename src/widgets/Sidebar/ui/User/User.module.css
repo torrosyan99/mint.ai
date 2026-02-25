@@ -1,0 +1,23 @@
+.button {
+    display: flex;
+    height: 48px;
+    align-items: center;
+    position: relative;
+    border-radius: 16px;
+}
+
+.photo {
+    position: absolute;
+    top: 50%;
+}
+
+.name {
+    margin-left: 40px;
+    margin-right: auto;
+}
+
+.dropdown {
+    display: flex;
+    flex-direction: column;
+    gap: 6px;
+}

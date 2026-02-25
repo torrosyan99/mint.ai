@@ -1,0 +1,8 @@
+.panel {
+    background-color: var(--panel-bg);
+    border-left: 1px solid var(--sidebar-border);
+}
+
+.sheet.sheet {
+    padding: 0 0 32px;
+}
