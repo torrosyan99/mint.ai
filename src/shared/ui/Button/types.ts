@@ -13,7 +13,7 @@ type ButtonHeightSize =
     | 'lgCompact'
     | 'xl'
     | 'x2l';
-type ButtonRadius = 'xs' | 'sm' | 'md' | 'lg' | 'pill';
+type ButtonRadius = 'xs' | 'sm' | 'md' | 'lg' | 'lgCompact' | 'pill';
 type ButtonFontSize = 'xs' | 'sm' | 'md';
 type ButtonPadding = 'none' | 'xs' | 'sm';
 type ButtonVariants = 'none' |'primary' | 'secondary' |'ghost' | 'green' ;

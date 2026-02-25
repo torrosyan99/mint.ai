@@ -26,22 +26,24 @@ export const SplitButton = ({
     rightIcon,
     ...others
 }: PropsWithChildren<SplitButtonProps>) => {
-    const [opened, setOpened] = useState(false);
+    const [isOpen, setIsOpen] = useState(false);
 
     const DropdownButton = (
-        <span className={cls.dotsButton}>
+        <span className={cls.dotsButton} onClick={(e) => e.stopPropagation()}>
             <DotsSvg />
         </span>
     );
 
+
     return (
         <Button
             className={clsx(cls.button, {
-                [cls.active]: opened,
+                [cls.active]: isOpen,
                 [cls.rightIconHas]: rightIcon,
             })}
             font={'regular'}
             fontSize={'xs'}
+
             variant={'ghost'}
             hSize={'md'}
             {...others}
@@ -50,16 +52,17 @@ export const SplitButton = ({
 
             <span className={cls.buttonValue}>{buttonValue}</span>
 
-            {rightIcon && !opened && (
+            {rightIcon && !isOpen && (
                 <span className={cls.rightIcon}>{rightIcon}</span>
             )}
 
             <Dropdown
-                opened={opened}
-                setOpened={setOpened}
+                isOpen={isOpen}
+                setIsOpen={setIsOpen}
                 sideOffset={3}
                 align={'start'}
                 Button={DropdownButton}
+                list
             >
                 {children}
             </Dropdown>

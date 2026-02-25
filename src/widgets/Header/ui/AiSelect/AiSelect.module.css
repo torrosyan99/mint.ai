@@ -5,35 +5,68 @@
 
 .dropdown {
     min-width: 420px;
+    padding: 12px 16px 106px 12px;
+    max-height: 640px;
+    position: relative;
+    overflow-y: auto;
 }
 
+
+.sheet {
+    border-radius: 24px 24px 0 0;
+    padding:0 12px 146px;
+}
+.bottom {
+    padding: 16px;
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    background-color: var(--bg-color-3);
+    border-top: var(--primary-border-color) 1px solid;
+}
 .button {
     height: 64px;
     text-align: start;
 }
+
 .wrapper {
     margin-top: 16px;
 }
+
 .search {
     width: 100%;
 }
 
 .list {
     margin-top: 10px;
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+}
+
+.info {
+    flex-grow: 1;
 }
 
 .count {
     display: flex;
     align-items: center;
     gap: 4px;
+    margin: 0 auto 0 4px;
 }
 
 .pin {
     margin-left: auto;
+    background-color: var(--bg-color-2);
 }
 
-.aiName{
-    display: block;
+.button:hover .pin {
+    background-color: var(--bg-color-10);
+}
+
+.wrapperTitle {
+    padding-left: 16px;
 }
 
 @media (max-width: 1280px) {

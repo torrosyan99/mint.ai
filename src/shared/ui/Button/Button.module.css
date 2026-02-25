@@ -59,6 +59,10 @@
     border-radius: 20px;
 }
 
+.button.lgCompact-radius {
+    border-radius: 30px;
+}
+
 .button.lg-radius {
     border-radius: 42px;
 }
@@ -77,6 +81,10 @@
 
 .button.primary:hover {
     background-color: var(--bg-color-1);
+}
+
+.button.secondary {
+    background-color: var(--bg-color-6);
 }
 
 .button.ghost:hover {

@@ -8,7 +8,7 @@ import {
 import cls from './ButtonIcon.module.css';
 
 interface Props {
-    size?: 'none' | 'xs' | 'sm' | 'md' | 'lg' | 'lgCompact' | 'xl' | 'x2l';
+    size?: 'none' | 'xs' | 'sm' | 'sm-compact' | 'md' | 'lg' | 'lgCompact' | 'xl' | 'x2l';
     radius?: 'xs' | 'sm' | 'md' | 'full';
     variant?: 'none' | 'primary' | 'secondary' | 'ghost';
 }

@@ -40,8 +40,15 @@
     --search-icon-color: var(--icon-color-7);
 }
 
+
 .search.primary .input {
     background-color: var(--bg-color-6);
+    border: 1px solid transparent;
+
+}
+.search.primary .input:hover ,
+.search.primary .input:focus {
+    border: 1px solid var(--border-color-2);
 }
 
 .search.secondary {

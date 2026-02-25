@@ -21,7 +21,7 @@
 }
 
 .menuButton,
-.panelButton{
+.panelButton {
     display: none;
 }
 
@@ -31,13 +31,18 @@
         justify-content: normal;
         background-color: var(--header-bg-color);
     }
+
     .menuButton,
-    .panelButton{
+    .panelButton {
         display: block;
-        height: 20px;
+    }
+
+    .menuButton {
+        height: 24px;
     }
 
     .panelButton {
+        height: 19px;
         margin-left: 8px;
     }
 

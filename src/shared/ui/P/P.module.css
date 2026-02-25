@@ -26,10 +26,6 @@
     color: var(--primary-text-color);
 }
 
-.primary-2 {
-    color: var(--text-color-3);
-}
-
 .secondary {
     color: var(--secondary-text-color);
 }

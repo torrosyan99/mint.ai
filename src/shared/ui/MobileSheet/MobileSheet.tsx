@@ -11,7 +11,7 @@ import CloseSvg from '@icons/close.svg?react';
 import cls from './MobileSheet.module.css';
 
 interface MobileSheetProps {
-    border?: 'xs' | 'sm';
+    border?: 'none' | 'xs' | 'sm';
     isOpen: boolean;
     setIsOpen: (b: boolean) => void;
     className?: string;

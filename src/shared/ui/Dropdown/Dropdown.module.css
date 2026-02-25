@@ -6,4 +6,5 @@
     border: 1px solid var(--border-color-1);
     min-width: var(--radix-dropdown-menu-trigger-width);
     z-index: 100;
+    overflow: hidden;
 }
