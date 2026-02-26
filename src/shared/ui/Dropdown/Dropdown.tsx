@@ -1,11 +1,7 @@
 import * as DropdownMenu from '@radix-ui/react-dropdown-menu';
 import type { DropdownMenuContentProps } from '@radix-ui/react-dropdown-menu';
 import clsx from 'clsx';
-import {
-    Children,
-    type PropsWithChildren,
-    type ReactNode,
-} from 'react';
+import { Children, type PropsWithChildren, type ReactNode } from 'react';
 
 import cls from './Dropdown.module.css';
 
@@ -18,6 +14,7 @@ interface DropdownProps {
     setIsOpen?: (isOpen: boolean) => void;
     dropdownClass?: string;
     list?: boolean;
+    portal?: boolean;
 }
 
 export const Dropdown = ({
@@ -30,29 +27,32 @@ export const Dropdown = ({
     setIsOpen,
     dropdownClass,
     list,
+    portal = true,
 }: PropsWithChildren<DropdownProps>) => {
     const items = Children.toArray(children);
+    const content = (
+        <DropdownMenu.Content
+            className={clsx(cls.dropdown, dropdownClass)}
+            side={side}
+            align={align}
+            sideOffset={sideOffset}
+        >
+            {list
+                ? items.map((item, index) => (
+                      <DropdownMenu.Item key={index}>{item}</DropdownMenu.Item>
+                  ))
+                : children}
+        </DropdownMenu.Content>
+    );
     return (
         <DropdownMenu.Root open={isOpen} onOpenChange={setIsOpen}>
-            <DropdownMenu.Trigger  asChild>
-                {Button}
-            </DropdownMenu.Trigger>
-            <DropdownMenu.Portal>
-                <DropdownMenu.Content
-                    className={clsx(cls.dropdown, dropdownClass)}
-                    side={side}
-                    align={align}
-                    sideOffset={sideOffset}
-                >
-                    {list
-                        ? items.map((item, index) => (
-                              <DropdownMenu.Item key={index}>
-                                  {item}
-                              </DropdownMenu.Item>
-                          ))
-                        : children}
-                </DropdownMenu.Content>
-            </DropdownMenu.Portal>
+            <DropdownMenu.Trigger asChild>{Button}</DropdownMenu.Trigger>
+
+            {portal ? (
+                <DropdownMenu.Portal>{content}</DropdownMenu.Portal>
+            ) : (
+                content
+            )}
         </DropdownMenu.Root>
     );
 };

@@ -142,6 +142,7 @@ export const AiSelect = () => {
             align={'start'}
             sideOffset={10}
             Button={MainButton}
+            portal={false}
         >
             {content}
         </Dropdown>
