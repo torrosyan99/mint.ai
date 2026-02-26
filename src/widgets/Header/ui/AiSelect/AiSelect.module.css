@@ -24,7 +24,8 @@
     background-color: var(--color-3);
     border-top: var(--primary-border-color) 1px solid;
 }
-.dropdown .button {
+.dropdown .button,
+.sheet .button {
     min-height: 64px;
     text-align: start;
     padding: 12px;
@@ -79,4 +80,10 @@
     .aiSelectButton {
         margin-right: auto;
     }
+
+    .name {
+        text-wrap: wrap;
+    }
+
+
 }
