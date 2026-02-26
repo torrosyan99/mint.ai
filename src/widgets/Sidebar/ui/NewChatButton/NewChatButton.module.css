@@ -1,7 +1,6 @@
 .button {
     text-wrap: nowrap;
     padding-right: 8px;
-    color: var(--color-13);
 }
 
 .button:hover {
