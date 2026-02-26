@@ -7,7 +7,7 @@ import cls from './P.module.css';
 type BaseProps = {
     size?: 'xs' | 'sm' | 'md' | 'lg';
     font?: 'regular' | 'medium';
-    color?: 'primary'  | 'secondary';
+    color?: 'primary'  | 'secondary' | 'tertiary';
     className?: string;
 };
 

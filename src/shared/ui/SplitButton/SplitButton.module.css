@@ -1,5 +1,5 @@
 .button {
-    color: var(--text-color-3);
+    color: var(--color-13);
 }
 
 .button:hover,
@@ -10,7 +10,7 @@
 
 .button:hover,
 .button.button.active {
-    background-color: var(--bg-color-1);
+    background-color: var(--color-1);
 }
 
 .dotsButton {
@@ -28,7 +28,7 @@
 
 .dotsButton:hover,
 .button.button.active .dotsButton {
-    background-color: var(--bg-color-4);
+    background-color: var(--color-4);
 }
 
 .rightIcon {

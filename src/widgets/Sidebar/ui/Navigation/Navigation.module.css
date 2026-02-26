@@ -9,7 +9,6 @@
     margin-left: 28px;
 }
 
-
 .icon {
     height: 20px;
     position: absolute;
@@ -18,5 +17,5 @@
 }
 
 .topButton {
-    color: var(--text-color-2);
+    color: var(--color-5);
 }

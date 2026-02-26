@@ -37,26 +37,26 @@
 /* Variants */
 
 .search.primary {
-    --search-icon-color: var(--icon-color-7);
+    --search-icon-color: var(--color-11);
 }
 
 
 .search.primary .input {
-    background-color: var(--bg-color-6);
+    background-color: var(--color-6);
     border: 1px solid transparent;
 
 }
 .search.primary .input:hover ,
 .search.primary .input:focus {
-    border: 1px solid var(--border-color-2);
+    border: 1px solid var(--color-19);
 }
 
 .search.secondary {
-    --search-icon-color: var(--icon-color-1);
+    --search-icon-color: var(--color-13);
 }
 
 .search.secondary .input {
-    background-color: var(--bg-color-2);
+    background-color: var(--color-2);
 }
 
 /*padding*/

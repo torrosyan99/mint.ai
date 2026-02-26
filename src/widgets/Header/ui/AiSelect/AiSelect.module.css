@@ -4,13 +4,12 @@
 }
 
 .dropdown {
-    min-width: 420px;
+    width: 420px;
     padding: 12px 16px 106px 12px;
     max-height: 640px;
     position: relative;
     overflow-y: auto;
 }
-
 
 .sheet {
     border-radius: 24px 24px 0 0;
@@ -22,12 +21,13 @@
     bottom: 0;
     left: 0;
     right: 0;
-    background-color: var(--bg-color-3);
+    background-color: var(--color-3);
     border-top: var(--primary-border-color) 1px solid;
 }
-.button {
-    height: 64px;
+.dropdown .button {
+    min-height: 64px;
     text-align: start;
+    padding: 12px;
 }
 
 .wrapper {
@@ -50,23 +50,29 @@
 }
 
 .count {
+    min-width: 50px;
     display: flex;
     align-items: center;
     gap: 4px;
-    margin: 0 auto 0 4px;
+    margin: 0 4px 0 auto;
+    font-weight: 600;
 }
 
 .pin {
     margin-left: auto;
-    background-color: var(--bg-color-2);
+    background-color: var(--color-2);
 }
 
 .button:hover .pin {
-    background-color: var(--bg-color-10);
+    background-color: var(--color-9);
 }
 
 .wrapperTitle {
     padding-left: 16px;
+}
+
+.name {
+    text-wrap: nowrap;
 }
 
 @media (max-width: 1280px) {

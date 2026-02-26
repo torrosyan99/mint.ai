@@ -16,8 +16,8 @@ const boxVariants = {
         boxShadow: 'none',
         padding: 0,
     },
-    expaned: {
-        background: 'var(--bg-color-2)',
+    expanded: {
+        background: 'var(--color-2)',
         boxShadow: '0 5px 20px 0 rgba(41, 50, 43, 0.10)',
         padding: 16,
     },

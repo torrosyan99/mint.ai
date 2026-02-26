@@ -1,9 +1,9 @@
 .message {
     border-radius: 12px;
-    background: var(--bg-color-5);
+    background: var(--color-5);
     padding: 8px 12px;
     position: relative;
-    color: var(--text-color-4);
+    color: var(--color-12);
     font-size: 14px;
     z-index: 100;
 }

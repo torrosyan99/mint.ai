@@ -30,6 +30,10 @@
     color: var(--secondary-text-color);
 }
 
+.tertiary {
+    color: var(--color-13);
+}
+
 
 @media (max-width: 768px) {
     .lg {

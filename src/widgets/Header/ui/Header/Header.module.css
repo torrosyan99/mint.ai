@@ -12,12 +12,13 @@
     border-radius: 50%;
     display: grid;
     place-items: center;
-    background-color: var(--bg-color-9);
+    background-color: var(--color-8);
 }
 
-
+.button:hover {
+}
 .button:hover .countAdd {
-    background-color: var(--bg-color-1);
+    background-color: var(--color-1);
 }
 
 .menuButton,

@@ -1,6 +1,6 @@
 .navigation {
     padding: 16px;
-    --search-icon-color: var(--icon-color-1);
+    --search-icon-color: var(--color-13);
 }
 
 .navigation.isCompact {
@@ -40,7 +40,7 @@
 }
 
 .searchButton {
-    background-color: var(--bg-color-6);
+    background-color: var(--color-6);
 }
 
 

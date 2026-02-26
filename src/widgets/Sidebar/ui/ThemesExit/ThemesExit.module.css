@@ -23,8 +23,8 @@
 }
 
 .button.active {
-    --icon-color-4: var(--icon-color-5);
-    background-color: var(--bg-color-1);
+    --color-16: var(--color-17);
+    background-color: var(--color-1);
     transition: .2s all ease;
 }
 

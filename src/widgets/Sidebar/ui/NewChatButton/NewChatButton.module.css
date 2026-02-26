@@ -1,10 +1,11 @@
 .button {
     text-wrap: nowrap;
     padding-right: 8px;
+    color: var(--color-13);
 }
 
 .button:hover {
-    background-color: var(--bg-color-1);
+    background-color: var(--color-1);
 }
 
 .add {

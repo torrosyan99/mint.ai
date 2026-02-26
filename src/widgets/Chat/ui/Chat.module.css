@@ -63,7 +63,7 @@
     place-items: center;
     width: 56px;
     height: 56px;
-    background-color: var(--bg-color-10);
+    background-color: var(--color-9);
     border: 1px solid var(--primary-border-color);
     border-radius: 20px;
     box-shadow: 0 5px 20px 0 rgba(27, 28, 29, 0.05);

@@ -11,9 +11,9 @@
     height: 20px;
     position: absolute;
     top: 50%;
+    --bar-icon-color: var(--color-13)
 }
 
 .button:hover {
-    --icon-color-1: var(--icon-color-6);
-
+    --bar-icon-color: var(--color-18)
 }

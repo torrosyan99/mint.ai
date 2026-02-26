@@ -1,6 +1,8 @@
+import type { ReactNode } from 'react';
+
 import CountSvg from '@/shared/assets/icons/count-icon.svg?react';
+import PinCancelSvg from '@/shared/assets/icons/pin-cancel.svg?react';
 import PinSvg from '@/shared/assets/icons/pin.svg?react';
-import chatgpt from '@/shared/assets/images/chatgpt-2.png';
 import { Button } from '@/shared/ui/Button/Button.tsx';
 import { ButtonIcon } from '@/shared/ui/ButtonIcon/ButtonIcon.tsx';
 import { P } from '@/shared/ui/P/P.tsx';
@@ -8,7 +10,21 @@ import { Tooltip } from '@/shared/ui/Tooltip/Tooltip.tsx';
 
 import cls from './AiSelect.module.css';
 
-export const AiSelectButton = () => {
+interface AiSelectButtonProps {
+    icon: ReactNode;
+    name: string;
+    text: string;
+    count: number;
+    unpinned?: boolean;
+}
+
+export const AiSelectButton = ({
+    icon,
+    name,
+    text,
+    count,
+    unpinned,
+}: AiSelectButtonProps) => {
     return (
         <Button
             className={cls.button}
@@ -18,24 +34,32 @@ export const AiSelectButton = () => {
             wFull
             as={'div'}
         >
-            <img src={chatgpt} alt={'chatgpt'} />
+            {icon}
             <div className={cls.info}>
-                <P font={'medium'}>ChatGPT 5.2</P>
-                <P size="xs" color={'secondary'}>
-                    Новейшая нейросеть от OpenAI
+                <P className={cls.name} font={'medium'}>{name}</P>
+                <P  size="xs" color={'tertiary'}>
+                    {text}
                 </P>
             </div>
             <div className={cls.count}>
-                <CountSvg /> 30
+                <CountSvg /> {count}
             </div>
-            <Tooltip message={'Открепить'} placement={'top'} offsetSize={3.8}>
+            <Tooltip
+                message={unpinned ? 'Открепить' : 'Закрепить'}
+                placement={'top'}
+                offsetSize={3.8}
+            >
                 <ButtonIcon
                     size={'sm-compact'}
                     variant={'none'}
                     radius={'sm'}
                     className={cls.pin}
                 >
-                    <PinSvg width={16} height={16} />
+                    {unpinned ? (
+                        <PinCancelSvg width={16} height={16} />
+                    ) : (
+                        <PinSvg width={16} height={16} />
+                    )}
                 </ButtonIcon>
             </Tooltip>
         </Button>

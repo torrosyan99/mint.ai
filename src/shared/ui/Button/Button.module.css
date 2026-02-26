@@ -75,20 +75,20 @@
 
 
 .button.primary {
-    background-color: var(--primary-bg-color);
+    background-color: var(--color-3);
     border: 1px solid var(--primary-border-color);
 }
 
-.button.primary:hover {
-    background-color: var(--bg-color-1);
+.button.primary:not(.hoverNone):hover {
+    background-color: var(--color-1);
 }
 
 .button.secondary {
-    background-color: var(--bg-color-6);
+    background-color: var(--color-6);
 }
 
-.button.ghost:hover {
-    background-color: var(--bg-color-1);
+.button.ghost:not(.hoverNone):hover {
+    background-color: var(--color-1);
 }
 
 
@@ -97,7 +97,7 @@
     color: var(--white-color);
 }
 
-.button.green:hover {
+.button.green:not(.hoverNone):hover {
     opacity: .9;
 }
 
@@ -146,6 +146,3 @@
     color: var(--cancel-color);
 }
 
-.button.hoverNone:hover {
-    background-color: inherit;
-}
