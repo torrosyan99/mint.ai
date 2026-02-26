@@ -1,13 +1,9 @@
 import { ChatForm } from '@/features/ChatForm';
 
-
-
 import { Button } from '@/shared/ui/Button/Button.tsx';
 import { Container } from '@/shared/ui/Container/Container.tsx';
 import { P } from '@/shared/ui/P/P.tsx';
 import { Title } from '@/shared/ui/Title/Title.tsx';
-
-
 
 import ChatGptSvg from '@icons/chatgpt.svg?react';
 import ClaudeSvg from '@icons/claude.svg?react';
@@ -16,29 +12,7 @@ import GeminiSvg from '@icons/gemini-2.svg?react';
 import GrokSvg from '@icons/grok.svg?react';
 import LogoSvg from '@icons/logo.svg?react';
 
-
-
 import cls from './Chat.module.css';
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 
 export const Chat = () => {
     return (
