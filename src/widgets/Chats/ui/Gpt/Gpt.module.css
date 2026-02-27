@@ -1,21 +1,14 @@
-.chat {
-    width: 100%;
+.message.hasMessage {
     flex-grow: 1;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
-    text-align: center;
-    overflow-x: hidden;
-    min-width: 0;
-}
-
-.chatTop {
-    width: 100%
 }
 
 .form {
     margin-top: 40px;
+}
+
+.transition {
+
+    transition: .4s all linear;
 }
 
 .titleSpan {

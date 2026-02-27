@@ -1,7 +1,7 @@
-import { Chat } from '@/widgets/Chat/ui/Chat.tsx';
+import { Chats } from '@/widgets/Chats';
 
 const HomePage = () => {
-    return <Chat />;
+    return <Chats />;
 };
 
 export default HomePage;

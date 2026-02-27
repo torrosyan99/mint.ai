@@ -1,5 +1,5 @@
 import clsx from 'clsx';
-import { useState } from 'react';
+import {type FormEvent, useState} from 'react';
 
 import { Button } from '@/shared/ui/Button/Button';
 import { ButtonIcon } from '@/shared/ui/ButtonIcon/ButtonIcon.tsx';
@@ -13,12 +13,19 @@ import cls from './ChatForm.module.css';
 
 interface ChatFormProps {
     className?: string;
+    onSubmit?: (e: string) => void;
 }
 
-export const ChatForm = ({ className }: ChatFormProps) => {
+export const ChatForm = ({ className, onSubmit }: ChatFormProps) => {
     const [text, setText] = useState('');
+
+    const handleSubmit = (e: FormEvent<HTMLFormElement>) => {
+        e.preventDefault();
+        if (!text.trim()) return;
+        onSubmit?.(text);
+    }
     return (
-        <div className={clsx(cls.chatForm, className)}>
+        <form className={clsx(cls.chatForm, className)} onSubmit={handleSubmit}>
             <textarea
                 className={cls.textarea}
                 placeholder={'Введите сообщение ...'}
@@ -27,7 +34,7 @@ export const ChatForm = ({ className }: ChatFormProps) => {
             ></textarea>
 
             <div className={cls.bottom}>
-                <ButtonIcon size={'sm'} radius={'full'} variant={'ghost'}>
+                <ButtonIcon size={'sm'} radius={'full'} variant={'ghost'} type={'button'}>
                     <AddSvg />
                 </ButtonIcon>
                 <Button
@@ -35,6 +42,7 @@ export const ChatForm = ({ className }: ChatFormProps) => {
                     radius={'md'}
                     fontSize={'xs'}
                     hSize={'sm'}
+                    type={'button'}
                 >
                     <InstrumentsSvg />
                     Инструменты
@@ -44,15 +52,21 @@ export const ChatForm = ({ className }: ChatFormProps) => {
                     size={'lg'}
                     radius={'full'}
                     variant={'ghost'}
+                    type={'button'}
                 >
                     <MicrophoneSvg />
                 </ButtonIcon>
-                <ButtonIcon className={clsx(
-                  cls.sendButton
-                )}  as={'button'} size={'lg'} radius={'full'} variant={'none'} disabled={text.length === 0}>
+                <ButtonIcon
+                    className={clsx(cls.sendButton)}
+                    as={'button'}
+                    size={'lg'}
+                    radius={'full'}
+                    variant={'none'}
+                    disabled={text.length === 0}
+                >
                     <ArrowUpSvg />
                 </ButtonIcon>
             </div>
-        </div>
+        </form>
     );
 };
