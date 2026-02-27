@@ -1,0 +1,33 @@
+.top {
+    display: flex;
+    gap: 8px;
+}
+
+.search {
+    flex-grow: 1;
+}
+
+.pin {
+    --pin-color: var(--color-11);
+    background-color: var(--color-6);
+}
+
+.pin:hover {
+    background-color: var(--color-1);
+}
+
+.wrapper {
+    margin-top: 16px;
+}
+
+.title {
+    padding-left: 16px;
+    color: var(--color-13);
+}
+
+.list {
+    margin-top: 10px;
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+}

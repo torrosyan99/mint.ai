@@ -1,1 +1,1 @@
-export {Header} from './ui/Header/Header.tsx'
+export {Header} from './ui/Header.tsx'

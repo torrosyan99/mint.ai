@@ -1,15 +1,9 @@
-.wrapper {
-    position: fixed;
-    inset: 0;
-    z-index: 100;
-}
-
-.outline {
+.overlay {
     position: absolute;
+    z-index: 49;
     inset: 0;
     background-color: var(--opacity-bg);
     backdrop-filter:var(--blur);
-    z-index: 99;
 }
 
 .content {
@@ -18,7 +12,7 @@
     bottom: 0;
     left: 0;
     right: 0;
-    z-index: 100;
+    z-index: 50;
     transition: 0.3s all ease-in-out;
     transform: translateY(100%);
 }
@@ -69,4 +63,5 @@
     position: absolute;
     top: 16px;
     right: 16px;
+    background-color: var(--color-1);
 }

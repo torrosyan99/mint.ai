@@ -11,13 +11,13 @@ import type { ButtonProps } from '@/shared/ui/Button/types.ts';
 import { getIsCompactClass } from '../../helpers/getIsCompactClass.ts';
 import cls from './Navigation.module.css';
 
-type NavigationButtonProps = {
+interface NavigationButtonProps {
     icon: ReactNode;
     isCompact: boolean;
     to: string;
     buttonEnd?: ReactNode;
     variant?: ButtonProps['variant'];
-};
+}
 
 const iconVariants = {
     expanded: { x: 12, y: '-50%' },

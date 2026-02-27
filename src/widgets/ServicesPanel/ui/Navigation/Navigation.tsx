@@ -11,8 +11,8 @@ import CropSvg from '@icons/crop.svg?react';
 import FindImageSvg from '@icons/find-image.svg?react';
 import PenSvg from '@icons/pen.svg?react';
 import PieChartSvg from '@icons/pie-chart.svg?react';
-import PinCancelSvg from '@icons/pin-cancel-s.svg?react';
-import PinSvg from '@icons/pin-s.svg?react';
+import PinCancelSvg from '@icons/pin-cancel.svg?react';
+import PinSvg from '@icons/pin.svg?react';
 import SearchSvg from '@icons/search.svg?react';
 
 import { getIsCompactClass } from '../../helpers/getIsCompactClass.ts';
@@ -33,16 +33,22 @@ export const Navigation = ({ isCompact }: NavigationProps) => {
                     Сервисы
                 </P>
             )}
-
             <div className={cls.list}>
                 {isCompact && (
-                    <Button className={cls.searchButton} variant={'none'} hSize={'sm'} center>
+                    <Button
+                        className={cls.searchButton}
+                        variant={'none'}
+                        hSize={'sm'}
+                        center
+                    >
                         <SearchSvg />
                     </Button>
                 )}
                 <NavigationButton
                     icon={<CropSvg />}
-                    buttonEnd={<PinSvg />}
+                    buttonEnd={
+                        <PinCancelSvg width={14} height={14} className={cls.pinCancel} />
+                    }
                     isCompact={isCompact}
                     to={'p-1'}
                 >
@@ -50,7 +56,13 @@ export const Navigation = ({ isCompact }: NavigationProps) => {
                 </NavigationButton>
                 <NavigationButton
                     icon={<CropSvg />}
-                    buttonEnd={<PinCancelSvg />}
+                    buttonEnd={
+                        <PinSvg
+                            width={14}
+                            height={14}
+                            className={cls.pin}
+                        />
+                    }
                     isCompact={isCompact}
                     to={'p-3'}
                 >
@@ -99,7 +111,7 @@ export const Navigation = ({ isCompact }: NavigationProps) => {
                     Поиск в Интернете
                 </NavigationButton>
                 {!isCompact && (
-                    <Button fontSize={'xs'} wFull center>
+                    <Button fontSize={'xs'} variant={'primary'} wFull center>
                         <AiIconsSvg />
                         Все AI сервисы
                     </Button>

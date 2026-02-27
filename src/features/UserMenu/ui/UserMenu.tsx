@@ -10,7 +10,7 @@ import { P } from '@/shared/ui/P/P.tsx';
 import ElementsSvg from '@icons/elements.svg?react';
 
 import { Menu } from './Menu.tsx';
-import cls from './User.module.css';
+import cls from './UserMenu.module.css';
 
 const imgVariants = {
     expanded: {
@@ -35,7 +35,7 @@ const buttonVariants = {
         height: 39,
     },
 };
-export const User = ({ isCompact }: SidebarComponentProps) => {
+export const UserMenu = ({ isCompact }: SidebarComponentProps) => {
     const Button = (
         <Box
             className={cls.button}

@@ -26,14 +26,13 @@ export const History = ({ isCompact }: SidebarComponentProps) => {
                     exit="hidden"
                 >
                     <div className={cls.top}>
-                        <P className={cls.p} size={'sm'} font={'medium'}>
+                        <P className={cls.title} color={'primary'}  size={'sm'} font={'medium'}>
                             История чата
                         </P>
                         <Tooltip placement={'top'} message={'Удалить историю'}>
                             <ButtonIcon
                                 className={cls.deleteButton}
                                 size={'xs'}
-                                variant={'secondary'}
                             >
                                 <TrashBinSvg />
                             </ButtonIcon>

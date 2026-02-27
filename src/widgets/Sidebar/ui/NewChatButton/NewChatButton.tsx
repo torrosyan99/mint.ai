@@ -18,7 +18,7 @@ const iconVariants = {
 
 export const NewChatButton = ({ isCompact }: SidebarComponentProps) => {
     return (
-        <Button className={cls.button} fontSize={'xs'} hSize={'sm'} wFull>
+        <Button className={cls.button} variant={'primary'} fontSize={'xs'} hSize={'sm'} wFull>
             <motion.span
                 className={cls.icon}
                 {...motionCompactOptions(iconVariants, isCompact)}

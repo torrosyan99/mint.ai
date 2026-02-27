@@ -22,17 +22,7 @@
     font-weight: 500;
 }
 
-.primary {
-    color: var(--primary-text-color);
-}
 
-.secondary {
-    color: var(--secondary-text-color);
-}
-
-.tertiary {
-    color: var(--color-13);
-}
 
 
 @media (max-width: 768px) {

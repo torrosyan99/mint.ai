@@ -7,7 +7,7 @@ import type { ButtonProps } from './types.ts';
 export const Button = <T extends ElementType = 'button'>({
     hSize = 'md',
     radius = 'xs',
-    variant = 'primary',
+    variant = 'none',
     fontSize = 'sm',
     padding = 'xs',
     font = 'medium',
@@ -28,7 +28,7 @@ export const Button = <T extends ElementType = 'button'>({
         cls[radius + '-radius'],
         cls[variant],
         cls[font],
-        cls[textColor],
+        cls[textColor + '-color'],
         {
             [cls.wFull]: wFull,
             [cls.center]: center,

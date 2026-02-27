@@ -2,6 +2,8 @@ import clsx from 'clsx';
 import { motion } from 'framer-motion';
 import { useEffect, useRef, useState } from 'react';
 
+import { UserMenu } from '@/features/UserMenu/ui/UserMenu.tsx';
+
 import { motionCompactOptions } from '@/shared/helpers';
 import { useBlockHeight } from '@/shared/hooks/useBlockHeight.tsx';
 import { useMediaQuery } from '@/shared/hooks/useMediaQuery.tsx';
@@ -15,7 +17,6 @@ import { Navigation } from '../Navigation/Navigation.tsx';
 import { NewChatButton } from '../NewChatButton/NewChatButton.tsx';
 import { Pro } from '../Pro/Pro.tsx';
 import { ThemesExit } from '../ThemesExit/ThemesExit.tsx';
-import { User } from '../User/User.tsx';
 import cls from './Sidebar.module.css';
 
 const sidebarVariants = {
@@ -75,7 +76,7 @@ export const Sidebar = ({ isOpen, setIsOpen }: SidebarProps) => {
                     className={clsx(cls.bottom, isCompactClass)}
                 >
                     <Pro isCompact={isCompactEffective} />
-                    <User isCompact={isCompactEffective} />
+                    <UserMenu isCompact={isCompactEffective} />
                     <ThemesExit isCompact={isCompactEffective} />
                 </div>
             </motion.aside>

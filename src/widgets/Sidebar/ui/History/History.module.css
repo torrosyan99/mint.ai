@@ -4,7 +4,8 @@
     align-items: center;
 }
 
-.p {
+.title {
+    color: var(--color-11);
     text-wrap: nowrap;
 }
 
@@ -22,6 +23,7 @@
 
 .deleteButton {
     opacity: 0;
+    background-color: var(--color-1);
 }
 
 .history:hover .deleteButton {

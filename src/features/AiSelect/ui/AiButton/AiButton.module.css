@@ -1,0 +1,61 @@
+.button {
+    position: relative;
+    min-height: 64px;
+    padding: 12px;
+}
+
+.title {
+    position: absolute;
+    left: 52px;
+    color: var(--color-5);
+    text-wrap: nowrap;
+}
+
+.text {
+    color: var(--color-13);
+    margin-top: 21px;
+}
+
+.count {
+    margin: 0 4px 0 auto;
+    display: flex;
+    align-items: center;
+    gap: 4px;
+    font-weight: 600;
+    font-size: 14px;
+    min-width: 50px;
+}
+
+.modal {
+    min-width: 343px;
+    padding: 24px;
+}
+
+.modalTitle {
+    color: var(--color-10);
+}
+.modalFlex {
+    margin-top: 16px;
+    display: flex;
+    gap: 12px;
+}
+
+.modalButton {
+    height: 36px;
+}
+
+.pinButton {
+    background-color: var(--color-2);
+}
+
+.button:hover .pinButton {
+    background-color: var(--color-9);
+}
+
+.pin {
+    --pin-color: var(--color-13);
+}
+
+.pinCancel {
+    --pin-color: #A1A4A9;
+}

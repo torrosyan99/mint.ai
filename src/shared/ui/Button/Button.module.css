@@ -91,7 +91,6 @@
     background-color: var(--color-1);
 }
 
-
 .button.green {
     background-color: var(--green-bg);
     color: var(--white-color);
@@ -101,7 +100,15 @@
     opacity: .9;
 }
 
+.button.cancel {
+    background-color: var(--cancel-color-3);
+    color: var(--color-3);
+}
 
+.button.dark {
+    background-color: var(--color-5);
+    color: var(--color-3);
+}
 /* Font Size */
 
 .button.xs-font {
@@ -126,6 +133,10 @@
     padding: 0 12px;
 }
 
+.button.md-padding {
+    padding: 0 24px;
+}
+
 /* Font Weight */
 
 .button.regular {
@@ -138,11 +149,11 @@
 
 /*Colors*/
 
-.button.success {
+.button.success-color {
     color: var(--success-color);
 }
 
-.button.cancel {
+.button.cancel-color {
     color: var(--cancel-color);
 }
 

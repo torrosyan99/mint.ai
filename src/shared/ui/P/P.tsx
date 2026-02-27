@@ -7,7 +7,6 @@ import cls from './P.module.css';
 type BaseProps = {
     size?: 'xs' | 'sm' | 'md' | 'lg';
     font?: 'regular' | 'medium';
-    color?: 'primary'  | 'secondary' | 'tertiary';
     className?: string;
 };
 
@@ -17,7 +16,7 @@ type MotionPProps = BaseProps & HTMLMotionProps<'p'>;
 export const P = ({
     size = 'md',
     font = 'regular',
-    color = 'primary',
+    color = 'none',
     children,
     className,
 }: PropsWithChildren<PProps>) => {

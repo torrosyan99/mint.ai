@@ -43,6 +43,14 @@
     background-color: var(--color-6);
 }
 
+.pinCancel {
+    --pin-color: #A1A4A9;
+}
+
+.pin {
+    --pin-color: var(--color-22);
+}
+
 
 @media (max-width: 1280px) {
     .navigation .button {

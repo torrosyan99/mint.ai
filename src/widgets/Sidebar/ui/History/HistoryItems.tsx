@@ -1,4 +1,4 @@
-import { HistoryButton } from '@/widgets/Sidebar/ui/History/HistoryButton.tsx';
+import { HistoryButton } from '@/features/HistoryButton';
 
 import chatgpt from '@/shared/assets/images/chatgpt.png';
 

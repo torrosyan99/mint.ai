@@ -31,6 +31,7 @@
     --color-20: #fff;
     --color-21-start: rgba(255, 255, 255, 0.50);
     --color-21-end: #FFF;
+    --color-22: #DBDFE2;
 
 
     /*  Colors  */
@@ -39,6 +40,7 @@
     --white-color: #fff;
     --cancel-color: #DBDFE2;
     --cancel-color-2: #A1A4A9;
+    --cancel-color-3: #fff;
     --success-color: #DBDFE2;
     --success-color-2: #A1A4A9;
     --green-color: #0E7D42;
@@ -54,6 +56,6 @@
 
 
     /*    others*/
-    --input-placeholder-color: #A1A4A9F
+    --input-placeholder-color: #A1A4A9
 
 }

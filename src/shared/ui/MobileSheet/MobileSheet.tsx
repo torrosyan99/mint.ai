@@ -65,7 +65,7 @@ export const MobileSheet = ({
 
     return createPortal(
         <>
-            <div className={cls.outline}>
+            <div className={cls.overlay}>
                 <ButtonIcon
                     className={cls.closeButton}
                     size={'none'}

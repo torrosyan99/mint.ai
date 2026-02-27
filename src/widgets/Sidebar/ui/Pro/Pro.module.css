@@ -13,3 +13,11 @@
 .button.isCompact {
     height: 40px;
 }
+
+.title {
+    color: var(--color-5);
+}
+
+.text {
+    color: var(--secondary-text-color);
+}

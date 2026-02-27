@@ -30,6 +30,8 @@
     --color-20: #000;
     --color-21-start: #6A77F0;
     --color-21-end: #2F1BA3;
+    --color-22: #646567;
+
 
     /*Colors*/
     --primary-text-color: #232425;
@@ -37,6 +39,7 @@
     --white-color: #fff;
     --cancel-color: #EC3332;
     --cancel-color-2: #EC3332;
+    --cancel-color-3: #EC3332;
     --success-color: #0E7D42;
     --success-color-2: #0E7D42;
     --green-color: #0E7D42;

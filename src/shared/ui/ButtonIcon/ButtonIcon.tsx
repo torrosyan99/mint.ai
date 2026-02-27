@@ -10,7 +10,7 @@ import cls from './ButtonIcon.module.css';
 interface Props {
     size?: 'none' | 'xs' | 'sm' | 'sm-compact' | 'md' | 'lg' | 'lgCompact' | 'xl' | 'x2l';
     radius?: 'xs' | 'sm' | 'md' | 'full';
-    variant?: 'none' | 'primary' | 'secondary' | 'ghost';
+    variant?: 'none' | 'ghost';
 }
 
 type PolymorphicProps<T extends ElementType, P> = PropsWithChildren<
@@ -26,7 +26,7 @@ export type ButtonProps<T extends ElementType = 'button'> = PolymorphicProps<
 export const ButtonIcon = <T extends ElementType = 'button'>({
     size = 'md',
     radius = 'xs',
-    variant = 'primary',
+    variant = 'none',
     className,
     children,
     as,

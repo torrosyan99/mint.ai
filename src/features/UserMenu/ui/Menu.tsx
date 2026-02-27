@@ -1,6 +1,6 @@
 import type { ReactNode } from 'react';
 
-import cls from '@/widgets/Sidebar/ui/User/User.module.css';
+import cls from '@/features/UserMenu/ui/UserMenu.module.css';
 
 import { Button } from '@/shared/ui/Button/Button.tsx';
 import { Dropdown } from '@/shared/ui/Dropdown/Dropdown.tsx';
