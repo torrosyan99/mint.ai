@@ -11,11 +11,13 @@ import cls from './Gpt.module.css';
 import { List } from './List.tsx';
 
 export const Gpt = () => {
-    const [text, setText] = useState('');
+    const [messages, setMessages] = useState<
+        { type: 'send' | 'answer'; message: string }[]
+    >([]);
     return (
         <>
             <Chat
-                hasMessage={text.length > 0}
+                messages={messages}
                 Top={
                     <>
                         <Title h={'h3'}>
@@ -29,12 +31,18 @@ export const Gpt = () => {
                 }
                 Bottom={<List />}
             >
-                <div
-                    className={clsx(cls.message, {
-                        [cls.hasMessage]: text.length > 0,
-                    })}
-                ></div>
-                <ChatForm className={cls.form} onSubmit={(e) => setText(e)} />
+                <ChatForm
+                    className={cls.form}
+                    onSubmit={(e) =>
+                        setMessages([
+                            ...messages,
+                            {
+                                type: 'send',
+                                message: e,
+                            },
+                        ])
+                    }
+                />
             </Chat>
         </>
     );

@@ -10,7 +10,7 @@ import cls from './Chat.module.css';
 interface ChatProps {
     Top?: ReactNode;
     Bottom?: ReactNode;
-    hasMessage: boolean;
+    messages: {type:'send' | 'answer', message:string}[];
 }
 
 const fade = {
@@ -23,13 +23,13 @@ export const Chat = ({
     Top,
     Bottom,
     children,
-    hasMessage,
+    messages,
 }: PropsWithChildren<ChatProps>) => {
     return (
         <Container className={cls.chat}>
             <LayoutGroup>
                 <AnimatePresence initial={false} mode="popLayout">
-                    {!hasMessage && (
+                    {messages.length === 0 && (
                         <motion.div
                             className={cls.box}
                             key="top"
@@ -45,7 +45,7 @@ export const Chat = ({
                     )}
                 </AnimatePresence>
 
-                <Messages hasMessages={hasMessage} />
+                <Messages messages={messages} />
 
                 <motion.div
                     layout
@@ -56,7 +56,7 @@ export const Chat = ({
                 </motion.div>
 
                 <AnimatePresence initial={false} mode="popLayout">
-                    {!hasMessage && (
+                    {messages.length === 0 && (
                         <motion.div
                             className={cls.box}
                             key="bottom"
