@@ -1,7 +1,10 @@
 .overlay {
+    min-height: 100dvh;
     position: fixed;
     z-index: 99;
-    inset: 0;
+    width: 100%;
+    top: 0;
+    left: 0;
     background-color: var(--opacity-bg);
     backdrop-filter: var(--blur);
     display: flex;
