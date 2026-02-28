@@ -1,16 +1,18 @@
 import { AnimatePresence, LayoutGroup, motion } from 'framer-motion';
-import type { PropsWithChildren, ReactNode } from 'react';
+import type { PropsWithChildren, ReactNode} from 'react';
 
-import {type ChatMessage, Messages} from '@/widgets/Messages';
+import { Messages} from '@/widgets/Messages';
 
 import { Container } from '@/shared/ui/Container/Container.tsx';
 
 import cls from './Chat.module.css';
+import {useAppSelector} from "@/shared/hooks/useAppSelector.tsx";
+import {selectMessages} from "@/entities/chat";
 
 interface ChatProps {
     Top?: ReactNode;
     Bottom?: ReactNode;
-    messages: ChatMessage[];
+
 }
 
 const fade = {
@@ -23,8 +25,8 @@ export const Chat = ({
     Top,
     Bottom,
     children,
-    messages,
 }: PropsWithChildren<ChatProps>) => {
+    const messages = useAppSelector(selectMessages);
     return (
         <Container className={cls.chat}>
             <LayoutGroup>
@@ -45,7 +47,7 @@ export const Chat = ({
                     )}
                 </AnimatePresence>
 
-                <Messages messages={messages} />
+                <Messages  />
 
                 <motion.div
                     layout

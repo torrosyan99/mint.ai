@@ -1,19 +1,40 @@
 import clsx from 'clsx';
 import { motion } from 'framer-motion';
 
+
+
+import {selectMessages, selectSending} from '@/entities/chat';
+
+
+
+import { useAppSelector } from '@/shared/hooks/useAppSelector.tsx';
+import { TypingIndicator } from '@/shared/ui/TypingIndicator/TypingIndicator.tsx';
+
+
+
 import { Answer } from '../Answer/Answer.tsx';
 import { Message } from '../Message/Message.tsx';
 import cls from './Messages.module.css';
 
-export type ChatMessage =
-  | { type: 'send'; message: string, status?: never }
-  | { type: 'answer'; message: string; status: 'waiting' | 'done' | 'streaming' };
 
-interface MessagesProps {
-  messages: ChatMessage[];
-}
 
-export const Messages = ({ messages }: MessagesProps) => {
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+export const Messages = () => {
+    const messages = useAppSelector(selectMessages);
+    const sending = useAppSelector(selectSending);
     return (
         <motion.div
             layout
@@ -29,6 +50,12 @@ export const Messages = ({ messages }: MessagesProps) => {
                     <Answer status={status}>{message}</Answer>
                 ),
             )}
+
+            {
+              sending &&  (<div className={cls.indicator}>
+                    <TypingIndicator />
+                </div>)
+            }
         </motion.div>
     );
 };

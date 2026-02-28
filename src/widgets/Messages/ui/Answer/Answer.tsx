@@ -1,25 +1,34 @@
-import type {PropsWithChildren} from "react";
-import {TypingIndicator} from "@/shared/ui/TypingIndicator/TypingIndicator.tsx";
-import {StreamingText} from "@/features/StreamingText";
-import cls from './Answer.module.css'
+import type { PropsWithChildren } from 'react';
+
+import { StreamingText } from '@/features/StreamingText';
+
+import { type Message, messagesActions } from '@/entities/chat';
+
+import { useAppDispatch } from '@/shared/hooks/useAppDispatch.tsx';
+
+import cls from './Answer.module.css';
+
 interface AnswerProps {
-  status:'waiting' | 'streaming'  | 'done'
+    status: Message['status'];
 }
 
-export const Answer = ({children, status}:PropsWithChildren<AnswerProps>) => {
+export const Answer = ({
+    children,
+    status,
+}: PropsWithChildren<AnswerProps>) => {
+    const dispatch = useAppDispatch();
 
-  if(status === 'waiting') return <div className={cls.answer}> <TypingIndicator /></div>
 
+    if (status === 'streaming') {
+        return (
+            <div className={cls.answer}>
+                <StreamingText
+                    onDone={() => dispatch(messagesActions.finishStreaming())}
+                    text={String(children)}
+                />
+            </div>
+        );
+    }
 
-  if (status === 'streaming') {
-    return <div className={cls.answer}>
-      <StreamingText text={String(children)} />
-    </div> ;
-  }
-
-  return (
-    <div className={cls.answer}>
-      {children}
-    </div>
-  );
+    return <div className={cls.answer}>{children}</div>;
 };

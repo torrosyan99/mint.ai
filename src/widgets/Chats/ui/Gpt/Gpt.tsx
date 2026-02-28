@@ -1,9 +1,14 @@
-import { useState } from 'react';
-
-import type { ChatMessage } from '@/widgets/Messages';
-
 import { ChatForm } from '@/features/ChatForm';
 
+import {
+    messagesActions,
+    selectMessages,
+    selectSending,
+} from '@/entities/chat';
+import { getAnswer } from '@/entities/chat';
+
+import { useAppDispatch } from '@/shared/hooks/useAppDispatch.tsx';
+import { useAppSelector } from '@/shared/hooks/useAppSelector.tsx';
 import { P } from '@/shared/ui/P/P.tsx';
 import { Title } from '@/shared/ui/Title/Title.tsx';
 
@@ -12,11 +17,12 @@ import cls from './Gpt.module.css';
 import { List } from './List.tsx';
 
 export const Gpt = () => {
-    const [messages, setMessages] = useState<ChatMessage[]>([]);
+    const messages = useAppSelector(selectMessages);
+    const sending = useAppSelector(selectSending);
+    const dispatch = useAppDispatch();
     return (
         <>
             <Chat
-                messages={messages}
                 Top={
                     <>
                         <Title h={'h3'}>
@@ -32,42 +38,15 @@ export const Gpt = () => {
             >
                 <ChatForm
                     className={cls.form}
+                    disabled={messages.length > 0 && sending}
                     onSubmit={(text) => {
-                        const userMsg: ChatMessage = {
-                            type: 'send',
-                            message: text,
-                        };
-
-                        const aiMsg: ChatMessage = {
-                            type: 'answer',
-                            message: '',
-                            status: 'waiting',
-                        };
-
-                        setMessages((prev) => [...prev, userMsg, aiMsg]);
-
-                        setTimeout(() => {
-                            setMessages((prev) => {
-                                // ищем последний answer и обновляем его
-                                const lastAnswerIndex = [...prev]
-                                    .reverse()
-                                    .findIndex((m) => m.type === 'answer');
-                                if (lastAnswerIndex === -1) return prev;
-
-                                const idx = prev.length - 1 - lastAnswerIndex;
-
-                                return prev.map((m, i) =>
-                                    i === idx && m.type === 'answer'
-                                        ? {
-                                              ...m,
-                                              message:
-                                                  'abcdabasdsadsadsadsadasdsadasdasdsad',
-                                              status: 'streaming',
-                                          }
-                                        : m,
-                                );
-                            });
-                        }, 4000);
+                        dispatch(
+                            messagesActions.addMessage({
+                                type: 'send' as const,
+                                message: text,
+                            }),
+                        );
+                        dispatch(getAnswer());
                     }}
                 />
             </Chat>

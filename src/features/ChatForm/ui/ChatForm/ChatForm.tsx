@@ -14,16 +14,19 @@ import cls from './ChatForm.module.css';
 interface ChatFormProps {
     className?: string;
     onSubmit?: (e: string) => void;
+    disabled?: boolean;
 }
 
-export const ChatForm = ({ className, onSubmit }: ChatFormProps) => {
+export const ChatForm = ({ className, onSubmit, disabled }: ChatFormProps) => {
     const [text, setText] = useState('');
 
     const handleSubmit = (e: FormEvent<HTMLFormElement>) => {
         e.preventDefault();
         if (!text.trim()) return;
         onSubmit?.(text);
+        setText('')
     }
+    console.log(disabled, 'disabled')
     return (
         <form className={clsx(cls.chatForm, className)} onSubmit={handleSubmit}>
             <textarea
@@ -62,7 +65,7 @@ export const ChatForm = ({ className, onSubmit }: ChatFormProps) => {
                     size={'lg'}
                     radius={'full'}
                     variant={'none'}
-                    disabled={text.length === 0}
+                    disabled={text.length === 0 || disabled}
                 >
                     <ArrowUpSvg />
                 </ButtonIcon>
