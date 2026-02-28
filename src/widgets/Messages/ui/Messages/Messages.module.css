@@ -4,18 +4,8 @@
     flex-direction: column;
     gap: 10px;
     width: 100%;
+    overflow-y: auto;
+    height: 100%;
 }
 
-/*.message.noMessages {*/
-/*    flex-grow: 0;*/
-/*    display: block;*/
-/*}*/
 
-.message {
-    width: fit-content;
-    border-radius: 16px 4px 16px 16px;
-    border: 1px solid var(--primary-border-color);
-    background: var(--color-5);
-    padding: 16px 20px;
-    align-self: end;
-}

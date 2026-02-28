@@ -1,7 +1,7 @@
 import { AnimatePresence, LayoutGroup, motion } from 'framer-motion';
 import type { PropsWithChildren, ReactNode } from 'react';
 
-import { Messages } from '@/widgets/Messages';
+import {type ChatMessage, Messages} from '@/widgets/Messages';
 
 import { Container } from '@/shared/ui/Container/Container.tsx';
 
@@ -10,7 +10,7 @@ import cls from './Chat.module.css';
 interface ChatProps {
     Top?: ReactNode;
     Bottom?: ReactNode;
-    messages: {type:'send' | 'answer', message:string}[];
+    messages: ChatMessage[];
 }
 
 const fade = {

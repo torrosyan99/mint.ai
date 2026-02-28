@@ -1,11 +1,16 @@
 import clsx from 'clsx';
 import { motion } from 'framer-motion';
 
+import { Answer } from '../Answer/Answer.tsx';
+import { Message } from '../Message/Message.tsx';
 import cls from './Messages.module.css';
-import {Message} from "./Message.tsx";
+
+export type ChatMessage =
+  | { type: 'send'; message: string, status?: never }
+  | { type: 'answer'; message: string; status: 'waiting' | 'done' | 'streaming' };
 
 interface MessagesProps {
-    messages: {type:'send' | 'answer', message:string}[];
+  messages: ChatMessage[];
 }
 
 export const Messages = ({ messages }: MessagesProps) => {
@@ -17,8 +22,13 @@ export const Messages = ({ messages }: MessagesProps) => {
                 [cls.noMessages]: messages.length === 0,
             })}
         >
-          {messages.map(({type, message}) =>(type === 'send' ? <Message>{message}</Message>: 'a') )}
-
+            {messages.map(({ type, message, status }) =>
+                type === 'send' ? (
+                    <Message>{message}</Message>
+                ) : (
+                    <Answer status={status}>{message}</Answer>
+                ),
+            )}
         </motion.div>
     );
 };

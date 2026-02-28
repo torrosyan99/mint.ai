@@ -1,5 +1,6 @@
-import clsx from 'clsx';
 import { useState } from 'react';
+
+import type { ChatMessage } from '@/widgets/Messages';
 
 import { ChatForm } from '@/features/ChatForm';
 
@@ -11,9 +12,7 @@ import cls from './Gpt.module.css';
 import { List } from './List.tsx';
 
 export const Gpt = () => {
-    const [messages, setMessages] = useState<
-        { type: 'send' | 'answer'; message: string }[]
-    >([]);
+    const [messages, setMessages] = useState<ChatMessage[]>([]);
     return (
         <>
             <Chat
@@ -33,15 +32,43 @@ export const Gpt = () => {
             >
                 <ChatForm
                     className={cls.form}
-                    onSubmit={(e) =>
-                        setMessages([
-                            ...messages,
-                            {
-                                type: 'send',
-                                message: e,
-                            },
-                        ])
-                    }
+                    onSubmit={(text) => {
+                        const userMsg: ChatMessage = {
+                            type: 'send',
+                            message: text,
+                        };
+
+                        const aiMsg: ChatMessage = {
+                            type: 'answer',
+                            message: '',
+                            status: 'waiting',
+                        };
+
+                        setMessages((prev) => [...prev, userMsg, aiMsg]);
+
+                        setTimeout(() => {
+                            setMessages((prev) => {
+                                // ищем последний answer и обновляем его
+                                const lastAnswerIndex = [...prev]
+                                    .reverse()
+                                    .findIndex((m) => m.type === 'answer');
+                                if (lastAnswerIndex === -1) return prev;
+
+                                const idx = prev.length - 1 - lastAnswerIndex;
+
+                                return prev.map((m, i) =>
+                                    i === idx && m.type === 'answer'
+                                        ? {
+                                              ...m,
+                                              message:
+                                                  'abcdabasdsadsadsadsadasdsadasdasdsad',
+                                              status: 'streaming',
+                                          }
+                                        : m,
+                                );
+                            });
+                        }, 4000);
+                    }}
                 />
             </Chat>
         </>
