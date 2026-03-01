@@ -14,11 +14,16 @@ import cls from './AiSelect.module.css';
 
 export const AiSelect = () => {
     const isMobile = useMediaQuery('(max-width: 1280px)');
+    const [isMobileOpen, setIsMobileOpen] = useState(false);
     const [isOpen, setIsOpen] = useState(false);
-    const onClick = () => isMobile && setIsOpen(true);
+    const onClick = () => isMobile && setIsMobileOpen(true);
 
     const MainButton = (
-        <Button className={cls.mainButton} variant={'primary'} onClick={onClick}>
+        <Button
+            className={cls.mainButton}
+            variant={'primary'}
+            onClick={onClick}
+        >
             <img className={cls.gpt} src={chatgpt} alt={'chatgpt'} />
             {!isMobile && <span>GPT 5 mini</span>}
             <ArrowBottomSvg />
@@ -28,23 +33,30 @@ export const AiSelect = () => {
     return isMobile ? (
         <>
             {MainButton}
-            <MobileSheet className={cls.sheet} innerClassName={cls.sheetInner} isOpen={isOpen} setIsOpen={setIsOpen}>
+            <MobileSheet
+                className={cls.sheet}
+                innerClassName={cls.sheetInner}
+                isOpen={isMobileOpen}
+                setIsOpen={setIsMobileOpen}
+            >
                 <div className={cls.mobileTop}>
                     <img src={chatgptS} alt={'chatgpt'} />
                     <span>GPT 5 mini</span>
                 </div>
-                <Content />
+                <Content   setIsOpen={setIsMobileOpen} />
             </MobileSheet>
         </>
     ) : (
         <Dropdown
+            isOpen={isOpen}
+            setIsOpen={setIsOpen}
             dropdownClass={cls.dropdown}
             align={'start'}
             sideOffset={8}
             Button={MainButton}
             portal={false}
         >
-            {<Content />}
+            {<Content  setIsOpen={setIsOpen}/>}
         </Dropdown>
     );
 };

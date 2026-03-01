@@ -5,11 +5,10 @@
 }
 
 .typing span {
-    width: 6px;
-    height: 6px;
+    width: 8px;
+    height: 8px;
     border-radius: 50%;
-    background: currentColor;
-    opacity: 0.3;
+    background: #CACED2;
     animation: typingBounce 1.2s infinite ease-in-out;
 }
 

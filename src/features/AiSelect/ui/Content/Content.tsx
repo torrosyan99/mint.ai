@@ -1,10 +1,14 @@
 import { Wrapper } from '@/features/AiSelect/ui/Content/Wrapper.tsx';
 
+import { AI, aiActions } from '@/entities/ai';
+
 import chatgpt from '@/shared/assets/images/chatgpt-2.png';
 import klingMotion from '@/shared/assets/images/kling-motion.png';
+import { useAppDispatch } from '@/shared/hooks/useAppDispatch.tsx';
 import { Button } from '@/shared/ui/Button/Button.tsx';
 import { ButtonIcon } from '@/shared/ui/ButtonIcon/ButtonIcon.tsx';
 import { Search } from '@/shared/ui/Search/Search.tsx';
+import { SimpleBar } from '@/shared/ui/SimpleBar/SimpleBar.tsx';
 
 import AiIconsSvg from '@icons/ai-icons-2.svg?react';
 import ArrowRightSvg from '@icons/arrow-rigth.svg?react';
@@ -14,12 +18,16 @@ import VideoGenerateSvg from '@icons/video-generate.svg?react';
 
 import { AiButton } from '../AiButton/AiButton.tsx';
 import cls from './Content.module.css';
-import {SimpleBar} from "@/shared/ui/SimpleBar/SimpleBar.tsx";
 
-export const Content = () => {
+interface ContentProps {
+    setIsOpen: (b: boolean) => void;
+}
+
+export const Content = ({ setIsOpen }: ContentProps) => {
+    const dispatch = useAppDispatch();
     return (
         <>
-            <SimpleBar  className={cls.content}>
+            <SimpleBar className={cls.content}>
                 <div className={cls.top}>
                     <Search
                         className={cls.search}
@@ -37,6 +45,10 @@ export const Content = () => {
                         title={'ChatGPT 5.2'}
                         text={'Новейшая нейросеть от OpenAI'}
                         count={30}
+                        onClick={() => {
+                            dispatch(aiActions.changeAi(AI.gpt));
+                            setIsOpen(false);
+                        }}
                     />
                     <AiButton
                         unpinned
@@ -46,6 +58,10 @@ export const Content = () => {
                             'Новейшая нейросеть от Kling  переноса движений на фото'
                         }
                         count={400}
+                        onClick={() => {
+                            dispatch(aiActions.changeAi(AI.klingMotion));
+                            setIsOpen(false);
+                        }}
                     />
                 </Wrapper>
                 <Wrapper title={'Популярные'}>
@@ -72,14 +88,13 @@ export const Content = () => {
                         count={300}
                     />{' '}
                     <AiButton
-                      icon={<PresentationGenerateSvg />}
-                      title={'Генератор презентаций PRO'}
-                      text={
-                          'Мощная нейросеть для генерации стильных презентаций за 5 минут'
-                      }
-                      count={300}
+                        icon={<PresentationGenerateSvg />}
+                        title={'Генератор презентаций PRO'}
+                        text={
+                            'Мощная нейросеть для генерации стильных презентаций за 5 минут'
+                        }
+                        count={300}
                     />{' '}
-
                 </Wrapper>
             </SimpleBar>
             <div className={cls.bottom}>

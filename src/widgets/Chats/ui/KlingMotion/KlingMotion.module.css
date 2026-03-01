@@ -1,0 +1,23 @@
+.title {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 16px;
+}
+
+.text {
+    margin-top: 16px;
+    color: var(--color-14);
+    margin-bottom: 24px;
+}
+
+.bottomText {
+    margin-top: 16px;
+    color: var(--color-13);
+}
+
+@media (max-width: 1280px) {
+    .text {
+        font-size: 14px;
+    }
+}

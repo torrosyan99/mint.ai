@@ -42,6 +42,10 @@ const messagesSlice = createSlice({
             );
             state.items[streamingInd].status = 'done';
         },
+        resetMessages: (state) => {
+            state.items = [];
+            state.sending = false;
+        },
     },
     extraReducers: (builder) => {
         builder.addCase(

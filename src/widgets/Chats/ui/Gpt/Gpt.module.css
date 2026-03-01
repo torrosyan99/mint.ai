@@ -1,15 +1,8 @@
-.message.hasMessage {
-    flex-grow: 1;
-}
 
 .form {
     margin-top: 40px;
 }
 
-.transition {
-
-    transition: .4s all linear;
-}
 
 .titleSpan {
     color: var(--green-color);
