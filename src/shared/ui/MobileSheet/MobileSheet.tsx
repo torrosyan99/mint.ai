@@ -15,6 +15,7 @@ interface MobileSheetProps {
     isOpen: boolean;
     setIsOpen: (b: boolean) => void;
     className?: string;
+    innerClassName?: string;
 }
 
 export const MobileSheet = ({
@@ -22,6 +23,7 @@ export const MobileSheet = ({
     isOpen,
     setIsOpen,
     children,
+                                innerClassName,
   className,
 }: PropsWithChildren<MobileSheetProps>) => {
     if (!isOpen) return;
@@ -84,7 +86,7 @@ export const MobileSheet = ({
                 <div className={cls.top} {...handlers}>
                     <div className={cls.topLine} />
                 </div>
-                <div className={cls.inner}>{children}</div>
+                <div className={clsx(cls.inner, innerClassName)}>{children}</div>
             </div>
         </>,
         document.body,

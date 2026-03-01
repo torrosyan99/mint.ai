@@ -45,7 +45,7 @@ export const Dropdown = ({
         </DropdownMenu.Content>
     );
     return (
-        <DropdownMenu.Root open={isOpen} onOpenChange={setIsOpen}>
+        <DropdownMenu.Root  open={isOpen} onOpenChange={setIsOpen} >
             <DropdownMenu.Trigger asChild>{Button}</DropdownMenu.Trigger>
 
             {portal ? (

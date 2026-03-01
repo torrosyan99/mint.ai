@@ -28,7 +28,7 @@ export const AiSelect = () => {
     return isMobile ? (
         <>
             {MainButton}
-            <MobileSheet isOpen={isOpen} setIsOpen={setIsOpen}>
+            <MobileSheet className={cls.sheet} innerClassName={cls.sheetInner} isOpen={isOpen} setIsOpen={setIsOpen}>
                 <div className={cls.mobileTop}>
                     <img src={chatgptS} alt={'chatgpt'} />
                     <span>GPT 5 mini</span>
