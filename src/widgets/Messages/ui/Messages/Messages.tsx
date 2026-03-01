@@ -1,36 +1,14 @@
 import clsx from 'clsx';
 import { motion } from 'framer-motion';
 
-
-
-import {selectMessages, selectSending} from '@/entities/chat';
-
-
+import { selectMessages, selectSending } from '@/entities/chat';
 
 import { useAppSelector } from '@/shared/hooks/useAppSelector.tsx';
 import { TypingIndicator } from '@/shared/ui/TypingIndicator/TypingIndicator.tsx';
 
-
-
 import { Answer } from '../Answer/Answer.tsx';
 import { Message } from '../Message/Message.tsx';
 import cls from './Messages.module.css';
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 
 export const Messages = () => {
     const messages = useAppSelector(selectMessages);
@@ -51,11 +29,11 @@ export const Messages = () => {
                 ),
             )}
 
-            {
-              sending &&  (<div className={cls.indicator}>
+            {sending && (
+                <div className={cls.indicator}>
                     <TypingIndicator />
-                </div>)
-            }
+                </div>
+            )}
         </motion.div>
     );
 };
