@@ -1,0 +1,46 @@
+.projectMemory {
+    padding: 24px;
+    border-radius: 16px;
+    border: 1px solid var(--primary-border-color);
+    background: var(--color-3);
+}
+
+.title {
+    text-align: center;
+}
+
+.text {
+    margin-top: 8px;
+}
+
+.info {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    color: var(--color-29);
+    margin: 16px 0 8px;
+}
+
+.textarea {
+    min-height: 135px;
+}
+
+.buttons {
+    margin-top: 16px;
+    display: flex;
+    flex-direction: column;
+    gap: 16px;
+}
+
+.addButton {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.buttonIcon {
+    --add-color: var(--color-17);
+    background-color: var(--color-2);
+    border: 1px solid var(--color-19);
+}
+

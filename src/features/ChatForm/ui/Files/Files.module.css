@@ -53,7 +53,7 @@
     display: grid;
     place-items: center;
     border-radius: 50%;
-    background: var(--color-26);
+    background: var(--color-4);
 }
 
 .fileButton {

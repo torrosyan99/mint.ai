@@ -4,3 +4,7 @@
 .innerButton {
 --pin-color: var(--color-14)
 }
+
+.delete {
+  --trash-bin-color:var(--cancel-color-2)
+}

@@ -1,10 +1,7 @@
- const ProjectsPage = () => {
-  return (
-    <div>
+import { Projects } from '@/widgets/Projects';
 
-    </div>
-  );
+const ProjectsPage = () => {
+    return <Projects projects={[]} />;
 };
-
 
 export default ProjectsPage;

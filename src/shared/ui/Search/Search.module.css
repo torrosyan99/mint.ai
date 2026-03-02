@@ -33,10 +33,15 @@
 .input.sm {
     height: 40px;
 }
+.input.md {
+    height: 48px;
+}
+
 
 /* Variants */
 
-.search.primary {
+.search.primary,
+.search.tertiary {
     --search-icon-color: var(--color-11);
 }
 
@@ -57,6 +62,11 @@
 
 .search.secondary .input {
     background-color: var(--color-2);
+}
+
+.search.tertiary .input  {
+    border: 1px solid var(--color-1);
+    background-color: var(--color-23);
 }
 
 /*padding*/

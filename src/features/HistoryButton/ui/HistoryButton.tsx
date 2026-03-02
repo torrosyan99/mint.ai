@@ -42,6 +42,7 @@ export const HistoryButton = ({ icon, unpinned,buttonValue, ...others }: History
         Переименовать
       </Button>
       <Button
+        className={cls.delete}
         as={'button'}
         variant={'ghost'}
         fontSize={'xs'}

@@ -1,4 +1,4 @@
-import { type HTMLAttributes, type ReactNode, useState } from 'react';
+import { type HTMLAttributes, type ReactNode, type MouseEvent, useState } from 'react';
 
 import { Button } from '@/shared/ui/Button/Button.tsx';
 import { ButtonIcon } from '@/shared/ui/ButtonIcon/ButtonIcon.tsx';
@@ -30,7 +30,10 @@ export const AiButton = ({
 }: AiButtonProps) => {
     const [isOpen, setIsOpen] = useState(false);
     const onClose = () => setIsOpen(false);
-    const onOpen = () => setIsOpen(true);
+    const onOpen = (e: MouseEvent<HTMLButtonElement>) => {
+        e.stopPropagation();
+        setIsOpen(true);
+    };
     return (
         <>
             <Button

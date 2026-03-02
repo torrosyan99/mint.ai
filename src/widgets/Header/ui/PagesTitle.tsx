@@ -11,9 +11,8 @@ export const PagesTitle = () => {
         { path: PagePaths.HOME, end: true },
         pathname,
     );
-    const isProjectPage = !!matchPath(
-        { path: PagePaths.PROJECT, end: true },
-        pathname,
+    const isProjectPage = [PagePaths.PROJECT, PagePaths.PROJECTS].some(path =>
+      matchPath({ path, end: true }, pathname)
     );
     if (isHomePage) {
         return <AiSelect />;

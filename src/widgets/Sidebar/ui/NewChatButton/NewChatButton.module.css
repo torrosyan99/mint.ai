@@ -2,6 +2,8 @@
     text-wrap: nowrap;
     padding-right: 8px;
     color: var(--color-11);
+    --add-color: var(--color-13);
+    --messages-color: var(--color-14);
 }
 
 .button:hover {

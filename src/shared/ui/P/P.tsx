@@ -8,6 +8,7 @@ type BaseProps = {
     size?: 'xs' | 'sm' | 'md' | 'lg';
     font?: 'regular' | 'medium' | 'semibold';
     className?: string;
+    color?: 'none' | 'dark' | 'secondary';
 };
 
 type PProps = BaseProps & HTMLAttributes<HTMLParagraphElement>;
@@ -30,7 +31,7 @@ export const P = ({
 export const MotionP = ({
     size = 'md',
     font = 'regular',
-    color = 'primary',
+    color = 'none',
     className,
     children,
     ...others

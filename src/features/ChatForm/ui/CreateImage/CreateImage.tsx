@@ -56,7 +56,7 @@ export const CreateImage = ({ setShowCreateImage }: CreateImageProps) => {
                     </Button>
                 }
             >
-                <Button  variant={'ghost'} fontSize={'xs'} wFull>
+                <Button variant={'ghost'} fontSize={'xs'} wFull>
                     <StopSvg />
                     Квадратная (1024:1024)
                     <UnreadSvg className={cls.check} />

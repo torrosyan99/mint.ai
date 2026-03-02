@@ -35,10 +35,13 @@
     --color-23: #F4F5F6;
     --color-24: #232425;
     --color-25:#CACED2;
-    --color-26: #F4F5F6;
+    --color-26: #3E3E3F;
+    --color-27:#E5E7EB;
+    --color-28: #646567;
+    --color-29: #141415;
+    --color-30: #E9EAEB;
 
-
-    /*Colors*/
+        /*Colors*/
     --primary-text-color: #232425;
     --secondary-text-color: #646567;
     --white-color: #fff;
@@ -57,6 +60,7 @@
     /*  Borders  */
     --sidebar-border: #EDEEF0;
     --primary-border-color: #EDEEF0;
+    --border-color-1: #EDEEF0;
 
 
     /*    others*/

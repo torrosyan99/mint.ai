@@ -8,7 +8,7 @@ import { P } from '@/shared/ui/P/P.tsx';
 import { Search } from '@/shared/ui/Search/Search.tsx';
 import { Tooltip } from '@/shared/ui/Tooltip/Tooltip.tsx';
 
-import TrashBinSvg from '@icons/trash-bin-2.svg?react';
+import TrashBinSvg from '@icons/trash-bin.svg?react';
 
 import type { SidebarComponentProps } from '../../types';
 import cls from './History.module.css';

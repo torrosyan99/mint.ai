@@ -21,11 +21,11 @@ export const Navigation = ({ isCompact }: SidebarComponentProps) => {
                 className={cls.topButton}
                 active={
                     !!matchPath(
-                        { path: PagePaths.PROJECT, end: true },
+                        { path: PagePaths.PROJECTS, end: true },
                         pathname,
                     )
                 }
-                to={PagePaths.PROJECT}
+                to={PagePaths.PROJECTS}
                 icon={<FieldSvg />}
                 isCompact={isCompact}
             >

@@ -1,0 +1,25 @@
+.paths {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+}
+
+.link {
+    color: var(--color-13);
+}
+
+.menuButton {
+    background-color: var(--color-1);
+}
+
+.top {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 24px;
+}
+
+.text {
+    margin-top: 16px;
+    text-align: center;
+}

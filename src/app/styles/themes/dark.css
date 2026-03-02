@@ -37,8 +37,10 @@
     --color-24: #3E3E3F;
     --color-25:#3E3E3F;
     --color-26: #646567;
-
-
+    --color-27:#3E3E3F;
+   --color-28: #88898C;
+    --color-29: #DBDFE2;
+    --color-30: #232425;
 
     /*  Colors  */
     --primary-text-color: #DBDFE2;
@@ -59,6 +61,7 @@
     /*  Borders  */
     --sidebar-border: transparent;
     --primary-border-color: #3E3E3F;
+    --border-color-1: #232425;
 
 
     /*blur */

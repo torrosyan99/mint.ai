@@ -15,6 +15,7 @@ type ModalProps = {
     title?: string;
     className?: string;
     bodyOverflow?: boolean;
+    closeClass?: string;
 };
 
 const modalVariants = {
@@ -28,7 +29,8 @@ export function Modal({
     title,
     children,
     className,
-  bodyOverflow=true,
+    closeClass,
+    bodyOverflow = true,
 }: PropsWithChildren<ModalProps>) {
     useEffect(() => {
         if (!isOpen) return;
@@ -80,8 +82,11 @@ export function Modal({
                         onMouseDown={(e) => e.stopPropagation()}
                         className={clsx(cls.modal, className)}
                     >
-                        <button className={cls.close} onClick={onClose}>
-                            <CloseSvg />
+                        <button
+                            className={clsx(cls.close, closeClass)}
+                            onClick={onClose}
+                        >
+                            <CloseSvg width={16} height={16} />
                         </button>
                         {children}
                     </motion.div>

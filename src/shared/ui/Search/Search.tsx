@@ -6,8 +6,9 @@ import SearchSvg from '@icons/search.svg?react';
 import cls from './Search.module.css';
 
 interface SearchProps extends InputHTMLAttributes<HTMLInputElement> {
-    variant?: 'primary' | 'secondary';
+    variant?: 'primary' | 'secondary' | 'tertiary';
     className?: string;
+    inputClassName?: string;
     hSize?: 'xs' | 'sm' | 'md' | 'lg' | 'xl';
     padding?: 'xs' | 'sm' | 'md';
 }
@@ -17,6 +18,7 @@ export const Search = ({
     className,
     hSize = 'sm',
     padding = 'xs',
+  inputClassName = '',
     ...others
 }: SearchProps) => {
     return (
@@ -28,7 +30,7 @@ export const Search = ({
             ])}
         >
             <SearchSvg className={cls.icon} />
-            <input className={clsx(cls.input, [cls[hSize]])} {...others} />
+            <input className={clsx(cls.input, [cls[hSize], inputClassName])} {...others} />
         </div>
     );
 };

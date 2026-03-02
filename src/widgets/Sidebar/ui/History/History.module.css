@@ -24,6 +24,7 @@
 .deleteButton {
     opacity: 0;
     background-color: var(--color-1);
+    --trash-bin-color: var(--color-13);
 }
 
 .history:hover .deleteButton {

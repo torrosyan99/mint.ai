@@ -26,7 +26,13 @@
     font-weight: 600;
 }
 
+.dark {
+    color: var(--color-10);
+}
 
+.secondary {
+    color: var(--color-13);
+}
 
 @media (max-width: 768px) {
     .lg {

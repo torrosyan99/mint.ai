@@ -1,0 +1,26 @@
+.row {
+    display: flex;
+    padding: 0 24px;
+    gap: 40px 38px;
+}
+
+.left {
+    width: 65.2%;
+}
+.right {
+  width: calc(100% -  65.2% - 16px);
+}
+
+.list {
+    margin-top: 40px;
+}
+
+@media (max-width: 900px) {
+    .row {
+        flex-direction: column;
+    }
+    .left,
+    .right {
+        width: auto
+    }
+}

@@ -19,11 +19,15 @@ interface KlingMotionProps {
     sending?: boolean;
 }
 
-export const KlingMotion = ({ messages, setMessages, sending }: KlingMotionProps) => {
+export const KlingMotion = ({
+    messages,
+    setMessages,
+    sending,
+}: KlingMotionProps) => {
     return (
         <>
             <Chat
-              sending={sending}
+                sending={sending}
                 messages={messages}
                 Top={
                     <>
@@ -42,8 +46,13 @@ export const KlingMotion = ({ messages, setMessages, sending }: KlingMotionProps
             >
                 <ChatForm
                     className={cls.form}
-                    banner={messages.length > 0 }
-                    onSubmit={(text) => setMessages([...messages, {type:'send', message:text}])}
+                    banner={messages.length > 0}
+                    onSubmit={(text) =>
+                        setMessages([
+                            ...messages,
+                            { type: 'send', message: text },
+                        ])
+                    }
                 />
 
                 <P className={cls.bottomText} size={'sm'}>

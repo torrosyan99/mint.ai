@@ -1,0 +1,36 @@
+
+.content {
+    flex-grow: 1;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 24px;
+    text-align: center;
+    --add-color: #fff;
+}
+
+.title {
+    color: var(--color-10);
+}
+
+.text {
+    max-width: 441px;
+    margin-top: 8px;
+    color: var(--color-13);
+}
+
+.button {
+    background-color: var(--color-24);
+    color: var(--white-color);
+}
+
+@media (max-width: 1280px) {
+    .projects {
+        padding: 0 16px;
+    }
+
+    .icon {
+        width: 48px;
+    }
+}

@@ -1,0 +1,41 @@
+.input {
+    padding: 12px 20px;
+    border-radius: 16px;
+    border: 1px solid var(--color-27);
+    background: var(--color-3);
+    width: 100%;
+}
+
+.input:focus,
+.textarea:focus {
+    outline: none;
+}
+
+.input::placeholder {
+    color: var(--color-28);
+}
+
+div.input{
+    display: flex;
+    position: relative;
+    flex-direction: column;
+}
+.textarea {
+    flex-grow: 1;
+    position: relative;
+    resize: none;
+    width: 100%;
+}
+
+.textCount {
+    position: absolute;
+    bottom: 10px;
+    right: 20px;
+    color: #646567;
+    font-size: 14px;
+}
+
+
+.input.hasMax {
+    padding-bottom: 40px;
+}
