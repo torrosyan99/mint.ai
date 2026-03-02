@@ -74,7 +74,7 @@ export const MobileSheet = ({
                     radius={'sm'}
                     onClick={closeClick}
                 >
-                    <CloseSvg />
+                    <CloseSvg  width={16} height={16}/>
                 </ButtonIcon>
             </div>
             <div

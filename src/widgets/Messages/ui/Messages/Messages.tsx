@@ -1,18 +1,22 @@
 import clsx from 'clsx';
 import { motion } from 'framer-motion';
 
-import { selectMessages, selectSending } from '@/entities/chat';
-
-import { useAppSelector } from '@/shared/hooks/useAppSelector.tsx';
 import { TypingIndicator } from '@/shared/ui/TypingIndicator/TypingIndicator.tsx';
 
 import { Answer } from '../Answer/Answer.tsx';
 import { Message } from '../Message/Message.tsx';
 import cls from './Messages.module.css';
 
-export const Messages = () => {
-    const messages = useAppSelector(selectMessages);
-    const sending = useAppSelector(selectSending);
+export type Message =
+    | { type: 'send'; message: string, status?:never }
+    | { type: 'answer'; message?: string, status: "done" | 'no-subscription' };
+
+interface MessagesProps {
+    messages: Message[];
+    sending?: boolean;
+}
+
+export const Messages = ({ messages, sending }: MessagesProps) => {
     return (
         <motion.div
             layout

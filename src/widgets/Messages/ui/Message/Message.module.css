@@ -5,4 +5,12 @@
     background: var(--color-23);
     padding: 16px 20px;
     align-self: end;
+    text-align: end;
+    margin-left: 97px;
+}
+
+@media (max-width: 1280px) {
+    .message {
+        padding: 16px;
+    }
 }

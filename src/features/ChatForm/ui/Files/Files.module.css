@@ -1,0 +1,86 @@
+.files {
+    display: flex;
+    gap: 8px;
+    flex-wrap: wrap;
+    margin-bottom: 8px;
+}
+
+.imgWaiting {
+    width: 56px;
+    height: 56px;
+    display: grid;
+    place-items: center;
+    border-radius: 16px;
+    background: var(--color-25);
+}
+
+.wrapper {
+    position: relative;
+}
+
+.imgCancel {
+    position: absolute;
+    top: 2px;
+    right: 2px;
+}
+
+.img {
+    width: 56px;
+    height: 56px;
+    border-radius: 12px;
+    object-fit: cover;
+}
+
+.waitingIcon {
+    animation: move 1s linear infinite;
+    transform-origin: center;
+}
+
+.file {
+    display: flex;
+    gap: 12px;
+    align-items: center;
+    text-align: start;
+    --close-color: #646567;
+    padding: 10px 16px;
+    border: 1px solid var(--color-19);
+    border-radius: 19px;
+}
+
+.fileIcon {
+    width: 36px;
+    height: 36px;
+    display: grid;
+    place-items: center;
+    border-radius: 50%;
+    background: var(--color-26);
+}
+
+.fileButton {
+    height: 20px;
+}
+
+.fileName {
+    color: var(--color-17);
+}
+
+.fileSize {
+    color: #A1A4A9;
+}
+
+.file.error * {
+    opacity: .8;
+}
+
+.file.error {
+    border: 1px solid var(--cancel-color-5);
+}
+
+@keyframes move {
+    from {
+        transform: rotate(0deg);
+    }
+    to {
+        transform: rotate(360deg);
+    }
+}

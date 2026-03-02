@@ -66,4 +66,5 @@
     top: 16px;
     right: 16px;
     background-color: var(--color-1);
+    --close-color: var(--color-18)
 }

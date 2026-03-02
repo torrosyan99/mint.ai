@@ -1,3 +1,48 @@
 .answer {
     align-self: start;
+    text-align: start;
+}
+
+.options {
+    margin-top: 24px;
+    display: flex;
+    padding: 8px;
+    gap: 8px;
+}
+
+.noSubscription {
+    padding: 16px;
+    border-radius: 16px;
+    border: 1px solid var(--cancel-color-4);
+    background: var(--color-3);
+    display: flex;
+    align-items: flex-start;
+    gap: 12px;
+    text-align: start;
+    flex-wrap: wrap;
+}
+
+.errorTitle {
+    color: var(--color-5);
+}
+
+.errorText {
+    color: var(--color-13);
+}
+
+.errorButton {
+    margin-left: auto;
+}
+
+@media (max-width: 768px) {
+    .noSubscription {
+        gap: 10px 12px;
+    }
+    .noSubscriptionMessage {
+        width: 85%;
+    }
+.errorButton {
+    margin-left: 32px;
+    margin-right: auto;
+}
 }

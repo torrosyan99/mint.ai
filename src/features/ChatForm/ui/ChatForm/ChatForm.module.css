@@ -1,6 +1,14 @@
+.wrapper {
+  position: relative;
+}
+.wrapper.mt {
+    margin-top: 82px;
+}
+
 .chatForm {
     width: 100%;
     padding: 16px;
+    position: relative;
     border-radius: 24px;
     background-color: var(--color-3);
     display: flex;
@@ -13,29 +21,10 @@
 
 .textarea {
     resize: none;
+
 }
 
 .textarea:focus {
     outline: none;
 }
 
-.bottom {
-    gap: 12px;
-    display: flex;
-    color: var(--color-11);
-    align-items: center;
-}
-
-.microphone {
-    margin-left: auto;
-}
-
-.sendButton {
-    background-color: var(--color-5);
-    --up-icon-color: var(--color-3);
-}
-
-.sendButton:disabled {
-    background-color: var(--color-1);
-    --up-icon-color: var(--color-7);
-}

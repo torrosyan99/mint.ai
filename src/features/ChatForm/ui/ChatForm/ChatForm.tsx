@@ -1,75 +1,70 @@
 import clsx from 'clsx';
-import {type FormEvent, useState} from 'react';
+import { type SyntheticEvent, useState } from 'react';
 
-import { Button } from '@/shared/ui/Button/Button';
-import { ButtonIcon } from '@/shared/ui/ButtonIcon/ButtonIcon.tsx';
 
-import ArrowUpSvg from '@icons/arrow-up.svg?react';
-import AddSvg from '@icons/chat-add.svg?react';
-import InstrumentsSvg from '@icons/instruments.svg?react';
-import MicrophoneSvg from '@icons/microphone.svg?react';
 
+import { Banner } from '@/features/ChatForm/ui/Baner/Banner.tsx';
+import { Instruments } from '@/features/ChatForm/ui/Intruments/Instruments.tsx';
+
+
+
+import type { AllFile } from "../../types";
+import { Files } from '../Files/Files.tsx';
 import cls from './ChatForm.module.css';
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 interface ChatFormProps {
     className?: string;
     onSubmit?: (e: string) => void;
-    disabled?: boolean;
+    banner?: boolean;
+    files?: AllFile[];
 }
 
-export const ChatForm = ({ className, onSubmit, disabled }: ChatFormProps) => {
+export const ChatForm = ({
+    className,
+    onSubmit,
+    banner,
+    files = [],
+}: ChatFormProps) => {
     const [text, setText] = useState('');
-
-    const handleSubmit = (e: FormEvent<HTMLFormElement>) => {
+    const handleSubmit = (e: SyntheticEvent<HTMLFormElement>) => {
         e.preventDefault();
         if (!text.trim()) return;
         onSubmit?.(text);
-        setText('')
-    }
-    console.log(disabled, 'disabled')
+        setText('');
+    };
+    const [showBanner, setShowBanner] = useState(banner);
     return (
-        <form className={clsx(cls.chatForm, className)} onSubmit={handleSubmit}>
-            <textarea
-                className={cls.textarea}
-                placeholder={'Введите сообщение ...'}
-                value={text}
-                onChange={(e) => setText(e.target.value)}
-            ></textarea>
-
-            <div className={cls.bottom}>
-                <ButtonIcon size={'sm'} radius={'full'} variant={'ghost'} type={'button'}>
-                    <AddSvg />
-                </ButtonIcon>
-                <Button
-                    variant={'ghost'}
-                    radius={'md'}
-                    fontSize={'xs'}
-                    hSize={'sm'}
-                    type={'button'}
-                >
-                    <InstrumentsSvg />
-                    Инструменты
-                </Button>
-                <ButtonIcon
-                    className={cls.microphone}
-                    size={'lg'}
-                    radius={'full'}
-                    variant={'ghost'}
-                    type={'button'}
-                >
-                    <MicrophoneSvg />
-                </ButtonIcon>
-                <ButtonIcon
-                    className={clsx(cls.sendButton)}
-                    as={'button'}
-                    size={'lg'}
-                    radius={'full'}
-                    variant={'none'}
-                    disabled={text.length === 0 || disabled}
-                >
-                    <ArrowUpSvg />
-                </ButtonIcon>
-            </div>
-        </form>
+        <div
+            className={clsx(cls.wrapper, className, {
+                [cls.mt]: showBanner,
+            })}
+        >
+            {showBanner && <Banner setShowBanner={setShowBanner} />}
+            <form className={cls.chatForm} onSubmit={handleSubmit}>
+                {files?.length > 0 && <Files files={files} />}
+                <textarea
+                    className={cls.textarea}
+                    placeholder={'Введите сообщение ...'}
+                    value={text}
+                    onChange={(e) => setText(e.target.value)}
+                ></textarea>
+                <Instruments text={text} />
+            </form>
+        </div>
     );
 };

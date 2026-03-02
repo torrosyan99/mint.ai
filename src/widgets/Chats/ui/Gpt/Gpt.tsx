@@ -1,14 +1,9 @@
-import { ChatForm } from '@/features/ChatForm';
+import type { Dispatch, SetStateAction } from 'react';
 
-import {
-    messagesActions,
-    selectMessages,
-    selectSending,
-} from '@/entities/chat';
-import { getAnswer } from '@/entities/chat';
+import type { Message } from '@/widgets/Messages';
 
-import { useAppDispatch } from '@/shared/hooks/useAppDispatch.tsx';
-import { useAppSelector } from '@/shared/hooks/useAppSelector.tsx';
+import {type AllFile, ChatForm} from '@/features/ChatForm';
+
 import { P } from '@/shared/ui/P/P.tsx';
 import { Title } from '@/shared/ui/Title/Title.tsx';
 
@@ -16,13 +11,19 @@ import { Chat } from '../Chat/Chat.tsx';
 import cls from './Gpt.module.css';
 import { List } from './List.tsx';
 
-export const Gpt = () => {
-    const messages = useAppSelector(selectMessages);
-    const sending = useAppSelector(selectSending);
-    const dispatch = useAppDispatch();
+interface GptProps {
+    messages: Message[];
+    setMessages: Dispatch<SetStateAction<Message[]>>;
+    sending?: boolean;
+    files?: AllFile[]
+}
+
+export const Gpt = ({ messages, setMessages, sending, files }: GptProps) => {
     return (
         <>
             <Chat
+                sending={sending}
+                messages={messages}
                 Top={
                     <>
                         <Title h={'h3'}>
@@ -37,17 +38,15 @@ export const Gpt = () => {
                 Bottom={<List />}
             >
                 <ChatForm
+                  files={files}
                     className={cls.form}
-                    disabled={messages.length > 0 && sending}
-                    onSubmit={(text) => {
-                        dispatch(
-                            messagesActions.addMessage({
-                                type: 'send' as const,
-                                message: text,
-                            }),
-                        );
-                        dispatch(getAnswer());
-                    }}
+                    banner={messages.length > 0}
+                    onSubmit={(text) =>
+                        setMessages([
+                            ...messages,
+                            { type: 'send', message: text },
+                        ])
+                    }
                 />
             </Chat>
         </>

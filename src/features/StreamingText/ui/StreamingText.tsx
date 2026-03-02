@@ -18,7 +18,6 @@ export const StreamingText = ({ text, speed = 40, onDone }: StreamingTextProps) 
 
       if (i >= text.length) {
         clearInterval(interval);
-        console.log(onDone, 'onDone');
         onDone?.();
       }
     }, speed);

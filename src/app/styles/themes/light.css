@@ -3,6 +3,7 @@
     --main-bg: #fff;
     --sidebar-bg: #F8F8F8;
     --sidebar-outline-bg: rgba(20, 20, 21, 0.70);
+    --banner-bg:#141415;
     --panel-bg: transparent;
     --header-bg-color: #fff;
     --green-bg: #0E7D42;
@@ -32,6 +33,9 @@
     --color-21-end: #2F1BA3;
     --color-22: #646567;
     --color-23: #F4F5F6;
+    --color-24: #232425;
+    --color-25:#CACED2;
+    --color-26: #F4F5F6;
 
 
     /*Colors*/
@@ -41,8 +45,13 @@
     --cancel-color: #EC3332;
     --cancel-color-2: #EC3332;
     --cancel-color-3: #EC3332;
+    --cancel-color-4: #EC3332;
+    --cancel-color-5: #EC3332;
+
+
     --success-color: #0E7D42;
     --success-color-2: #0E7D42;
+    --success-color-3: #0E7D42;
     --green-color: #0E7D42;
 
     /*  Borders  */

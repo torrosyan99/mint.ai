@@ -1,12 +1,14 @@
 import type { PropsWithChildren } from 'react';
 
-import { StreamingText } from '@/features/StreamingText';
+import { Tooltip } from '@/shared/ui/Tooltip/Tooltip.tsx';
 
-import { type Message, messagesActions } from '@/entities/chat';
+import CopySvg from '@icons/copy.svg?react';
+import DisLikeSvg from '@icons/dislike.svg?react';
+import LikeSvg from '@icons/like.svg?react';
 
-import { useAppDispatch } from '@/shared/hooks/useAppDispatch.tsx';
-
+import type { Message } from '../Messages/Messages';
 import cls from './Answer.module.css';
+import { NoSubscription } from './NoSubscription.tsx';
 
 interface AnswerProps {
     status: Message['status'];
@@ -16,19 +18,27 @@ export const Answer = ({
     children,
     status,
 }: PropsWithChildren<AnswerProps>) => {
-    const dispatch = useAppDispatch();
-
-
-    if (status === 'streaming') {
-        return (
-            <div className={cls.answer}>
-                <StreamingText
-                    onDone={() => dispatch(messagesActions.finishStreaming())}
-                    text={String(children)}
-                />
+    if (status === 'no-subscription') return <NoSubscription />;
+    return (
+        <div className={cls.answer}>
+            {children}
+            <div className={cls.options}>
+                <Tooltip message={'Копировать'} size={'xs'} offsetSize={10}>
+                    <button>
+                        <CopySvg />
+                    </button>
+                </Tooltip>
+                <Tooltip message={'Нравится'} size={'xs'} offsetSize={10}>
+                    <button>
+                        <LikeSvg />
+                    </button>
+                </Tooltip>
+                <Tooltip message={'Не нравиться'} size={'xs'} offsetSize={10}>
+                    <button>
+                        <DisLikeSvg />
+                    </button>
+                </Tooltip>
             </div>
-        );
-    }
-
-    return <div className={cls.answer}>{children}</div>;
+        </div>
+    );
 };

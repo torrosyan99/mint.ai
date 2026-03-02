@@ -5,7 +5,7 @@ import { createPortal } from 'react-dom';
 
 import { fadeOpacityVariants } from '@/shared/configs/motionConfig/motionConfig.ts';
 
-import CloseSvg from '@icons/close-2.svg?react';
+import CloseSvg from '@icons/close.svg?react';
 
 import cls from './Modal.module.css';
 

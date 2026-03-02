@@ -6,7 +6,7 @@ import cls from './P.module.css';
 
 type BaseProps = {
     size?: 'xs' | 'sm' | 'md' | 'lg';
-    font?: 'regular' | 'medium';
+    font?: 'regular' | 'medium' | 'semibold';
     className?: string;
 };
 

@@ -1,29 +1,30 @@
+import type { Dispatch, SetStateAction } from 'react';
+
+import type { Message } from '@/widgets/Messages';
+
 import { ChatForm } from '@/features/ChatForm';
 
-import {
-    messagesActions,
-    selectMessages,
-    selectSending,
-} from '@/entities/chat';
-import { getAnswer } from '@/entities/chat';
-
 import klingMotion from '@/shared/assets/images/kling-motion.png';
-import CountSvg from '@icons/count-icon.svg?react';
-import { useAppDispatch } from '@/shared/hooks/useAppDispatch.tsx';
-import { useAppSelector } from '@/shared/hooks/useAppSelector.tsx';
 import { P } from '@/shared/ui/P/P.tsx';
 import { Title } from '@/shared/ui/Title/Title.tsx';
+
+import CountSvg from '@icons/count-icon.svg?react';
 
 import { Chat } from '../Chat/Chat.tsx';
 import cls from './KlingMotion.module.css';
 
-export const KlingMotion = () => {
-    const messages = useAppSelector(selectMessages);
-    const sending = useAppSelector(selectSending);
-    const dispatch = useAppDispatch();
+interface KlingMotionProps {
+    messages: Message[];
+    setMessages: Dispatch<SetStateAction<Message[]>>;
+    sending?: boolean;
+}
+
+export const KlingMotion = ({ messages, setMessages, sending }: KlingMotionProps) => {
     return (
         <>
             <Chat
+              sending={sending}
+                messages={messages}
                 Top={
                     <>
                         <div className={cls.title}>
@@ -41,21 +42,14 @@ export const KlingMotion = () => {
             >
                 <ChatForm
                     className={cls.form}
-                    disabled={messages.length > 0 && sending}
-                    onSubmit={(text) => {
-                        dispatch(
-                            messagesActions.addMessage({
-                                type: 'send' as const,
-                                message: text,
-                            }),
-                        );
-                        dispatch(getAnswer());
-                    }}
+                    banner={messages.length > 0 }
+                    onSubmit={(text) => setMessages([...messages, {type:'send', message:text}])}
                 />
 
-              <P className={cls.bottomText} size={'sm'}>
-                Стоимость 400 <CountSvg /> за одно сообщение. Нейросеть может ошибаться
-              </P>
+                <P className={cls.bottomText} size={'sm'}>
+                    Стоимость 400 <CountSvg /> за одно сообщение. Нейросеть
+                    может ошибаться
+                </P>
             </Chat>
         </>
     );

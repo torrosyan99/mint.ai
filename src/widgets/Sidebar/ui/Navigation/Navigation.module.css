@@ -19,3 +19,7 @@
 .topButton {
     color: var(--color-5);
 }
+
+.activeButton {
+    background-color: var(--color-1);
+}

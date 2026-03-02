@@ -32,6 +32,9 @@
         justify-content: normal;
         background-color: var(--header-bg-color);
     }
+    .button {
+        margin-left: auto;
+    }
 
     .menuButton,
     .panelButton {

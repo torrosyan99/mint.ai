@@ -29,9 +29,9 @@ svg {
 .app {
    height: 100dvh;
     display: flex;
+    overflow: hidden;
     /*overflow-x: hidden;*/
     /*overflow-y: auto;*/
-    overflow: hidden;
     position: relative;
 
     --sidebar-width: 250px;

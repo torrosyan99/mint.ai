@@ -1,0 +1,52 @@
+.instruments {
+    display: flex;
+    color: var(--color-11);
+    align-items: flex-end;
+
+}
+.left,
+.right {
+    display: flex;
+    align-items: center;
+}
+
+.left {
+    flex-wrap: wrap;
+    margin-right: auto;
+}
+.add {
+    margin-right: 10px;
+}
+
+.microphone {
+    margin-left: auto;
+    margin-right: 12px;
+}
+
+.sendButton {
+    width: 42px;
+    height: 42px;
+    background-color: var(--color-5);
+    --up-icon-color: var(--color-3);
+}
+
+.sendButton:disabled {
+    background-color: var(--color-1);
+    --up-icon-color: var(--color-7);
+}
+
+.dropdown {
+    width: 231px;
+    text-align: start;
+}
+
+@media (max-width: 768px) {
+.sendButton {
+    width: 40px;
+    height: 40px;
+}
+
+    .add.mb {
+        margin-bottom: 12px;
+    }
+}
