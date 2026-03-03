@@ -1,0 +1,10 @@
+.list {
+    display: flex;
+    gap: 12px;
+    overflow-x: auto;
+    margin: 24px 0 10px;
+}
+
+.list button {
+    flex-shrink: 0;
+}

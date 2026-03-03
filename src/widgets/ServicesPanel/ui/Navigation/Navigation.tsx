@@ -10,10 +10,10 @@ import CodeSquareSvg from '@icons/code-square.svg?react';
 import CropSvg from '@icons/crop.svg?react';
 import FindImageSvg from '@icons/find-image.svg?react';
 import PenSvg from '@icons/pen.svg?react';
-import PieChartSvg from '@icons/pie-chart.svg?react';
 import PinCancelSvg from '@icons/pin-cancel.svg?react';
 import PinSvg from '@icons/pin.svg?react';
 import SearchSvg from '@icons/search.svg?react';
+import PieChartSvg from '@icons/pie-chart.svg?react';
 
 import { getIsCompactClass } from '../../helpers/getIsCompactClass.ts';
 import cls from './Navigation.module.css';

@@ -34,7 +34,7 @@ export const InstrumentsButton = ({setShowCreateImage}:InstrumentsButtonProps) =
             }
         >
             <Button fontSize={'xs'} variant={'ghost'} wFull>
-                <GlobalSvg />
+                <GlobalSvg width={20} height={20} />
                 Поиск в сети
             </Button>
             <Button fontSize={'xs'} variant={'ghost'} wFull onClick={onShowCreateImage}>

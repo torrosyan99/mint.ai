@@ -1,10 +1,13 @@
 import type { ReactNode } from 'react';
 
+import { AllAiPage } from '@/pages/AllAiPage';
+import AllServicesPage from '@/pages/AllServicesPage/ui/AllServicesPage.tsx';
 import { AudioPage } from '@/pages/AudioPage';
 import { DocumentsPage } from '@/pages/DocumentsPage';
 import { ChatIconsPage, HomePage } from '@/pages/HomePage';
 import { ErrorsImagePage } from '@/pages/HomePage/ui/ErrorsImagePage.tsx';
 import { FilesPage } from '@/pages/HomePage/ui/FilesPage.tsx';
+import HomePageWithTarrifs from '@/pages/HomePage/ui/HomePageWithTarrifs.tsx';
 import { SendingPage } from '@/pages/HomePage/ui/SendingPage.tsx';
 import { ImagesPage } from '@/pages/ImagesPage';
 import { ImagesWithImage } from '@/pages/ImagesPage/ui/ImagesWithImage.tsx';
@@ -12,7 +15,6 @@ import { ProjectPage } from '@/pages/ProjectPage';
 import { ProjectsPage } from '@/pages/ProjectsPage';
 import { ProjectsWithProject } from '@/pages/ProjectsPage/ui/ProjectsWithProject.tsx';
 import { VideosPage } from '@/pages/VideosPage';
-import HomePageWithTarrifs from "@/pages/HomePage/ui/HomePageWithTarrifs.tsx";
 
 export enum PagePaths {
     HOME = '/',
@@ -22,6 +24,8 @@ export enum PagePaths {
     DOCUMENTS = '/documents',
     AUDIO = '/audio',
     IMAGES = '/images',
+    ALL_AI = '/all-ai',
+    ALL_SERVICES = '/all-services',
 }
 
 interface Route {
@@ -88,6 +92,14 @@ export const routesConfig: Config = {
         {
             path: 'page-with-tarrifs',
             element: <HomePageWithTarrifs />,
+        },
+        {
+            path: PagePaths.ALL_AI,
+            element: <AllAiPage />,
+        },
+        {
+            path: PagePaths.ALL_SERVICES,
+            element: <AllServicesPage />,
         },
     ],
     withoutPanel: [

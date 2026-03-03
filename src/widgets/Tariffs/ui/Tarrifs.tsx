@@ -1,5 +1,4 @@
 import { useState } from 'react';
-import 'swiper/css';
 
 import { ButtonIcon } from '@/shared/ui/ButtonIcon/ButtonIcon.tsx';
 import { P } from '@/shared/ui/P/P.tsx';

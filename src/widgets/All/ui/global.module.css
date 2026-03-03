@@ -1,0 +1,101 @@
+.container.container {
+    max-width: 812px;
+    width: 100%;
+}
+
+.title {
+    color: var(--color-5);
+}
+
+.text {
+    color: var(--color-14);
+    margin: 16px 0 24px;
+}
+
+.search {
+    flex-grow: 1;
+}
+
+.flex {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+}
+
+.pinButton {
+    background-color: var(--color-23);
+    --pin-color: var(--color-14);
+}
+
+.wrapper {
+    padding-top: 30px;
+}
+
+.list {
+    margin-top: 16px;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 16px;
+}
+
+.iconBox,.iconBoxSecond,
+.iconBoxWhite {
+    flex-shrink: 0;
+    display: grid;
+    place-items: center;
+    width: 48px;
+    height: 48px;
+    border-radius: 16px;
+}
+
+.iconBox {
+    background-color: var(--color-6);
+}
+.iconBoxSecond {
+background-color: var(--color-35);
+}
+
+.iconBoxWhite {
+    background-color: #fff;
+}
+
+.card {
+    padding: 16px;
+    position: relative;
+}
+
+.cardText {
+    color: #646567;
+}
+
+.pin {
+    align-self: flex-start;
+    --pin-color: #646567;
+    margin-left: auto;
+}
+
+.info {
+    margin-left: 4px;
+}
+
+.count {
+    margin-left: auto;
+    display: flex;
+    align-items: center;
+    gap: 4px;
+    font-size: 18px;
+    font-weight: 600;
+}
+
+@media (max-width: 768px) {
+    .text.text {
+        font-size: 14px;
+    }
+
+    .text br {
+        display: none;
+    }
+    .list {
+        grid-template-columns: 1fr;
+    }
+}
