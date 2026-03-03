@@ -6,19 +6,34 @@ import {
     useFloating,
 } from '@floating-ui/react';
 import clsx from 'clsx';
-import {type PropsWithChildren, type ReactNode, useState} from 'react';
+import { type PropsWithChildren, type ReactNode, useState } from 'react';
 import { createPortal } from 'react-dom';
 
 import TooltipSvg from '@icons/tooltip-icon.svg?react';
 
 import cls from './Tooltip.module.css';
 
+type TooltipPlacement =
+    | 'top'
+    | 'bottom'
+    | 'left'
+    | 'right'
+    | 'top-start'
+    | 'top-end'
+    | 'bottom-start'
+    | 'bottom-end'
+    | 'left-start'
+    | 'left-end'
+    | 'right-start'
+    | 'right-end';
+
 interface TooltipProps {
     message: string | ReactNode;
-    placement?: 'top' | 'bottom';
+    placement?: TooltipPlacement;
     offsetSize?: number;
-    size?:'none' | "xs" | 'sm';
+    size?: 'none' | 'xs' | 'sm';
     className?: string;
+    shiftX?: number;
 }
 
 export function Tooltip({
@@ -26,17 +41,29 @@ export function Tooltip({
     message,
     offsetSize = 12,
     placement = 'bottom',
-  className,
-  size = 'sm',
+    className,
+    shiftX,
+    size = 'sm',
 }: PropsWithChildren<TooltipProps>) {
+    if (!message) return null;
     const [open, setOpen] = useState(false);
 
-    const { refs, floatingStyles, placement:finalPlacement } = useFloating({
+    const {
+        refs,
+        floatingStyles,
+        placement: finalPlacement,
+    } = useFloating({
         open,
         placement,
-        middleware: [offset(offsetSize), flip(), shift()],
+        middleware: [
+            offset(() => ({
+                mainAxis: offsetSize,
+                crossAxis: shiftX,
+            })),
+            flip(),
+            shift(),
+        ],
         whileElementsMounted: autoUpdate,
-
     });
 
     return (
@@ -59,7 +86,9 @@ export function Tooltip({
                         }}
                     >
                         {message}
-                        <TooltipSvg className={clsx(cls.svg, cls[finalPlacement])} />
+                        <TooltipSvg
+                            className={clsx(cls.svg, cls[finalPlacement])}
+                        />
                     </div>,
                     document.body,
                 )}

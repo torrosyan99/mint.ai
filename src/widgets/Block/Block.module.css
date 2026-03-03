@@ -1,0 +1,12 @@
+.block {
+    padding: 0 24px;
+    flex-grow: 1;
+    display: flex;
+    flex-direction: column;
+}
+
+@media (max-width: 1280px) {
+    .block {
+        padding: 0 16px;
+    }
+}

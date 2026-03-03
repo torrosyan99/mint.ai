@@ -1,41 +1,20 @@
-import clsx from "clsx";
+import clsx from 'clsx';
 import { motion } from 'framer-motion';
 import type { PropsWithChildren, ReactNode } from 'react';
 import { Link } from 'react-router-dom';
-
-
 
 import { fadeOpacityVariants } from '@/shared/configs/motionConfig/motionConfig.ts';
 import { motionCompactOptions, motionHiddenOptions } from '@/shared/helpers';
 import { Button } from '@/shared/ui/Button/Button.tsx';
 
-
-
 import cls from './Navigation.module.css';
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 
 type NavigationButtonProps = {
     icon: ReactNode;
     isCompact: boolean;
     to: string;
     className?: string;
-    active:boolean
+    active: boolean;
 };
 
 const iconVariants = {
@@ -48,12 +27,12 @@ export const NavigationButton = ({
     icon,
     isCompact,
     className,
-  active,
+    active,
     to,
 }: PropsWithChildren<NavigationButtonProps>) => {
     return (
         <Button
-            className={clsx(className, { [cls.activeButton]:active })}
+            className={clsx(className, { [cls.activeButton]: active })}
             as={Link}
             to={to}
             variant="ghost"

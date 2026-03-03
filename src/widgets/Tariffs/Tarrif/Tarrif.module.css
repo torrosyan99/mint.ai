@@ -1,0 +1,80 @@
+.slide {
+    height: auto;
+}
+
+.tarrif {
+    height: 100%;
+    padding: 24px;
+    border-radius: 24px;
+    background: var(--color-3);
+    border: 1px solid var(--color-19);
+    position: relative;
+}
+
+.tarrif:hover {
+    box-shadow: 0 5px 15px 0 rgba(17, 17, 17, 0.10);
+}
+
+.title {
+    color: var(--color-10);
+}
+
+.price {
+    font-size: 40px;
+}
+
+.price span {
+    font-size: 24px;
+    font-weight: 500;
+}
+
+.text {
+    margin: 12px 0 16px;
+}
+
+.tokensText {
+    text-wrap: nowrap;
+}
+
+.popular {
+    position: absolute;
+    right: 24px;
+    top: 24px;
+    background: rgba(14, 125, 66, 0.15);
+    color: var(--green-color);
+    font-size: 14px;
+    font-weight: 500;
+    padding: 4px 10px;
+    border-radius: 12px;
+}
+
+.tokens {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    margin: 16px 0 25px;
+}
+
+.list {
+    display: flex;
+    flex-direction: column;
+    gap: 12px
+}
+
+.item {
+    display: flex;
+    align-items: flex-start;
+    gap: 8px;
+}
+
+.tarrif.ultima {
+    border: 2px solid var(--green-color);
+}
+
+
+@media (max-width: 1280px) {
+    .svg {
+        width: 22px;
+        height: 22px;
+    }
+}

@@ -1,8 +1,9 @@
-import { matchPath, useLocation } from 'react-router-dom';
+import { useLocation } from 'react-router-dom';
 
 import { NavigationButton } from '@/widgets/Sidebar/ui/Navigation/NavigationButton.tsx';
 
 import { PagePaths } from '@/shared/configs/routesConfig/routesConfig.tsx';
+import { checkNavigation } from '@/shared/helpers';
 
 import AudioSvg from '@icons/audio.svg?react';
 import DocumentSvg from '@icons/document.svg?react';
@@ -15,16 +16,12 @@ import cls from './Navigation.module.css';
 
 export const Navigation = ({ isCompact }: SidebarComponentProps) => {
     const { pathname } = useLocation();
+
     return (
         <div className={cls.navigation}>
             <NavigationButton
                 className={cls.topButton}
-                active={
-                    !!matchPath(
-                        { path: PagePaths.PROJECTS, end: true },
-                        pathname,
-                    )
-                }
+                active={checkNavigation(PagePaths.PROJECTS, pathname)}
                 to={PagePaths.PROJECTS}
                 icon={<FieldSvg />}
                 isCompact={isCompact}
@@ -32,32 +29,32 @@ export const Navigation = ({ isCompact }: SidebarComponentProps) => {
                 Проекты
             </NavigationButton>
             <NavigationButton
-                active={false}
-                to={'ns-2'}
+                active={checkNavigation(PagePaths.DOCUMENTS, pathname)}
+                to={PagePaths.DOCUMENTS}
                 icon={<DocumentSvg />}
                 isCompact={isCompact}
             >
                 Документы
             </NavigationButton>
             <NavigationButton
-                active={false}
-                to={'ns-3'}
+                active={checkNavigation(PagePaths.IMAGES, pathname)}
+                to={PagePaths.IMAGES}
                 icon={<ImageSvg />}
                 isCompact={isCompact}
             >
                 Изображения
             </NavigationButton>
             <NavigationButton
-                active={false}
-                to={'ns-4'}
+                active={checkNavigation(PagePaths.VIDEOS, pathname)}
+                to={PagePaths.VIDEOS}
                 icon={<VideoSvg />}
                 isCompact={isCompact}
             >
                 Видео
             </NavigationButton>
             <NavigationButton
-                active={false}
-                to={'ns-5'}
+                active={checkNavigation(PagePaths.AUDIO, pathname)}
+                to={PagePaths.AUDIO}
                 icon={<AudioSvg />}
                 isCompact={isCompact}
             >

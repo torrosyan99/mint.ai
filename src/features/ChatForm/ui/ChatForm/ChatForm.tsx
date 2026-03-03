@@ -1,31 +1,12 @@
 import clsx from 'clsx';
 import { type SyntheticEvent, useState } from 'react';
 
-
-
 import { Banner } from '@/features/ChatForm/ui/Baner/Banner.tsx';
 import { Instruments } from '@/features/ChatForm/ui/Intruments/Instruments.tsx';
 
-
-
-import type { AllFile } from "../../types";
+import type { AllFile } from '../../types';
 import { Files } from '../Files/Files.tsx';
 import cls from './ChatForm.module.css';
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 
 interface ChatFormProps {
     className?: string;

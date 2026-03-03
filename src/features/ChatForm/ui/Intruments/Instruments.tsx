@@ -1,6 +1,7 @@
 import clsx from 'clsx';
 import { useRef, useState } from 'react';
 
+import { useMediaQuery } from '@/shared/hooks/useMediaQuery.tsx';
 import { ButtonIcon } from '@/shared/ui/ButtonIcon/ButtonIcon.tsx';
 import { Tooltip } from '@/shared/ui/Tooltip/Tooltip.tsx';
 
@@ -20,22 +21,25 @@ export const Instruments = ({ text }: InstrumentsProps) => {
     const fileRef = useRef<HTMLInputElement>(null);
     const [showCreateImage, setShowCreateImage] = useState(false);
     const addClick = () => fileRef.current?.click();
+    const isMobile = useMediaQuery('(max-width: 1280px)');
     return (
         <div className={cls.instruments}>
             <input type={'file'} ref={fileRef} hidden />
             <div className={cls.left}>
                 <Tooltip
                     message={
-                        <>
-                            Можно прикрепить к сообщению <br /> не более 2
-                            файлов
-                        </>
+                        !isMobile && (
+                            <>
+                                Можно прикрепить к сообщению <br /> не более 2
+                                файлов
+                            </>
+                        )
                     }
                     offsetSize={9}
                     placement={'bottom'}
                 >
                     <ButtonIcon
-                        className={clsx(cls.add, {[cls.mb]: showCreateImage})}
+                        className={clsx(cls.add, { [cls.mb]: showCreateImage })}
                         size={'sm'}
                         radius={'full'}
                         variant={'ghost'}

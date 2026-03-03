@@ -16,7 +16,6 @@ export const Project = () => {
             <div className={cls.right}>
                 <ProjectMemory />
             </div>
-
         </div>
     );
 };

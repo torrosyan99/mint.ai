@@ -1,17 +1,27 @@
 import type { ReactNode } from 'react';
 
+import { AudioPage } from '@/pages/AudioPage';
+import { DocumentsPage } from '@/pages/DocumentsPage';
 import { ChatIconsPage, HomePage } from '@/pages/HomePage';
 import { ErrorsImagePage } from '@/pages/HomePage/ui/ErrorsImagePage.tsx';
 import { FilesPage } from '@/pages/HomePage/ui/FilesPage.tsx';
 import { SendingPage } from '@/pages/HomePage/ui/SendingPage.tsx';
+import { ImagesPage } from '@/pages/ImagesPage';
+import { ImagesWithImage } from '@/pages/ImagesPage/ui/ImagesWithImage.tsx';
+import { ProjectPage } from '@/pages/ProjectPage';
 import { ProjectsPage } from '@/pages/ProjectsPage';
-import ProjectsWithProject from '@/pages/ProjectsPage/ui/ProjectsWithProject.tsx';
-import {ProjectPage} from "@/pages/ProjectPage";
+import { ProjectsWithProject } from '@/pages/ProjectsPage/ui/ProjectsWithProject.tsx';
+import { VideosPage } from '@/pages/VideosPage';
+import HomePageWithTarrifs from "@/pages/HomePage/ui/HomePageWithTarrifs.tsx";
 
 export enum PagePaths {
     HOME = '/',
     PROJECTS = '/projects',
     PROJECT = '/project',
+    VIDEOS = '/videos',
+    DOCUMENTS = '/documents',
+    AUDIO = '/audio',
+    IMAGES = '/images',
 }
 
 interface Route {
@@ -55,13 +65,35 @@ export const routesConfig: Config = {
             path: 'projects-with-project',
             element: <ProjectsWithProject />,
         },
-
+        {
+            path: PagePaths.AUDIO,
+            element: <AudioPage />,
+        },
+        {
+            path: PagePaths.IMAGES,
+            element: <ImagesPage />,
+        },
+        {
+            path: 'images-with-image',
+            element: <ImagesWithImage />,
+        },
+        {
+            path: PagePaths.DOCUMENTS,
+            element: <DocumentsPage />,
+        },
+        {
+            path: PagePaths.VIDEOS,
+            element: <VideosPage />,
+        },
+        {
+            path: 'page-with-tarrifs',
+            element: <HomePageWithTarrifs />,
+        },
     ],
     withoutPanel: [
         {
             path: PagePaths.PROJECT,
             element: <ProjectPage />,
         },
-    ]
-} as const;
-
+    ],
+};

@@ -5,7 +5,7 @@
     position: relative;
     color: var(--white-color);
     font-size: 14px;
-    z-index: 100;
+    z-index: 60;
 }
 
 .svg.bottom {
@@ -13,6 +13,13 @@
     left: 50%;
     top: 0;
     transform: translate(-50%, -6px);
+    z-index: -1;
+}
+.svg.bottom-end {
+    position: absolute;
+    right: 12px;
+    top: 0;
+    transform: translateY(-6px);
     z-index: -1;
 }
 

@@ -1,6 +1,6 @@
 import { Projects } from '@/widgets/Projects';
 
-const ProjectsPage = () => {
+export const ProjectsWithProject = () => {
   return <Projects projects={[{
     title:'Название проекта 1',
     description:'Краткое описание моего проекта',
@@ -12,4 +12,3 @@ const ProjectsPage = () => {
   }]} />;
 };
 
-export default ProjectsPage;

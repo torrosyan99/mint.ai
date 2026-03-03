@@ -1,0 +1,61 @@
+.tarrifs {
+    border-radius: 20px;
+    background: var(--color-3);
+    box-shadow: 0 2px 10px 0 rgba(41, 50, 43, 0.10);
+    position: fixed;
+    inset: 0;
+    padding: 50px 100px;
+    z-index: 100;
+    display: flex;
+    flex-direction: column;
+    gap: 24px;
+    overflow-y: auto;
+}
+
+.title {
+    text-align: center;
+}
+
+.period {
+    display: block;
+    padding: 4px 8px;
+    font-size: 12px;
+    border-radius: 8px;
+    box-shadow: 0 1px 3px 0 rgba(0, 0, 0, 0.03);
+    height: 24px;
+}
+
+.bottomText {
+    margin: 24px auto 0;
+    color: var(--color-14);
+    text-align: center;
+}
+
+.button:disabled {
+    background-color: var(--color-30);
+    color: var(--color-13);
+    border: 1px solid var(--color-34);
+}
+
+.darkButton {
+    color: #fff;
+    background-color: var(--color-24);
+}
+
+.close {
+    --close-color: var(--color-11);
+    position: absolute;
+    top: 23.33px;
+    right: 23.33px;
+    background-color: var(--color-2);
+}
+@media (max-width: 1280px) {
+    .tarrifs {
+        padding: 50px 16px 23px;
+    }
+
+    .close {
+        right: 12px;
+        top: 12px;
+    }
+}

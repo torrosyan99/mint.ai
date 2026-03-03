@@ -35,10 +35,10 @@ export const Message = ({ title, date }: MessageProps) => {
             </div>
             {isFocused ? (
                 <div className={cls.focusedBlock}>
-                    <button>
+                    <button className={cls.button}>
                         <UnreadSvg />
                     </button>
-                    <button>
+                    <button className={cls.button}>
                         <CloseSvg width={16} height={16} />
                     </button>
                 </div>

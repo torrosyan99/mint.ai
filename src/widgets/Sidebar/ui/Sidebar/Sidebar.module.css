@@ -49,7 +49,7 @@
         transition: var(--transform-transition);
         position: fixed;
         transform: translateX(-100%);
-        z-index: 100;
+        z-index: 50;
     }
 
     .sidebar.opened {
@@ -59,7 +59,7 @@
     .outline {
         position: fixed;
         inset: 0;
-        z-index: 99;
+        z-index: 49;
         background: var(--sidebar-outline-bg);
     }
 }

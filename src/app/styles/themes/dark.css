@@ -35,12 +35,16 @@
     --color-22: #DBDFE2;
     --color-23: #232425;
     --color-24: #3E3E3F;
-    --color-25:#3E3E3F;
+    --color-25: #3E3E3F;
     --color-26: #646567;
-    --color-27:#3E3E3F;
-   --color-28: #88898C;
+    --color-27: #3E3E3F;
+    --color-28: #88898C;
     --color-29: #DBDFE2;
     --color-30: #232425;
+    --color-31: #141415;
+    --color-32: #0E7D42;
+    --color-33: #0E7D42;
+    --color-34: #3E3E3F;
 
     /*  Colors  */
     --primary-text-color: #DBDFE2;
@@ -60,6 +64,7 @@
 
     /*  Borders  */
     --sidebar-border: transparent;
+    --header-border: transparent;
     --primary-border-color: #3E3E3F;
     --border-color-1: #232425;
 

@@ -35,7 +35,6 @@
 }
 
 
-
 .hoverBlock,
 .focusedBlock {
     margin-left: auto;
@@ -63,4 +62,11 @@
 .deleteButton {
     --trash-bin-color: #646567;
     height: 20px;
+}
+
+.button {
+    width: 20px;
+    height: 20px;
+    display: grid;
+    place-items: center;
 }

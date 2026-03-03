@@ -7,19 +7,23 @@ import { P } from '@/shared/ui/P/P.tsx';
 
 export const PagesTitle = () => {
     const { pathname } = useLocation();
-    const isHomePage = !!matchPath(
-        { path: PagePaths.HOME, end: true },
-        pathname,
+
+    const isProjectPage = [PagePaths.PROJECT, PagePaths.PROJECTS].some((path) =>
+        matchPath({ path, end: true }, pathname),
     );
-    const isProjectPage = [PagePaths.PROJECT, PagePaths.PROJECTS].some(path =>
-      matchPath({ path, end: true }, pathname)
-    );
-    if (isHomePage) {
-        return <AiSelect />;
-    } else if (isProjectPage)
-        return (
+    if (isProjectPage) return (
             <P font={'medium'} size={'lg'}>
                 Проекты
             </P>
         );
+
+    const isFilesPage = [PagePaths.VIDEOS, PagePaths.IMAGES, PagePaths.DOCUMENTS, PagePaths.AUDIO].some((path) =>
+      matchPath({ path, end: true }, pathname))
+
+    if(isFilesPage) return ( <P font={'medium'} size={'lg'}>
+        Мои файлы
+    </P>)
+
+    return <AiSelect />;
+
 };
