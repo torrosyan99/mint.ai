@@ -1,0 +1,10 @@
+
+.modal {
+    padding: 16px 24px;
+    width: 100%;
+    max-width: 400px;
+}
+
+.modal.error {
+    max-width: 450px;
+}

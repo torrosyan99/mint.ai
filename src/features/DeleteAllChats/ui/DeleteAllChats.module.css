@@ -1,0 +1,9 @@
+
+.text {
+    margin: 16px 0 24px;
+}
+
+.buttons {
+    display: flex;
+    gap: 12px;
+}

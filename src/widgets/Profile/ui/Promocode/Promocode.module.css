@@ -1,0 +1,23 @@
+.text {
+    max-width: 290px;
+}
+
+.button {
+    color: #fff;
+    padding: 0 16px;
+    margin-left: auto;
+    background-color: var(--color-24);
+}
+
+
+
+
+@media (max-width: 768px) {
+    .box {
+        flex-direction: column;
+        align-items: flex-start;
+    }
+.button {
+    width: 100%;
+}
+}

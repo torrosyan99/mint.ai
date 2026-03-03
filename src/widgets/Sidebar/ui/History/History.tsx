@@ -13,9 +13,16 @@ import TrashBinSvg from '@icons/trash-bin.svg?react';
 import type { SidebarComponentProps } from '../../types';
 import cls from './History.module.css';
 import { HistoryItems } from './HistoryItems.tsx';
+import {Modal} from "@/shared/ui/Modal/Modal.tsx";
+import {useState} from "react";
+import {DeleteAllChats} from "@/features/DeleteAllChats";
 
 export const History = ({ isCompact }: SidebarComponentProps) => {
+    const [isOpen, setIsOpen] = useState(false);
+    const onClose = () => setIsOpen(false);
+    const onOpen = () => setIsOpen(true);
     return (
+      <>
         <AnimatePresence initial={false}>
             {!isCompact && (
                 <motion.div
@@ -33,8 +40,9 @@ export const History = ({ isCompact }: SidebarComponentProps) => {
                             <ButtonIcon
                                 className={cls.deleteButton}
                                 size={'xs'}
+                                onClick={onOpen}
                             >
-                                <TrashBinSvg />
+                                <TrashBinSvg  width={16} height={16}/>
                             </ButtonIcon>
                         </Tooltip>
                     </div>
@@ -47,5 +55,9 @@ export const History = ({ isCompact }: SidebarComponentProps) => {
                 </motion.div>
             )}
         </AnimatePresence>
+          <Modal className={cls.modal} isOpen={isOpen} onClose={onClose}>
+              <DeleteAllChats onClose={onClose} />
+          </Modal>
+      </>
     );
 };

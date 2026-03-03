@@ -1,14 +1,21 @@
 import clsx from 'clsx';
 import { motion } from 'framer-motion';
 import { useEffect, useRef, useState } from 'react';
+import { useLocation } from "react-router-dom";
+
+
 
 import { UserMenu } from '@/features/UserMenu/ui/UserMenu.tsx';
+
+
 
 import { motionCompactOptions } from '@/shared/helpers';
 import { useBlockHeight } from '@/shared/hooks/useBlockHeight.tsx';
 import { useMediaQuery } from '@/shared/hooks/useMediaQuery.tsx';
 import { Line } from '@/shared/ui/Line/Line.tsx';
 import { SimpleBar } from '@/shared/ui/SimpleBar/SimpleBar.tsx';
+
+
 
 import { getIsCompactClass } from '../../helpers/getIsCompactClass.ts';
 import { Header } from '../Header/Header';
@@ -18,6 +25,32 @@ import { NewChatButton } from '../NewChatButton/NewChatButton.tsx';
 import { Pro } from '../Pro/Pro.tsx';
 import { ThemesExit } from '../ThemesExit/ThemesExit.tsx';
 import cls from './Sidebar.module.css';
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 const sidebarVariants = {
     expanded: { width: 'var(--sidebar-width)' },
@@ -37,6 +70,11 @@ export const Sidebar = ({ isOpen, setIsOpen }: SidebarProps) => {
     const isCompactEffective = !isMobile && isCompact;
     const isCompactClass = getIsCompactClass(isCompactEffective, cls);
     const sidebarCloseClick = () => setIsOpen(false);
+    const {pathname} = useLocation();
+
+    useEffect(() => {
+        if(isOpen) setIsOpen(false);
+    }, [pathname]);
 
     useEffect(() => {
         if (isOpen) {
@@ -67,7 +105,7 @@ export const Sidebar = ({ isOpen, setIsOpen }: SidebarProps) => {
                         setIsOpen={setIsOpen}
                     />
                     <NewChatButton isCompact={isCompactEffective} />
-                    <Navigation isCompact={isCompactEffective} />
+                    <Navigation  isCompact={isCompactEffective} />
                     <Line className={clsx(cls.line, isCompactClass)} />
                     <History isCompact={isCompactEffective} />
                 </SimpleBar>

@@ -1,0 +1,27 @@
+.top {
+    display: flex;
+    align-items: center;
+    gap: 16px;
+    margin-top: 16px;
+}
+
+.avatar {
+    width: 80px;
+    height: 80px;
+    border-radius: 50%;
+}
+
+.button {
+    margin-top: 8px;
+    padding: 0 16px;
+}
+
+.nickname {
+    margin: 20px 0 8px;
+}
+
+.buttons {
+    display: flex;
+    margin-top: 24px;
+    gap: 12px;
+}

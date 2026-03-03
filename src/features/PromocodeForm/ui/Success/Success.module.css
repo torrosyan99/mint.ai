@@ -1,0 +1,13 @@
+.success {
+    text-align: center;
+}
+
+.title {
+    color: var(--color-10);
+    margin: 12px 0 8px;
+}
+
+.text {
+    color: var(--color-14);
+    margin-bottom: 24px;
+}

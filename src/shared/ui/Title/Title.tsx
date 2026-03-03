@@ -1,6 +1,7 @@
 import type { PropsWithChildren } from 'react';
 
 import './Title.css';
+import clsx from "clsx";
 
 interface TitleProps {
     h?: 'h1' | 'h2' | 'h3' | 'h4' | 'h5' | 'h6';
@@ -14,5 +15,5 @@ export const Title = ({
 }: PropsWithChildren<TitleProps>) => {
     const Component = h;
 
-    return <Component className={className}>{children}</Component>;
+    return <Component className={clsx(h ,className)}>{children}</Component>;
 };

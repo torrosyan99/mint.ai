@@ -9,8 +9,6 @@
     transition: var(--opacity-transition);
 }
 
-.button.hover {
-}
 
 .button.wFull {
     width: 100%;
@@ -109,6 +107,11 @@
 .button.dark {
     background-color: var(--color-5);
     color: var(--color-3);
+}
+
+.button:disabled {
+    background-color: var(--color-1);
+    color: var(--color-37);
 }
 
 

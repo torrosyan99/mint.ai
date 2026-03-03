@@ -10,8 +10,10 @@ interface Param {
 
 interface SwitcherProps {
     params: [Param, Param];
+    variant?:'primary' | 'secondary';
+    className?: string;
 }
-export const Switcher = ({ params }: SwitcherProps) => {
+export const Switcher = ({ params, variant='primary', className }: SwitcherProps) => {
     const [index, setIndex] = useState(0);
 
     const firstButtonRef = useRef<HTMLButtonElement>(null);
@@ -30,7 +32,7 @@ export const Switcher = ({ params }: SwitcherProps) => {
 
     return (
       <>
-          <div className={cls.switcher}>
+          <div className={clsx(cls.switcher, cls[variant], className)}>
               <button className={clsx(cls.button, {
                   [cls.active]: index === 0
               })} ref={firstButtonRef} onClick={() => setIndex(0)}>

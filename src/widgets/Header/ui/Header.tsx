@@ -20,6 +20,7 @@ export const Header = ({ setSidebarIsOpen, setPanelIsOpen }: HeaderProps) => {
     const sidebarOpenClick = () => setSidebarIsOpen(true);
     const panelOpenClick = () => setPanelIsOpen(true);
     const isMobile = useMediaQuery('(max-width: 1280px)');
+
     return (
         <header className={cls.header}>
             <button className={cls.menuButton} onClick={sidebarOpenClick}>

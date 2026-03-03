@@ -1,0 +1,24 @@
+.title {
+    padding-bottom: 16px;
+    border-radius: 1px solid var(--primary-border-color);
+    color: var(--color-10);
+}
+
+.text {
+    color: #646567;
+    margin: 8px 0 20px;
+}
+
+.error {
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+.errorTitle {
+    color: var(--color-10);
+    margin: 12px 0 8px;
+}
+
+.errorText {
+    color: var(--color-14);
+}

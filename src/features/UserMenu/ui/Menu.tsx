@@ -1,7 +1,9 @@
 import type { ReactNode } from 'react';
+import { Link } from 'react-router-dom';
 
 import cls from '@/features/UserMenu/ui/UserMenu.module.css';
 
+import { PagePaths } from '@/shared/configs/routesConfig/routesConfig.tsx';
 import { Button } from '@/shared/ui/Button/Button.tsx';
 import { Dropdown } from '@/shared/ui/Dropdown/Dropdown.tsx';
 import { Line } from '@/shared/ui/Line/Line.tsx';
@@ -25,7 +27,14 @@ export const Menu = ({ DropdownButton }: MenuProps) => {
             sideOffset={16}
             side={'top'}
         >
-            <Button fontSize={'xs'} hSize={'sm'} variant={'ghost'} wFull>
+            <Button
+                as={Link}
+                to={PagePaths.PROFILE}
+                fontSize={'xs'}
+                hSize={'sm'}
+                variant={'ghost'}
+                wFull
+            >
                 <ProfileSvg />
                 Профиль
             </Button>

@@ -11,6 +11,9 @@ import HomePageWithTarrifs from '@/pages/HomePage/ui/HomePageWithTarrifs.tsx';
 import { SendingPage } from '@/pages/HomePage/ui/SendingPage.tsx';
 import { ImagesPage } from '@/pages/ImagesPage';
 import { ImagesWithImage } from '@/pages/ImagesPage/ui/ImagesWithImage.tsx';
+import { ProfilePage } from '@/pages/ProfilePage';
+import { ProfilePageExpired } from '@/pages/ProfilePage/ui/ProfilePageExpired.tsx';
+import { ProfilePagePro } from '@/pages/ProfilePage/ui/ProfilePagePro.tsx';
 import { ProjectPage } from '@/pages/ProjectPage';
 import { ProjectsPage } from '@/pages/ProjectsPage';
 import { ProjectsWithProject } from '@/pages/ProjectsPage/ui/ProjectsWithProject.tsx';
@@ -26,6 +29,7 @@ export enum PagePaths {
     IMAGES = '/images',
     ALL_AI = '/all-ai',
     ALL_SERVICES = '/all-services',
+    PROFILE = '/profile',
 }
 
 interface Route {
@@ -100,6 +104,18 @@ export const routesConfig: Config = {
         {
             path: PagePaths.ALL_SERVICES,
             element: <AllServicesPage />,
+        },
+        {
+            path: PagePaths.PROFILE,
+            element: <ProfilePage />,
+        },
+        {
+            path: 'profile-page-expired',
+            element: <ProfilePageExpired />,
+        },
+        {
+            path: 'profile-page-pro',
+            element: <ProfilePagePro />,
         },
     ],
     withoutPanel: [

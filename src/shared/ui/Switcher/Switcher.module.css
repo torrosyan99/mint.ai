@@ -1,11 +1,19 @@
 .switcher{
     display:flex;
     padding:4px;
-    background:var(--color-31);
-    border-radius:12px;
     position:relative;
     width:fit-content;
     margin:0 auto;
+}
+
+.switcher.primary{
+    background-color:var(--color-31);
+    border-radius:12px;
+}
+
+.switcher.secondary{
+    border-radius: 16px;
+    background:var(--color-2);
 }
 
 .bg{
@@ -13,18 +21,27 @@
     left:0;
     top:4px;
     bottom:4px;
-    border-radius:12px;
-    background:var(--color-2);
-    box-shadow:0 1px 3px 0 rgba(0,0,0,.07);
     z-index:0;
     transition: transform .2s ease, width .2s ease;
     will-change: transform, width;
 }
 
+.switcher.primary .bg {
+    box-shadow:0 1px 3px 0 rgba(0,0,0,.07);
+    border-radius:12px;
+    background:var(--color-2);
+}
+
+.switcher.secondary .bg {
+    border-radius:15px;
+    background:var(--color-36);
+}
+
+
+
 .button{
     position:relative;
     z-index:1;
-    color: var(--color-22);
     height:40px;
     background:transparent;
     display:flex;
@@ -35,7 +52,20 @@
     gap: 8px;
 }
 
-.button.active {
+.switcher.primary .button{
+    height: 40px;
+    color: var(--color-22);
+}
+
+.switcher.secondary .button{
+    height: 36px;
+    font-size: 14px;
+    color: var(--color-13);
+}
+
+
+.switcher.primary .button.active,
+.switcher.secondary .button.active{
     color:var(--color-5);
 }
 
