@@ -27,6 +27,9 @@ h6 {
 }
 
 @media (max-width: 1280px) {
+    h2 {
+        font-size: 42px;
+    }
     h3 {
         font-size: 30px;
     }
@@ -34,6 +37,9 @@ h6 {
 
 
 @media (max-width: 768px) {
+    h2 {
+        font-size: 32px;
+    }
     h3 {
         font-size: 24px;
     }
