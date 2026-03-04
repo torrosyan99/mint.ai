@@ -14,6 +14,11 @@ interface HeaderProps {
     setIsOpen: (b: boolean) => void;
 }
 
+const headerVariant = {
+    expanded: { minHeight: 62, marginBottom: 16 },
+    compact: { minHeight: 52, marginBottom: 0 },
+};
+
 const logoVariants = {
     visible: { opacity: 1, x: 0 },
     hidden: { opacity: 0, x: -8 },
@@ -30,7 +35,7 @@ export const Header = ({ isCompact, setIsCompact, setIsOpen }: HeaderProps) => {
     const isMobile = useMediaQuery('(max-width: 1280px)');
 
     return (
-        <div className={cls.header}>
+        <motion.div className={cls.header} {...motionCompactOptions(headerVariant, isCompact)}>
             <motion.div {...motionHiddenOptions(logoVariants, isCompact)}>
                 <Logo />
             </motion.div>
@@ -41,6 +46,6 @@ export const Header = ({ isCompact, setIsCompact, setIsOpen }: HeaderProps) => {
             >
                 <BarButtonSvg />
             </motion.button>
-        </div>
+        </motion.div>
     );
 };

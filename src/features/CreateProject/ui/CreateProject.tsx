@@ -62,7 +62,7 @@ export const CreateProject = ({ isOpen, setIsOpen }: CreateProjectProps) => {
                     текущей работы или просто для поддержания порядка.
                 </div>
                 <div className={cls.buttons}>
-                    <Button onClick={onClose} padding={'md'} hSize={'xl'} radius={'lg'} variant={'primary'}>
+                    <Button onClick={onClose} padding={'lg'} hSize={'xl'} radius={'lg'} variant={'primary'}>
                         Отменить
                     </Button>
                     <Button padding={'md'} hSize={'xl'} radius={'lg'} variant={'dark'}>

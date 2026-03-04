@@ -5,12 +5,13 @@ import cls from './PromocodeForm.module.css';
 import {useState} from "react";
 import clsx from "clsx";
 import {Success} from "../Success/Success.tsx";
+import {Payment} from "../Payment/Payment.tsx";
 
 interface PromocodeForm {
     isOpen: boolean;
     onClose: () => void;
 }
-export type FormType = 'FORM' | 'ERROR' | 'SUCCESS';
+export type FormType = 'FORM' | 'ERROR' | 'SUCCESS' | 'PAYMENT';
 
 export const PromocodeForm = ({ isOpen, onClose }: PromocodeForm) => {
     const [type, setType] = useState<FormType>('FORM');
@@ -21,7 +22,8 @@ export const PromocodeForm = ({ isOpen, onClose }: PromocodeForm) => {
 
             {type === 'FORM' && <Form type={type} setType={setType} />}
             {type === 'ERROR' && <Form  type={type} setType={setType} />}
-            {type === 'SUCCESS' && <Success />}
+            {type === 'SUCCESS' && <Success setType={setType}/>}
+            {type === 'PAYMENT' && <Payment />}
         </Modal>
     );
 };

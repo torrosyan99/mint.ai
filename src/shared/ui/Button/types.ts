@@ -14,8 +14,8 @@ type ButtonHeightSize =
     | 'xl'
     | 'x2l';
 type ButtonRadius = 'xs' | 'sm' | 'md' | 'lg' | 'lgCompact' | 'pill';
-type ButtonFontSize = 'xs' | 'sm' | 'md';
-type ButtonPadding = 'none' | 'xs' | 'sm' | 'md';
+type ButtonFontSize = 'none' | 'xs' | 'sm' | 'md' | 'lg' | 'lgCompact' | 'pill';
+type ButtonPadding = 'none' | 'xs' | 'sm' | 'md' | 'lg';
 type ButtonVariants = 'none'| 'primary' | 'secondary' | 'ghost' | 'green' | 'dark' | 'cancel' ;
 type ButtonColor = 'none' | 'cancel' | 'success';
 type ButtonFont = 'regular' | 'medium';

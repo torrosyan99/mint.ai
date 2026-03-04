@@ -7,18 +7,20 @@ import cls from './Box.module.css';
 type BoxProps<T extends ElementType> = {
     as?: T;
     className?: string;
-    variant?: 'primary' | 'secondary';
+    bg?: string;
     padding?: 'xs' | 'sm' | 'md' | 'lg' | 'xl';
     radius?: 'xs' | 'sm' | 'md';
+    shadow?: boolean;
 } & ComponentProps<T>;
 
 export const Box = <T extends ElementType = 'div'>({
     children,
     as,
-    variant = 'primary',
     padding = 'lg',
     className,
+    shadow = false,
     radius = 'xs',
+    bg,
     ...others
 }: PropsWithChildren<BoxProps<T>>) => {
     const Component = as || 'div';
@@ -26,10 +28,10 @@ export const Box = <T extends ElementType = 'div'>({
         <Component
             className={clsx(cls.box, [
                 className,
-                cls[variant],
                 cls[padding],
                 cls[radius + '-radius'],
-            ])}
+            ], {[cls.shadow]: shadow})}
+            style={{ backgroundColor: bg }}
             {...others}
         >
             {children}

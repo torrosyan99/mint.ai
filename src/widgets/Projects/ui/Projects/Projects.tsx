@@ -31,7 +31,7 @@ export const Projects = ({ projects }: ProjectsProps) => {
                     <Button
                         className={cls.button}
                         variant={'primary'}
-                        padding={'md'}
+                        padding={'lg'}
                         hSize={'xl'}
                         onClick={onClick}
                     >

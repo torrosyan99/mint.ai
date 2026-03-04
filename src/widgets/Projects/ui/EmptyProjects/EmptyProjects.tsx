@@ -25,7 +25,7 @@ export const EmptyProjects = ({ onClick }: EmptyProjectsProps) => {
                 className={cls.button}
                 fontSize={'xs'}
                 variant={'none'}
-                padding={'md'}
+                padding={'lg'}
                 hSize={'lgCompact'}
                 onClick={onClick}
             >

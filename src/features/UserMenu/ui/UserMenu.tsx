@@ -41,7 +41,9 @@ export const UserMenu = ({ isCompact }: SidebarComponentProps) => {
             className={cls.button}
             as={motion.button}
             padding={'sm'}
+            bg={'var(--color-2)'}
             radius={'sm'}
+            shadow
             {...motionCompactOptions(buttonVariants, isCompact)}
         >
             <motion.img

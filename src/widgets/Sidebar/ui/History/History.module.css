@@ -5,7 +5,6 @@
 }
 
 .title {
-    color: var(--color-11);
     text-wrap: nowrap;
 }
 
@@ -29,9 +28,4 @@
 
 .history:hover .deleteButton {
     opacity: 1;
-}
-
-.modal {
-    max-width: 420px;
-    padding: 24px;
 }

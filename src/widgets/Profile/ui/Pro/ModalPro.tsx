@@ -1,4 +1,5 @@
 import { Button } from '@/shared/ui/Button/Button.tsx';
+import { Modal } from '@/shared/ui/Modal/Modal.tsx';
 import { Title } from '@/shared/ui/Title/Title.tsx';
 
 import ProAlbumSvg from '@icons/pro-album.svg?react';
@@ -8,32 +9,33 @@ import ProDesktopSvg from '@icons/pro-desktop.svg?react';
 import ProVideoLibrary from '@icons/pro-video-libary.svg?react';
 import TokenSvg from '@icons/token-2.svg?react';
 
-import cls from './TarrifsTokens.module.css';
+import { Box } from '../Box/Box.tsx';
+import cls from './ModalPro.module.css';
 
-export const Pro = () => {
+interface ModalProps {
+    isOpen: boolean;
+    onClose: () => void;
+}
+
+export const ModalPro = ({ isOpen, onClose }: ModalProps) => {
     return (
-        <div className={cls.pro}>
-            <div className={cls.proTop}>
-                <div className={cls.proLeft}>
+        <Modal className={cls.modal} isOpen={isOpen} onClose={onClose}>
+            <Title className={cls.title} h={'h5'}>
+                Подробнее о подписке
+            </Title>
+            <Box className={cls.box}>
+                <div className={cls.tablet}>Активная до 15.02.2026</div>
+                <div className={cls.flex}>
                     <Title h={'h5'}>Pro</Title>
                     <div className={cls.line} />
-                    <div className={cls.proCount}>
+                    <div className={cls.count}>
                         <TokenSvg />
                         400
                     </div>
                     <div className={cls.line} />
                     <Title h={'h5'}>199 ₽/ед</Title>
                 </div>
-                <Button
-                    className={cls.activateButton}
-                    radius={'lg'}
-                    padding={'none'}
-                    fontSize={'xs'}
-                    hSize={'sm'}
-                >
-                    Активировать
-                </Button>
-            </div>
+            </Box>
             <ul className={cls.list}>
                 <li className={cls.item}>
                     <ProDesktopSvg />6 генераций презентаций
@@ -58,6 +60,29 @@ export const Pro = () => {
                     5-mini
                 </li>
             </ul>
-        </div>
+            <div className={cls.buttons}>
+                <Button
+                    variant={'none'}
+                    hSize={'xl'}
+                    radius={'lg'}
+                    padding={'lg'}
+                    className={cls.button}
+                    center
+                >
+                    Изменить способ оплаты
+                </Button>
+                <Button
+                    className={cls.cancelButton}
+                    variant={'primary'}
+                    hSize={'xl'}
+                    radius={'lg'}
+                    padding={'lg'}
+                    onClick={onClose}
+                    center
+                >
+                    Отменить подписку
+                </Button>
+            </div>
+        </Modal>
     );
 };

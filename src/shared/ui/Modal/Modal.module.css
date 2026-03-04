@@ -22,6 +22,18 @@
     position: relative;
 }
 
+.modal.xs {
+    padding: 12px;
+}
+
+.modal.sm {
+    padding: 16px;
+}
+
+.modal.md {
+    padding: 24px;
+}
+
 .close {
     width: 24px;
     height: 24px;

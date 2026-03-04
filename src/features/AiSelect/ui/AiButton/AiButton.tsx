@@ -104,7 +104,7 @@ export const AiButton = ({
                         hSize={'none'}
                         variant={'primary'}
                         onClick={onClose}
-                        padding={'md'}
+                        padding={'lg'}
                         radius={'sm'}
                         fontSize={'xs'}
                     >
@@ -113,7 +113,7 @@ export const AiButton = ({
                     <Button
                         className={cls.modalButton}
                         onClick={onClose}
-                        padding={'md'}
+                        padding={'lg'}
                         hSize={'none'}
                         radius={'sm'}
                         fontSize={'xs'}

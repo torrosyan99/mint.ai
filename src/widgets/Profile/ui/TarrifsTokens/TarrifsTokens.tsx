@@ -1,3 +1,7 @@
+import { useState } from 'react';
+
+import { ModalPro } from '@/widgets/Profile/ui/Pro/ModalPro.tsx';
+
 import { Button } from '@/shared/ui/Button/Button.tsx';
 import { P } from '@/shared/ui/P/P.tsx';
 import { Title } from '@/shared/ui/Title/Title.tsx';
@@ -5,11 +9,14 @@ import { Title } from '@/shared/ui/Title/Title.tsx';
 import TokenSvg from '@icons/token-2.svg?react';
 
 import { Box } from '../Box/Box.tsx';
+import { Pro } from '../Pro/Pro.tsx';
 import type { ProfileProps } from '../Profile/Profile.tsx';
-import { Pro } from './Pro.tsx';
 import cls from './TarrifsTokens.module.css';
 
-export const TarrifsTokens = ({ tarrif,expired }: ProfileProps) => {
+export const TarrifsTokens = ({ tarrif, expired }: ProfileProps) => {
+    const [isProOpen, setIsProOpen] = useState(false);
+    const onClosePro = () => setIsProOpen(false);
+    const onOpenPro = () => setIsProOpen(true);
     return (
         <div>
             <P className={cls.title} font={'medium'} size={'lg'} color={'dark'}>
@@ -29,10 +36,9 @@ export const TarrifsTokens = ({ tarrif,expired }: ProfileProps) => {
                     {!expired && tarrif === 'Pro' && (
                         <div className={cls.period}>Активная до 15.02.2026</div>
                     )}
-                  {expired && <div className={cls.expired}>
-                    Закончится  15.02.2026
-                  </div>}
-
+                    {expired && (
+                        <div className={cls.expired}>Закончится 15.02.2026</div>
+                    )}
 
                     {!expired && tarrif === 'Free' && (
                         <Button
@@ -46,6 +52,21 @@ export const TarrifsTokens = ({ tarrif,expired }: ProfileProps) => {
                         </Button>
                     )}
                     {!expired && tarrif === 'Pro' && (
+                        <>
+                            <ModalPro isOpen={isProOpen} onClose={onClosePro} />
+                            <Button
+                                className={cls.button}
+                                padding={'none'}
+                                variant={'green'}
+                                fontSize={'xs'}
+                                center
+                                onClick={onOpenPro}
+                            >
+                                Подробнее о тарифе
+                            </Button>
+                        </>
+                    )}
+                    {expired && (
                         <Button
                             className={cls.button}
                             padding={'none'}
@@ -53,20 +74,9 @@ export const TarrifsTokens = ({ tarrif,expired }: ProfileProps) => {
                             fontSize={'xs'}
                             center
                         >
-                            Подробнее о тарифе
+                            Восстановить подписку
                         </Button>
                     )}
-                  {expired && (
-                    <Button
-                      className={cls.button}
-                      padding={'none'}
-                      variant={'green'}
-                      fontSize={'xs'}
-                      center
-                    >
-                      Восстановить подписку
-                    </Button>
-                  )}
                 </div>
 
                 {tarrif === 'Pro' && (

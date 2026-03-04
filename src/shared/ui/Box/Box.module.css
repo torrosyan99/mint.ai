@@ -2,15 +2,8 @@
     overflow: hidden;
 }
 
-/*Variants */
-
-.box.primary {
+.box.shadow {
     box-shadow: 0 5px 20px 0 rgba(41, 50, 43, 0.10);
-    background-color: var(--color-2);
-}
-
-.box.secondary {
-
 }
 
 

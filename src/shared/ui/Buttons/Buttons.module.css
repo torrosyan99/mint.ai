@@ -1,0 +1,18 @@
+.buttons {
+    width: 100%;
+    display: flex;
+    align-items: center;
+    gap: 12px;
+}
+
+.buttons.center {
+    justify-content: center;
+}
+
+.buttons.start {
+    justify-content: start;
+}
+
+.buttons.end {
+    justify-content: end;
+}

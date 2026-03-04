@@ -1,9 +1,7 @@
 .header {
-    min-height: 64px;
     display: flex;
     align-items: center;
     position: relative;
-    margin-bottom: 16px;
 }
 
 .button {

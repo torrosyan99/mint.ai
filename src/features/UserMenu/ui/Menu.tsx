@@ -18,6 +18,13 @@ interface MenuProps {
     DropdownButton: ReactNode;
 }
 
+const buttonProps = {
+    fontSize: 'xs',
+    hSize: 'sm',
+    variant: 'ghost',
+    wFull: true,
+} as const;
+
 export const Menu = ({ DropdownButton }: MenuProps) => {
     return (
         <Dropdown
@@ -27,43 +34,24 @@ export const Menu = ({ DropdownButton }: MenuProps) => {
             sideOffset={16}
             side={'top'}
         >
-            <Button
-                as={Link}
-                to={PagePaths.PROFILE}
-                fontSize={'xs'}
-                hSize={'sm'}
-                variant={'ghost'}
-                wFull
-            >
+            <Button as={Link} to={PagePaths.PROFILE} {...buttonProps}>
                 <ProfileSvg />
                 Профиль
             </Button>
-            <Button
-                fontSize={'xs'}
-                hSize={'sm'}
-                variant={'ghost'}
-                textColor={'success'}
-                wFull
-            >
+            <Button {...buttonProps} textColor={'success'}>
                 <TokenSvg />
                 Купить токены
             </Button>
-            <Button fontSize={'xs'} hSize={'sm'} variant={'ghost'} wFull>
+            <Button {...buttonProps}>
                 <SupportSvg />
                 Помощь и FAQ
             </Button>
-            <Button fontSize={'xs'} hSize={'sm'} variant={'ghost'} wFull>
+            <Button {...buttonProps}>
                 <RocketSvg />
                 Что нового?
             </Button>
             <Line />
-            <Button
-                fontSize={'xs'}
-                hSize={'sm'}
-                variant={'ghost'}
-                textColor={'cancel'}
-                wFull
-            >
+            <Button {...buttonProps} textColor={'cancel'}>
                 <ExitSvg />
                 Выход
             </Button>

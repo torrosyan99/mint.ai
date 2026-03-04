@@ -4,6 +4,7 @@ import { type PropsWithChildren, useEffect } from 'react';
 import { createPortal } from 'react-dom';
 
 import { fadeOpacityVariants } from '@/shared/configs/motionConfig/motionConfig.ts';
+import { ButtonIcon } from '@/shared/ui/ButtonIcon/ButtonIcon.tsx';
 
 import CloseSvg from '@icons/close.svg?react';
 
@@ -16,6 +17,9 @@ type ModalProps = {
     className?: string;
     bodyOverflow?: boolean;
     closeClass?: string;
+    padding?: 'none' | 'xs' | 'sm' | 'md';
+    maxWidth?: number;
+    closeCircleFull?: boolean;
 };
 
 const modalVariants = {
@@ -29,7 +33,10 @@ export function Modal({
     title,
     children,
     className,
+    padding = 'md',
     closeClass,
+    maxWidth,
+    closeCircleFull,
     bodyOverflow = true,
 }: PropsWithChildren<ModalProps>) {
     useEffect(() => {
@@ -73,6 +80,7 @@ export function Modal({
                         initial="hidden"
                         animate="visible"
                         exit="hidden"
+                        style={{ maxWidth: maxWidth || '100%' }}
                         variants={modalVariants}
                         transition={{
                             type: 'spring',
@@ -80,14 +88,17 @@ export function Modal({
                             damping: 38,
                         }}
                         onMouseDown={(e) => e.stopPropagation()}
-                        className={clsx(cls.modal, className)}
+                        className={clsx(cls.modal, className, cls[padding])}
                     >
-                        <button
+                        <ButtonIcon
+                            size={closeCircleFull ? 'xs' : 'sm-compact'}
+                            radius={closeCircleFull ? 'full' : 'sm'}
+                            bg={'--color-2'}
                             className={clsx(cls.close, closeClass)}
                             onClick={onClose}
                         >
                             <CloseSvg width={16} height={16} />
-                        </button>
+                        </ButtonIcon>
                         {children}
                     </motion.div>
                 </motion.div>

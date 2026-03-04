@@ -140,6 +140,10 @@
 }
 
 .button.md-padding {
+    padding: 0 16px;
+}
+
+.button.lg-padding {
     padding: 0 24px;
 }
 

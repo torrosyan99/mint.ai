@@ -1,5 +1,7 @@
 import clsx from 'clsx';
 
+import type { AppDispatch } from '@/app/store';
+
 import { Themes, selectTheme, themeActions } from '@/entities/theme';
 
 import { useAppDispatch } from '@/shared/hooks/useAppDispatch.tsx';
@@ -15,6 +17,22 @@ import { getIsCompactClass } from '../../helpers/getIsCompactClass.ts';
 import type { SidebarComponentProps } from '../../types';
 import cls from './ThemesExit.module.css';
 
+const buttonProps = {
+    hSize: 'sm',
+    variant: 'ghost',
+} as const;
+
+const options = (list: Themes, theme: Themes, dispatch: AppDispatch) => {
+    return {
+        className: clsx(cls.button, {
+            [cls.active]: list === theme,
+        }),
+        onClick: () => {
+            dispatch(themeActions.setTheme(theme));
+        },
+    };
+};
+
 export const ThemesExit = ({ isCompact }: SidebarComponentProps) => {
     const theme = useAppSelector(selectTheme);
     const dispatch = useAppDispatch();
@@ -22,36 +40,29 @@ export const ThemesExit = ({ isCompact }: SidebarComponentProps) => {
     return (
         <div className={clsx(cls.wrapper, getIsCompactClass(isCompact, cls))}>
             <div className={cls.themes}>
-                <Button className={cls.button} hSize={'sm'} variant={'ghost'}>
+                <Button
+                    {...options(theme, Themes.DevicesLight, dispatch)}
+                    {...buttonProps}
+                >
                     <MonitorSvg />
                 </Button>
 
                 <Button
-                    className={clsx(cls.button, {
-                        [cls.active]: theme === Themes.Light,
-                    })}
-                    variant={'ghost'}
-                    hSize={'sm'}
-                    onClick={() =>
-                        dispatch(themeActions.setTheme(Themes.Light))
-                    }
+                    {...options(theme, Themes.Light, dispatch)}
+                    {...buttonProps}
                 >
                     <SunSvg />
                 </Button>
                 <Button
-                    className={clsx(cls.button, {
-                        [cls.active]: theme === Themes.Dark,
-                    })}
-                    variant={'ghost'}
-                    hSize={'sm'}
-                    onClick={() => dispatch(themeActions.setTheme(Themes.Dark))}
+                    {...options(theme, Themes.Dark, dispatch)}
+                    {...buttonProps}
                 >
                     <MoonSvg />
                 </Button>
             </div>
-            <button className={clsx(cls.button, cls.exit)}>
+            <Button {...buttonProps} className={clsx(cls.button, cls.exit)}>
                 <ExitSvg />
-            </button>
+            </Button>
         </div>
     );
 };

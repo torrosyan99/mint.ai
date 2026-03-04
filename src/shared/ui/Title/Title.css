@@ -6,6 +6,7 @@
     font-size: 48px;
     font-weight: 600;
 }
+
 .h3 {
     font-size: 40px;
     font-weight: 600;
@@ -31,8 +32,13 @@
     h2 {
         font-size: 42px;
     }
+
     h3 {
         font-size: 30px;
+    }
+
+    h5 {
+        font-size: 22px;
     }
 }
 
@@ -41,7 +47,12 @@
     h2 {
         font-size: 32px;
     }
+
     h3 {
         font-size: 24px;
+    }
+
+    h5 {
+        font-size: 20px;
     }
 }

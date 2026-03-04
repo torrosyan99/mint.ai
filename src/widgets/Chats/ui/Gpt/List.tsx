@@ -9,77 +9,50 @@ import LogoSvg from '@icons/logo.svg?react';
 
 import cls from './Gpt.module.css';
 
+const buttonProps = {
+    variant: 'ghost',
+    padding: 'none',
+    hSize: 'none',
+    font: 'regular',
+    fontSize: 'xs',
+    className: cls.item,
+} as const;
+
 export const List = () => {
     return (
         <div className={cls.listWrapper}>
             <div className={cls.list}>
-                <Button
-                    fontSize={'xs'}
-                    className={cls.item}
-                    variant={'ghost'}
-                    padding={'none'}
-                    hSize={'none'}
-                >
+                <Button {...buttonProps}>
                     <div className={cls.box}>
                         <ChatGptSvg />
                     </div>
                     ChatGPT 5.2
                 </Button>
-                <Button
-                    fontSize={'xs'}
-                    className={cls.item}
-                    variant={'ghost'}
-                    padding={'none'}
-                    hSize={'none'}
-                >
+                <Button {...buttonProps}>
                     <div className={cls.box}>
                         <GeminiSvg />
                     </div>
                     Gemini 3 Pro
                 </Button>
-                <Button
-                    fontSize={'xs'}
-                    className={cls.item}
-                    variant={'ghost'}
-                    padding={'none'}
-                    hSize={'none'}
-                >
+                <Button {...buttonProps}>
                     <div className={cls.box}>
                         <GrokSvg />
                     </div>
                     Grok-4
                 </Button>
-                <Button
-                    fontSize={'xs'}
-                    className={cls.item}
-                    variant={'ghost'}
-                    padding={'none'}
-                    hSize={'none'}
-                >
+                <Button {...buttonProps}>
                     <div className={cls.box}>
                         <ClaudeSvg />
                     </div>
                     Claude
                 </Button>
-                <Button
-                    fontSize={'xs'}
-                    className={cls.item}
-                    variant={'ghost'}
-                    padding={'none'}
-                    hSize={'none'}
-                >
+                <Button {...buttonProps}>
                     <div className={cls.box}>
                         <GalleryRoundSvg />
                     </div>
                     Генератор изображений
                 </Button>
-                <Button
-                    fontSize={'xs'}
-                    className={cls.item}
-                    variant={'ghost'}
-                    padding={'none'}
-                    hSize={'none'}
-                >
+                <Button {...buttonProps}>
                     <div className={cls.box}>
                         <LogoSvg />
                     </div>

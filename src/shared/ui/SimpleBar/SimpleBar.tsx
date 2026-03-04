@@ -15,6 +15,7 @@ export const SimpleBar = ({children, style, className}: PropsWithChildren<Simple
          className={className}
          autoHide={false}
          style={style}
+
     >
       {children}
     </Bar>

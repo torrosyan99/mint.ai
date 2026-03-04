@@ -40,6 +40,7 @@ export const NavigationButton = ({
             to={to}
             fontSize={'xs'}
             hSize={'lgCompact'}
+            font={'regular'}
             variant={variant}
         >
             <motion.span

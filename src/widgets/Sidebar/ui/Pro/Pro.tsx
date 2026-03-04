@@ -40,13 +40,23 @@ export const Pro = ({ isCompact }: SidebarComponentProps) => {
     return (
         <Box
             as={motion.div}
+            bg={'var(--color-2)'}
+            shadow
             className={clsx(cls.box, isCompactClass)}
             {...motionCompactOptions(boxVariants, isCompact)}
         >
-            <MotionP className={cls.title} {...motionTextVariants} font={'medium'}>
+            <MotionP
+                {...motionTextVariants}
+                font={'medium'}
+                color={'var(--color-5)'}
+            >
                 PRO тариф
             </MotionP>
-            <MotionP className={cls.text} {...motionTextVariants} size={'xs'} color={'secondary'}>
+            <MotionP
+                {...motionTextVariants}
+                size={'xs'}
+                color={'var(--secondary-text-color)'}
+            >
                 Попробуй Premium тариф. <br /> Первый месяц бесплатно.
             </MotionP>
             <Button

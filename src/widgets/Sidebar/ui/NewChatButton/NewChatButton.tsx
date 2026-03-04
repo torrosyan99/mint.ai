@@ -1,8 +1,7 @@
 import { motion } from 'framer-motion';
 
-import { motionCompactOptions, motionHiddenOptions } from '@/shared/helpers';
-
 import { fadeOpacityVariants } from '@/shared/configs/motionConfig/motionConfig.ts';
+import { motionCompactOptions, motionHiddenOptions } from '@/shared/helpers';
 import { Button } from '@/shared/ui/Button/Button.tsx';
 
 import AddSvg from '@icons/add.svg?react';
@@ -18,7 +17,13 @@ const iconVariants = {
 
 export const NewChatButton = ({ isCompact }: SidebarComponentProps) => {
     return (
-        <Button className={cls.button} variant={'primary'} fontSize={'xs'} hSize={'sm'} wFull>
+        <Button
+            className={cls.button}
+            variant={'primary'}
+            fontSize={'xs'}
+            hSize={'sm'}
+            wFull
+        >
             <motion.span
                 className={cls.icon}
                 {...motionCompactOptions(iconVariants, isCompact)}

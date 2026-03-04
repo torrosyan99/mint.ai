@@ -54,7 +54,7 @@ export const Project = ({ description, title, date }: ProjectType) => {
                         variant={'primary'}
                         hSize={'sm'}
                         radius={'sm'}
-                        padding={'md'}
+                        padding={'lg'}
                         fontSize={'xs'}
                         onClick={onClose}
                     >
@@ -64,7 +64,7 @@ export const Project = ({ description, title, date }: ProjectType) => {
                         variant={'dark'}
                         hSize={'sm'}
                         radius={'sm'}
-                        padding={'md'}
+                        padding={'lg'}
                         fontSize={'xs'}
                     >
                         Удалить

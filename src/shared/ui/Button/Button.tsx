@@ -8,7 +8,7 @@ export const Button = <T extends ElementType = 'button'>({
     hSize = 'md',
     radius = 'xs',
     variant = 'none',
-    fontSize = 'sm',
+    fontSize = 'none',
     padding = 'xs',
     font = 'medium',
     textColor='none',

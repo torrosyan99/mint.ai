@@ -1,0 +1,32 @@
+.payment {
+    text-align: center;
+}
+
+.title {
+    color: var(--color-10);
+    margin: 12px 0 8px;
+}
+
+.text {
+    color: var(--color-14);
+    margin-bottom: 12px;
+}
+
+.sum, .date {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    height: 48px;
+}
+
+.sum {
+    border-bottom: 1px solid var(--primary-border-color);
+}
+
+.value {
+    color: var(--color-14);
+}
+
+.button {
+    margin-top: 16px;
+}

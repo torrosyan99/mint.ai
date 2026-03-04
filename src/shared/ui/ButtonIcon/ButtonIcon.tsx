@@ -8,8 +8,18 @@ import {
 import cls from './ButtonIcon.module.css';
 
 interface Props {
-    size?: 'none' | 'xs' | 'sm' | 'sm-compact' | 'md' | 'lg' | 'lgCompact' | 'xl' | 'x2l';
+    size?:
+        | 'none'
+        | 'xs'
+        | 'sm'
+        | 'sm-compact'
+        | 'md'
+        | 'lg'
+        | 'lgCompact'
+        | 'xl'
+        | 'x2l';
     radius?: 'xs' | 'sm' | 'md' | 'full';
+    bg?: string;
     variant?: 'none' | 'ghost';
 }
 
@@ -27,6 +37,7 @@ export const ButtonIcon = <T extends ElementType = 'button'>({
     size = 'md',
     radius = 'xs',
     variant = 'none',
+    bg,
     className,
     children,
     as,
@@ -42,7 +53,7 @@ export const ButtonIcon = <T extends ElementType = 'button'>({
 
     const Component = as || 'button';
     return (
-        <Component className={buttonClass} {...others}>
+        <Component className={buttonClass} style={{ background: bg }} {...others}>
             {children}
         </Component>
     );

@@ -48,7 +48,7 @@ export const EditUser = ({onClose}:EditUserProps) => {
                         hSize={'xl'}
                         radius={'lg'}
                         variant={'primary'}
-                        padding={'md'}
+                        padding={'lg'}
                         type={'button'}
                         onClick={onClose}
                     >
@@ -58,7 +58,7 @@ export const EditUser = ({onClose}:EditUserProps) => {
                         hSize={'xl'}
                         radius={'lg'}
                         variant={'green'}
-                        padding={'md'}
+                        padding={'lg'}
                     >
                         Подтвердить
                     </Button>

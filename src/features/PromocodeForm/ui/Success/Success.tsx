@@ -3,7 +3,12 @@ import SuccessSvg from "@icons/success.svg?react"
 import {Title} from "@/shared/ui/Title/Title.tsx";
 import {P} from "@/shared/ui/P/P.tsx";
 import {Button} from "@/shared/ui/Button/Button.tsx";
-export const Success = () => {
+import type {FormType} from "../PromocodeForm/PromocodeForm.tsx";
+
+interface SuccessProps {
+  setType: (type:FormType) => void;
+}
+export const Success = ({setType}:SuccessProps) => {
   return (
     <div  className={cls.success}>
       <SuccessSvg />
@@ -12,6 +17,7 @@ export const Success = () => {
         Скидка 10% на следующие тарифы: Start, Pro, Ultima
       </P>
       <Button
+        onClick={()=>setType("PAYMENT")}
         variant={'green'}
         hSize={'xl'}
         wFull
