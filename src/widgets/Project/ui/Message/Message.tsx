@@ -45,10 +45,10 @@ export const Message = ({ title, date }: MessageProps) => {
             ) : (
                 <div className={cls.hoverBlock}>
                     <button className={cls.messagesButton}>
-                        <MessageSvg />
+                        <MessageSvg width={20} height={20} />
                     </button>
                     <button className={cls.deleteButton}>
-                        <TrashBinSvg />
+                        <TrashBinSvg width={20} height={20}/>
                     </button>
                 </div>
             )}
