@@ -11,15 +11,16 @@ export type Tarrif = 'Free' | 'Pro' | 'Ultima'
 export interface ProfileProps {
     tarrif: Tarrif;
     expired?: boolean;
+    empty?: boolean;
 }
 
-export const Profile = ({tarrif, expired = false}: ProfileProps) => {
+export const Profile = ({tarrif, expired = false, empty=false}: ProfileProps) => {
     return (
         <Container className={cls.profile}>
             <Header />
             <TrafficTokens  tarrif={tarrif}  expired={expired} />
             <Promocode />
-            <Transaction />
+            <Transaction  empty={empty}  />
         </Container>
     );
 };
