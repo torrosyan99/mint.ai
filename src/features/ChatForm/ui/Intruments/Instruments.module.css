@@ -4,6 +4,7 @@
     align-items: flex-end;
 
 }
+
 .left,
 .right {
     display: flex;
@@ -17,24 +18,24 @@
 }
 
 .add,
-.instrumentsButton{
+.instrumentsButton {
     --instruments-icon-color: var(--color-14);
     color: var(--color-11);
-    --add-icon-color:  var(--color-14);
+    --add-icon-color: var(--color-14);
 }
+
 .add:hover,
-.instrumentsButton:hover{
+.instrumentsButton:hover {
     color: var(--color-17);
     background-color: var(--color-1);
-    --add-icon-color:  var(--color-18);
+    --add-icon-color: var(--color-18);
     --instruments-icon-color: var(--color-18);
 }
 
 .add.hasText,
-.instrumentsButton.hasText{
-  background-color: var(--color-6);
+.instrumentsButton.hasText {
+    background-color: var(--color-6);
 }
-
 
 
 .microphone {
@@ -48,6 +49,7 @@
     --microphone-icon-color: var(--color-18);
     background-color: var(--color-1);
 }
+
 .sendButton {
     background-color: var(--color-5);
     --up-icon-color: var(--color-3);
@@ -64,10 +66,10 @@
 }
 
 @media (max-width: 768px) {
-.sendButton {
-    width: 40px;
-    height: 40px;
-}
+    .sendButton {
+        width: 40px;
+        height: 40px;
+    }
 
     .add.mb {
         margin-bottom: 12px;

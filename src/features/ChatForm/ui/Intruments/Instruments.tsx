@@ -22,35 +22,42 @@ export const Instruments = ({ text }: InstrumentsProps) => {
     const [showCreateImage, setShowCreateImage] = useState(false);
     const addClick = () => fileRef.current?.click();
     const isMobile = useMediaQuery('(max-width: 1280px)');
+
+    const AddButton = (
+        <ButtonIcon
+            className={clsx(cls.add, {
+                [cls.mb]: showCreateImage,
+                [cls.hasText]: text.length > 0,
+            })}
+            size={'sm'}
+            radius={'full'}
+            type={'button'}
+            onClick={addClick}
+        >
+            <AddSvg />
+        </ButtonIcon>
+    );
     return (
         <div className={cls.instruments}>
             <input type={'file'} ref={fileRef} hidden />
             <div className={cls.left}>
-                <Tooltip
-                    message={
-                        !isMobile && (
+                {isMobile ? (
+                    AddButton
+                ) : (
+                    <Tooltip
+                        message={
                             <>
                                 Можно прикрепить к сообщению <br /> не более 2
                                 файлов
                             </>
-                        )
-                    }
-                    offsetSize={9}
-                    placement={'bottom'}
-                >
-                    <ButtonIcon
-                        className={clsx(cls.add, {
-                            [cls.mb]: showCreateImage,
-                            [cls.hasText]: text.length > 0,
-                        })}
-                        size={'sm'}
-                        radius={'full'}
-                        type={'button'}
-                        onClick={addClick}
+                        }
+                        offsetSize={9}
+                        placement={'bottom'}
                     >
-                        <AddSvg />
-                    </ButtonIcon>
-                </Tooltip>
+                        {AddButton}
+                    </Tooltip>
+                )}
+
                 {showCreateImage ? (
                     <CreateImage setShowCreateImage={setShowCreateImage} />
                 ) : (
