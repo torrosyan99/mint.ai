@@ -101,8 +101,6 @@
     margin-left: 4px;
 }
 
-
-
 .count {
     margin-left: auto;
     display: flex;
@@ -127,5 +125,11 @@
 
     .list {
         grid-template-columns: 1fr;
+    }
+}
+
+@media (max-width: 480px) {
+    .cardText {
+        max-width: 174px;
     }
 }
