@@ -22,11 +22,15 @@ svg {
     flex-shrink: 0;
 }
 
-.body-overflow {
+.body-overflow-modal {
     height: 100dvh;
     overflow: hidden;
 }
 
+.body-overflow-mobile-sheet {
+    height: 100dvh;
+    overflow: hidden;
+}
 .app {
     height: 100dvh;
     display: flex;

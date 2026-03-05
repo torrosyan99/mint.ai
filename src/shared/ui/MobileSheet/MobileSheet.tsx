@@ -39,9 +39,9 @@ export const MobileSheet = ({
     useEffect(() => {
         if (isOpen) setTimeout(() => setShow(true), 100);
 
-        document.body.classList.add('body-overflow');
+        document.body.classList.add('body-overflow-mobile-sheet');
         return () => {
-            document.body.classList.remove('body-overflow');
+            document.body.classList.remove('body-overflow-mobile-sheet');
         };
     }, []);
 

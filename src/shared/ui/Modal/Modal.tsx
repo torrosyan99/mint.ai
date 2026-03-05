@@ -60,11 +60,12 @@ export function Modal({
             if (e.key === 'Escape') onClose();
         };
 
-        document.body.classList.add('body-overflow');
+
+        document.body.classList.add('body-overflow-modal');
 
         window.addEventListener('keydown', onKeyDown);
         return () => {
-            document.body.classList.remove('body-overflow');
+            document.body.classList.remove('body-overflow-modal');
             window.removeEventListener('keydown', onKeyDown);
         };
     }, [isOpen, onClose]);
