@@ -1,0 +1,86 @@
+.count {
+    height: 48px;
+    padding: 0 16px;
+    border-radius: 12px;
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    font-size: 24px;
+    font-weight: 600;
+    background-color: var(--color-2);
+    color: var(--color-10);
+}
+
+.freeButton {
+    margin-left: auto;
+    color: #fff;
+}
+
+.withSubsBox {
+    display: block;
+}
+
+.wrapper {
+    width: 100%;
+    display: flex;
+    align-items: center;
+    gap: 16px;
+    justify-content: space-between;
+}
+
+.wrapper .count {
+    background: 0;
+    padding: 0;
+    font-size: 20px;
+    height: auto;
+}
+
+.info {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+}
+
+.period {
+    padding: 4px 12px;
+    color: #fff;
+    border-radius: 12px;
+    font-weight: 500;
+    background-color: #0E7D42;
+    font-size: 12px;
+}
+
+.period.expired {
+    background-color: #EC7F19;
+}
+
+.line {
+    height: 1px;
+    background-color: var(--primary-border-color);
+    margin: 16px 0;
+}
+
+.countButton {
+    background-color: var(--color-42);
+    color: var(--color-3);
+}
+
+@media (max-width: 768px) {
+    .freeBox {
+        flex-wrap: wrap;
+    }
+
+    .freeButton {
+        width: 100%;
+    }
+
+    .wrapper {
+        flex-wrap: wrap;
+    }
+
+    .button,
+    .button {
+        width: 100%;
+    }
+
+}

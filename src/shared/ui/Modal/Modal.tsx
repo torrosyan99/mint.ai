@@ -89,7 +89,7 @@ export function Modal({
                         initial="hidden"
                         animate="visible"
                         exit="hidden"
-                        style={{ maxWidth: maxWidth || '100%' }}
+                        style={{ maxWidth: maxWidth  }}
                         variants={modalVariants}
                         transition={{
                             type: 'spring',

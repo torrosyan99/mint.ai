@@ -4,12 +4,8 @@
 
 .button {
     color: #fff;
-    padding: 0 16px;
     margin-left: auto;
-    background-color: var(--color-24);
 }
-
-
 
 
 @media (max-width: 768px) {
@@ -17,7 +13,8 @@
         flex-direction: column;
         align-items: flex-start;
     }
-.button {
-    width: 100%;
-}
+
+    .button {
+        width: 100%;
+    }
 }

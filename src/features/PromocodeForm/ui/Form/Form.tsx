@@ -3,7 +3,6 @@ import { type SyntheticEvent, useState } from 'react';
 import { Button } from '@/shared/ui/Button/Button.tsx';
 import { Input } from '@/shared/ui/Input/Input.tsx';
 import { P } from '@/shared/ui/P/P.tsx';
-import { Title } from '@/shared/ui/Title/Title.tsx';
 
 import type { FormType } from '../PromocodeForm/PromocodeForm.tsx';
 import { Error } from './Error.tsx';
@@ -23,13 +22,10 @@ export const Form = ({ setType, type }: FormProps) => {
     };
     return (
         <form onSubmit={onSubmit}>
-            {type === 'FORM' && (
-                <Title h={'h6'} className={cls.title}>
-                    Введите промокод
-                </Title>
-            )}
+
             {type === 'ERROR' && <Error />}
             <Input
+              className={cls.input}
                 placeholder={'Промокод'}
                 onChange={(e) => setValue(e.target.value)}
                 value={value}

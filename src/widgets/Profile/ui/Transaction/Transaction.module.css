@@ -36,7 +36,12 @@
     gap: 8px;
     font-weight: 500;
 }
-
+.noTransaction {
+    height: 128px;
+    display: grid;
+    place-items: center;
+    color: #88898C;
+}
 @media (max-width: 768px) {
     .box {
         padding: 16px;

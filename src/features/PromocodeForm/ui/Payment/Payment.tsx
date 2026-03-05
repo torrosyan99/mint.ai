@@ -37,7 +37,7 @@ export const Payment = () => {
             wFull
             center
           >
-            Оформить подписку
+            Перейти к нейросетям
           </Button>
         </div>
     );
