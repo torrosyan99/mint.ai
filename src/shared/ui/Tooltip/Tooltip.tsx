@@ -1,9 +1,9 @@
 import {
     autoUpdate,
     flip,
-    offset,
+    offset, safePolygon,
     shift,
-    useFloating,
+    useFloating, useHover, useInteractions,
 } from '@floating-ui/react';
 import clsx from 'clsx';
 import { type PropsWithChildren, type ReactNode, useState } from 'react';
@@ -35,63 +35,58 @@ interface TooltipProps {
     className?: string;
     shiftX?: number;
 }
-
 export function Tooltip({
-    children,
-    message,
-    offsetSize = 12,
-    placement = 'bottom',
-    className,
-    shiftX,
-    size = 'sm',
-}: PropsWithChildren<TooltipProps>) {
-    if (!message) return null;
+                            children,
+                            message,
+                            offsetSize = 12,
+                            placement = 'bottom',
+                            className,
+                            shiftX,
+                            size = 'sm',
+                        }: PropsWithChildren<TooltipProps>) {
     const [open, setOpen] = useState(false);
 
-    const {
-        refs,
-        floatingStyles,
-        placement: finalPlacement,
-    } = useFloating({
+    const { refs, floatingStyles, context, placement: finalPlacement } = useFloating({
         open,
+        onOpenChange: setOpen,
         placement,
         middleware: [
-            offset(() => ({
-                mainAxis: offsetSize,
-                crossAxis: shiftX,
-            })),
+            offset({ mainAxis: offsetSize, crossAxis: shiftX }),
             flip(),
-            shift(),
+            shift({ padding: 6 }),
         ],
         whileElementsMounted: autoUpdate,
     });
 
-    return (
-        <>
-            <div
-                ref={refs.setReference}
-                onMouseEnter={() => setOpen(true)}
-                onMouseLeave={() => setOpen(false)}
-            >
-                {children}
-            </div>
+    const hover = useHover(context, {
+        move: false,
+        handleClose: safePolygon({ buffer: 2 }), // ключ к отсутствию морганий
+        // delay: { open: 80, close: 80 }, // если хочешь
+    });
 
-            {open &&
-                createPortal(
-                    <div
-                        className={clsx(cls.message, cls[size], className)}
-                        ref={refs.setFloating}
-                        style={{
-                            ...floatingStyles,
-                        }}
-                    >
-                        {message}
-                        <TooltipSvg
-                            className={clsx(cls.svg, cls[finalPlacement])}
-                        />
-                    </div>,
-                    document.body,
-                )}
-        </>
+    const { getReferenceProps, getFloatingProps } = useInteractions([hover]);
+
+    if (!message) return null;
+
+    return (
+      <>
+          <div ref={refs.setReference} {...getReferenceProps()}>
+              {children}
+          </div>
+
+          {open &&
+            createPortal(
+              <div
+                ref={refs.setFloating}
+                className={clsx(cls.message, cls[size], className)}
+                style={floatingStyles}
+                {...getFloatingProps()}
+              >
+                  {message}
+                  <TooltipSvg className={clsx(cls.svg, cls[finalPlacement])} />
+              </div>,
+              document.body,
+            )}
+      </>
     );
 }
