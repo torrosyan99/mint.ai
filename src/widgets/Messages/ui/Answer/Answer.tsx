@@ -33,7 +33,7 @@ export const Answer = ({
                         <LikeSvg />
                     </button>
                 </Tooltip>
-                <Tooltip message={'Не нравиться'} size={'xs'} offsetSize={10}>
+                <Tooltip message={'Нравится'} size={'xs'} offsetSize={10}>
                     <button>
                         <DisLikeSvg />
                     </button>

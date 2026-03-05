@@ -60,8 +60,8 @@ export function Tooltip({
 
     const hover = useHover(context, {
         move: false,
-        handleClose: safePolygon({ buffer: 2 }), // ключ к отсутствию морганий
-        // delay: { open: 80, close: 80 }, // если хочешь
+        handleClose: safePolygon({ buffer: 2 }),
+
     });
 
     const { getReferenceProps, getFloatingProps } = useInteractions([hover]);
