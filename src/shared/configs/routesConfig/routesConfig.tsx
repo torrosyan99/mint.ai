@@ -3,7 +3,9 @@ import type { ReactNode } from 'react';
 import { AllAiPage } from '@/pages/AllAiPage';
 import AllServicesPage from '@/pages/AllServicesPage/ui/AllServicesPage.tsx';
 import { AudioPage } from '@/pages/AudioPage';
+import { AduioWithAudio } from '@/pages/AudioPage/ui/AduioWithAudio.tsx';
 import { DocumentsPage } from '@/pages/DocumentsPage';
+import { DocumentsWithDocument } from '@/pages/DocumentsPage/ui/DocumentsWithDocument.tsx';
 import { ChatIconsPage, HomePage } from '@/pages/HomePage';
 import { ErrorsImagePage } from '@/pages/HomePage/ui/ErrorsImagePage.tsx';
 import { FilesPage } from '@/pages/HomePage/ui/FilesPage.tsx';
@@ -18,6 +20,7 @@ import { ProjectPage } from '@/pages/ProjectPage';
 import { ProjectsPage } from '@/pages/ProjectsPage';
 import { ProjectsWithProject } from '@/pages/ProjectsPage/ui/ProjectsWithProject.tsx';
 import { VideosPage } from '@/pages/VideosPage';
+import { VideosWithVideo } from '@/pages/VideosPage/ui/VideosWithVideo.tsx';
 
 export enum PagePaths {
     HOME = '/',
@@ -116,6 +119,18 @@ export const routesConfig: Config = {
         {
             path: 'profile-page-pro',
             element: <ProfilePagePro />,
+        },
+        {
+            path: 'videos-with-video',
+            element: <VideosWithVideo />,
+        },
+        {
+            path: 'audio-with-audio',
+            element: <AduioWithAudio />,
+        },
+        {
+            path: 'documents-with-document',
+            element: <DocumentsWithDocument />,
         },
     ],
     withoutPanel: [

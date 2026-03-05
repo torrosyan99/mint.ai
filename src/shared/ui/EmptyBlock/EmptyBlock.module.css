@@ -9,10 +9,6 @@
         --add-color: #fff;
 }
 
-.title {
-        color: var(--color-10);
-}
-
 .text {
         max-width: 441px;
         margin-top: 8px;

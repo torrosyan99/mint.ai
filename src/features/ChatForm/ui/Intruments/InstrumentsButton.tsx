@@ -1,3 +1,5 @@
+import clsx from 'clsx';
+
 import { Button } from '@/shared/ui/Button/Button';
 import { Dropdown } from '@/shared/ui/Dropdown/Dropdown.tsx';
 
@@ -10,10 +12,20 @@ import PaletteSvg from '@icons/pallete.svg?react';
 import cls from './Instruments.module.css';
 
 interface InstrumentsButtonProps {
-    setShowCreateImage:(b: boolean) => void;
+    setShowCreateImage: (b: boolean) => void;
+    text: string;
 }
 
-export const InstrumentsButton = ({setShowCreateImage}:InstrumentsButtonProps) => {
+const buttonProps = {
+    font: 'regular',
+    fontSize: 'xs',
+    variant: 'ghost',
+    wFull: true,
+} as const;
+export const InstrumentsButton = ({
+    setShowCreateImage,
+    text,
+}: InstrumentsButtonProps) => {
     const onShowCreateImage = () => setShowCreateImage(true);
     return (
         <Dropdown
@@ -27,25 +39,30 @@ export const InstrumentsButton = ({setShowCreateImage}:InstrumentsButtonProps) =
                     fontSize={'xs'}
                     hSize={'sm'}
                     type={'button'}
+                    font={'regular'}
+                    padding={'sm'}
+                    className={clsx(cls.instrumentsButton, {
+                        [cls.hasText]: text.length > 0,
+                    })}
                 >
                     <InstrumentsSvg />
                     Инструменты
                 </Button>
             }
         >
-            <Button fontSize={'xs'} variant={'ghost'} wFull>
+            <Button {...buttonProps}>
                 <GlobalSvg width={20} height={20} />
                 Поиск в сети
             </Button>
-            <Button fontSize={'xs'} variant={'ghost'} wFull onClick={onShowCreateImage}>
+            <Button {...buttonProps} onClick={onShowCreateImage}>
                 <PaletteSvg />
                 Создать изображение
             </Button>
-            <Button fontSize={'xs'} variant={'ghost'} wFull>
+            <Button {...buttonProps}>
                 <AtomSvg />
                 Глубокое исследование{' '}
             </Button>
-            <Button  fontSize={'xs'} variant={'ghost'} wFull>
+            <Button {...buttonProps}>
                 <LightBulbSvg />
                 Думай дольше{' '}
             </Button>

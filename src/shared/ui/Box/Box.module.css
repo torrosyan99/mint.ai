@@ -25,7 +25,11 @@
     padding: 16px;
 }
 
-.box .xl {
+.box.xl {
+    padding: 12px 24px;
+}
+
+.box.x2l {
     padding: 24px;
 }
 

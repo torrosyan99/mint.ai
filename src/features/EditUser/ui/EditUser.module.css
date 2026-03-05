@@ -13,15 +13,9 @@
 
 .button {
     margin-top: 8px;
-    padding: 0 16px;
 }
 
 .nickname {
     margin: 20px 0 8px;
 }
 
-.buttons {
-    display: flex;
-    margin-top: 24px;
-    gap: 12px;
-}

@@ -8,6 +8,7 @@
     --header-bg-color: #232425;
     --green-bg: #0E7D42;
     --opacity-bg: rgba(20, 20, 21, 0.10);
+    --preview-bg: rgba(20, 20, 21, 0.10);
 
 
     --color-1: #3E3E3F;
@@ -48,6 +49,11 @@
     --color-35: #fff;
     --color-36: #646567;
     --color-37: #A1A4A9;
+    --color-38: #EDEEF0;
+    --color-39: #DBDFE2;
+    --color-40: #DBDFE2;
+    --color-41: #646567;
+    --color-42: #fff;
 
     /*  Colors  */
     --primary-text-color: #DBDFE2;

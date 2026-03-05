@@ -20,8 +20,8 @@ export const Images = ({ images }: ImagesProps) => {
         <Block>
             {images.length > 0 ? (
                 <div className={cls.images}>
-                    {images.map((image) => (
-                        <Image {...image} />
+                    {images.map((image, i) => (
+                        <Image {...image} key={i} />
                     ))}
                 </div>
             ) : (

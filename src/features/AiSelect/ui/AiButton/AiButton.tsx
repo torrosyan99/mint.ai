@@ -1,7 +1,13 @@
-import { type HTMLAttributes, type ReactNode, type MouseEvent, useState } from 'react';
+import {
+    type HTMLAttributes,
+    type MouseEvent,
+    type ReactNode,
+    useState,
+} from 'react';
 
 import { Button } from '@/shared/ui/Button/Button.tsx';
 import { ButtonIcon } from '@/shared/ui/ButtonIcon/ButtonIcon.tsx';
+import { Buttons } from '@/shared/ui/Buttons/Buttons.tsx';
 import { Modal } from '@/shared/ui/Modal/Modal.tsx';
 import { P } from '@/shared/ui/P/P.tsx';
 import { Tooltip } from '@/shared/ui/Tooltip/Tooltip.tsx';
@@ -19,6 +25,13 @@ interface AiButtonProps extends HTMLAttributes<HTMLDivElement> {
     text: string;
     count: number;
 }
+
+const modalButtonProps = {
+    padding: 'lg',
+    hSize: 'sm',
+    radius: 'sm',
+    fontSize: 'xs',
+} as const;
 
 export const AiButton = ({
     icon,
@@ -48,10 +61,18 @@ export const AiButton = ({
             >
                 {icon}
                 <div className={cls.info}>
-                    <P className={cls.title} font={'medium'}>
+                    <P
+                        className={cls.title}
+                        color={'var(--color-5)'}
+                        font={'medium'}
+                    >
                         {title}
                     </P>
-                    <P className={cls.text} size={'xs'}>
+                    <P
+                        className={cls.text}
+                        color={'var(--color-13)'}
+                        size={'xs'}
+                    >
                         {text}
                     </P>
                 </div>
@@ -66,7 +87,7 @@ export const AiButton = ({
                 >
                     <ButtonIcon
                         className={cls.pinButton}
-                        size={'sm-compact'}
+                        size={'smCompact'}
                         radius={'sm'}
                         onClick={onOpen}
                     >
@@ -86,42 +107,31 @@ export const AiButton = ({
                     </ButtonIcon>
                 </Tooltip>
             </Button>
-            <Modal
-                className={cls.modal}
-                isOpen={isOpen}
-                onClose={onClose}
-                bodyOverflow={false}
-            >
+            <Modal maxWidth={343} isOpen={isOpen} onClose={onClose} closeCircleFull>
                 <P className={cls.modalTitle} size={'lg'} font={'medium'}>
                     {unpinned
                         ? 'Удалить из избранного?'
                         : 'Добавить в избранное?'}
                 </P>
 
-                <div className={cls.modalFlex}>
+                <Buttons marginTop={16}>
                     <Button
                         className={cls.modalButton}
-                        hSize={'none'}
                         variant={'primary'}
                         onClick={onClose}
-                        padding={'lg'}
-                        radius={'sm'}
-                        fontSize={'xs'}
+                        {...modalButtonProps}
                     >
                         Отмена
                     </Button>
                     <Button
                         className={cls.modalButton}
                         onClick={onClose}
-                        padding={'lg'}
-                        hSize={'none'}
-                        radius={'sm'}
-                        fontSize={'xs'}
                         variant={unpinned ? 'cancel' : 'dark'}
+                        {...modalButtonProps}
                     >
                         {unpinned ? 'Удалить' : 'Добавить'}
                     </Button>
-                </div>
+                </Buttons>
             </Modal>
         </>
     );

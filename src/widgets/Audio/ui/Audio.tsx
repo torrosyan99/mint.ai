@@ -1,20 +1,44 @@
-import { Block } from '@/widgets/Block/Block.tsx';
+import { Box } from '@/shared/ui/Box/Box.tsx';
+import { P } from '@/shared/ui/P/P.tsx';
 
-import { EmptyBlock } from '@/shared/ui/EmptyBlock/EmptyBlock.tsx';
+import DownloadSvg from '@icons/download-3.svg?react';
+import PenSvg from '@icons/pen-3.svg?react';
+import PlaySvg from '@icons/play-2.svg?react';
+import TrashBinSvg from '@icons/trash-bin-4.svg?react';
 
-import SoundwaveSvg from '@icons/soundwave.svg?react';
+import cls from './Audio.module.css';
+import type { Audio as AudioType } from './AudioSection.tsx';
 
-
-export const Audio = () => {
-  return (
-    <Block>
-      <EmptyBlock
-        title={'Пока ничего нет'}
-        text={
-          'Здесь будут храниться ваши сгенерированные картинки, видео и другие файлы.'
-        }
-        icon={<SoundwaveSvg />}
-      />
-    </Block>
-  );
+export const Audio = ({ title }: AudioType) => {
+    return (
+        <Box
+            bg={'var(--color-23)'}
+            className={cls.box}
+            padding={'lg'}
+            radius={'sm'}
+        >
+            <Box className={cls.play} bg={'var(--color-24)'} padding={'none'}>
+                <PlaySvg />
+            </Box>
+            <div className={cls.info}>
+                <div className={cls.title}>
+                    <P font={'medium'}>{title}</P>
+                    <button className={cls.button}>
+                        <PenSvg />
+                    </button>
+                </div>
+                <P size={'sm'} color={'var(--color-7)'}>
+                    .MP3 - 4.39 MB
+                </P>
+            </div>
+            <div className={cls.instruments}>
+                <button className={cls.button}>
+                    <TrashBinSvg />
+                </button>
+                <button className={cls.button}>
+                    <DownloadSvg />
+                </button>
+            </div>
+        </Box>
+    );
 };

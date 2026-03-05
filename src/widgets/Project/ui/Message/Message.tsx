@@ -3,9 +3,9 @@ import { useState } from 'react';
 import chatgpt from '@/shared/assets/images/chatgpt-2.png';
 import { P } from '@/shared/ui/P/P.tsx';
 
-import CloseSvg from '@icons/close.svg?react';
-import MessageSvg from '@icons/messages.svg?react';
-import TrashBinSvg from '@icons/trash-bin.svg?react';
+import CloseSvg from '@icons/close-2.svg?react';
+import MessageSvg from '@icons/messages-2.svg?react';
+import TrashBinSvg from '@icons/trash-bin-2.svg?react';
 import UnreadSvg from '@icons/unread-2.svg?react';
 
 import cls from './Message.module.css';

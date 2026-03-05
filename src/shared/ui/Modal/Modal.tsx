@@ -5,15 +5,19 @@ import { createPortal } from 'react-dom';
 
 import { fadeOpacityVariants } from '@/shared/configs/motionConfig/motionConfig.ts';
 import { ButtonIcon } from '@/shared/ui/ButtonIcon/ButtonIcon.tsx';
+import { Title } from '@/shared/ui/Title/Title.tsx';
 
 import CloseSvg from '@icons/close.svg?react';
 
 import cls from './Modal.module.css';
 
-type ModalProps = {
+interface ModalProps  {
     isOpen: boolean;
     onClose: () => void;
-    title?: string;
+    title?: {
+        value: string;
+        h: 'h1' | 'h2' | 'h3' | 'h4' | 'h5' | 'h6';
+    };
     className?: string;
     bodyOverflow?: boolean;
     closeClass?: string;
@@ -37,7 +41,6 @@ export function Modal({
     closeClass,
     maxWidth,
     closeCircleFull,
-    bodyOverflow = true,
 }: PropsWithChildren<ModalProps>) {
     useEffect(() => {
         if (!isOpen) return;
@@ -51,14 +54,20 @@ export function Modal({
     }, [isOpen, onClose]);
 
     useEffect(() => {
-        if (!isOpen || !bodyOverflow) return;
+        if (!isOpen) return;
+
+        const onKeyDown = (e: KeyboardEvent) => {
+            if (e.key === 'Escape') onClose();
+        };
+
         document.body.classList.add('body-overflow');
+
+        window.addEventListener('keydown', onKeyDown);
         return () => {
             document.body.classList.remove('body-overflow');
+            window.removeEventListener('keydown', onKeyDown);
         };
-    }, [isOpen]);
-
-    if (typeof document === 'undefined') return null;
+    }, [isOpen, onClose]);
 
     return createPortal(
         <AnimatePresence>
@@ -76,7 +85,6 @@ export function Modal({
                     <motion.div
                         role="dialog"
                         aria-modal="true"
-                        aria-label={title ?? 'Modal'}
                         initial="hidden"
                         animate="visible"
                         exit="hidden"
@@ -88,10 +96,14 @@ export function Modal({
                             damping: 38,
                         }}
                         onMouseDown={(e) => e.stopPropagation()}
-                        className={clsx(cls.modal, className, cls[padding])}
+                        className={clsx(
+                            cls.modal,
+                            className,
+                            title ? [cls.hasTitle] : [cls[padding]],
+                        )}
                     >
                         <ButtonIcon
-                            size={closeCircleFull ? 'xs' : 'sm-compact'}
+                            size={closeCircleFull ? 'xs' : 'smCompact'}
                             radius={closeCircleFull ? 'full' : 'sm'}
                             bg={'--color-2'}
                             className={clsx(cls.close, closeClass)}
@@ -99,6 +111,11 @@ export function Modal({
                         >
                             <CloseSvg width={16} height={16} />
                         </ButtonIcon>
+                        {title && (
+                            <Title className={cls.title} h={title.h}>
+                                {title.value}
+                            </Title>
+                        )}
                         {children}
                     </motion.div>
                 </motion.div>

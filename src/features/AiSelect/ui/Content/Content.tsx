@@ -87,14 +87,6 @@ export const Content = ({ setIsOpen }: ContentProps) => {
                         }
                         count={300}
                     />{' '}
-                    <AiButton
-                        icon={<PresentationGenerateSvg />}
-                        title={'Генератор презентаций PRO'}
-                        text={
-                            'Мощная нейросеть для генерации стильных презентаций за 5 минут'
-                        }
-                        count={300}
-                    />{' '}
                 </Wrapper>
             </SimpleBar>
             <div className={cls.bottom}>

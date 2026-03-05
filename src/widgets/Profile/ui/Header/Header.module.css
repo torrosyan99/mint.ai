@@ -14,11 +14,7 @@
     padding: 0 16px;
 }
 
-.modal {
-    padding: 24px;
-    width: 100%;
-    max-width: 374px;
-}
+
 @media (max-width: 768px) {
     .button {
         width: 40px;
@@ -26,9 +22,6 @@
         justify-content: center;
     }
 
-    .title {
-        font-size: 18px;
-    }
     .button span {
         display: none;
     }

@@ -15,7 +15,7 @@ export const Sorting = () => {
 
     return (
         <div className={cls.sorting}>
-            <P className={cls.title} size={'sm'}>
+            <P color={'#646567'} size={'sm'}>
                 Сортировка
             </P>
             <Dropdown

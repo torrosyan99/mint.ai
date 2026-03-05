@@ -33,7 +33,7 @@ export const AllAi = () => {
             <Wrapper title={'Популярные'}>
                 <AiCard
                     icon={
-                        <div className={cls.iconBoxSecond}>
+                        <div className={cls.aiBox}>
                             <ChatGptSvg />
                         </div>
                     }
@@ -43,7 +43,7 @@ export const AllAi = () => {
                 />{' '}
                 <AiCard
                     icon={
-                        <div className={cls.iconBoxSecond}>
+                        <div className={cls.aiBox}>
                             <GeminiSvg />
                         </div>
                     }
@@ -71,7 +71,7 @@ export const AllAi = () => {
           <Wrapper title={'Творчество'}>
             <AiCard
               icon={
-                <div className={cls.iconBoxSecond}>
+                <div className={cls.aiBox}>
                   <ChatGptSvg />
                 </div>
               }
@@ -81,7 +81,7 @@ export const AllAi = () => {
             />{' '}
             <AiCard
               icon={
-                <div className={cls.iconBoxSecond}>
+                <div className={cls.aiBox}>
                   <GeminiSvg />
                 </div>
               }

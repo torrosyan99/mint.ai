@@ -12,7 +12,7 @@ interface Props {
         | 'none'
         | 'xs'
         | 'sm'
-        | 'sm-compact'
+        | 'smCompact'
         | 'md'
         | 'lg'
         | 'lgCompact'

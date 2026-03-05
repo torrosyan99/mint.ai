@@ -1,1 +1,1 @@
-export {AudioPage} from './ui/AudioPage'
+export { AudioPageLazy as AudioPage } from './ui/AudioPage.lazy.tsx';

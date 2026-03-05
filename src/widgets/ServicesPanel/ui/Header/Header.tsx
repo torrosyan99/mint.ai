@@ -22,12 +22,18 @@ const searchVariants = {
     visible: { opacity: 1, x: 0 },
     hidden: { opacity: 0, x: 8 },
 };
+
+const headerVariants = {
+    expanded: { height: 68 },
+    compact: { height: 52 },
+}
+
 export const Header = ({ isCompact, setIsCompact }: HeaderProps) => {
     const onClick = () => setIsCompact(!isCompact);
     const isMobile = useMediaQuery('(max-width: 1280px)');
 
     return (
-        <div className={cls.header}>
+        <motion.div className={cls.header} {...motionCompactOptions(headerVariants, isCompact)}>
             {!isMobile && (
                 <motion.button
                     onClick={onClick}
@@ -40,6 +46,6 @@ export const Header = ({ isCompact, setIsCompact }: HeaderProps) => {
             <motion.div className={cls.searchWrapper} {...motionHiddenOptions(searchVariants, isCompact)}>
                 <Search className={cls.search} placeholder={'Поиск'} padding={'sm'} />
             </motion.div>
-        </div>
+        </motion.div>
     );
 };

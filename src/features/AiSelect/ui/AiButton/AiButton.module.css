@@ -8,12 +8,10 @@
 .title {
     position: absolute;
     left: 52px;
-    color: var(--color-5);
     text-wrap: nowrap;
 }
 
 .text {
-    color: var(--color-13);
     margin-top: 21px;
 }
 
@@ -27,23 +25,14 @@
     min-width: 50px;
 }
 
-.modal {
-    min-width: 343px;
-    padding: 24px;
-}
+
 
 .modalTitle {
     color: var(--color-10);
 }
-.modalFlex {
-    margin-top: 16px;
-    display: flex;
-    gap: 12px;
-}
 
-.modalButton {
-    height: 36px;
-}
+
+
 
 .pinButton {
     background-color: var(--color-2);

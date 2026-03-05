@@ -17,7 +17,6 @@ type ButtonRadius = 'xs' | 'sm' | 'md' | 'lg' | 'lgCompact' | 'pill';
 type ButtonFontSize = 'none' | 'xs' | 'sm' | 'md' | 'lg' | 'lgCompact' | 'pill';
 type ButtonPadding = 'none' | 'xs' | 'sm' | 'md' | 'lg';
 type ButtonVariants = 'none'| 'primary' | 'secondary' | 'ghost' | 'green' | 'dark' | 'cancel' ;
-type ButtonColor = 'none' | 'cancel' | 'success';
 type ButtonFont = 'regular' | 'medium';
 
 type Props = {
@@ -26,12 +25,13 @@ type Props = {
     variant?: ButtonVariants;
     fontSize?: ButtonFontSize;
     padding?: ButtonPadding;
-    textColor?: ButtonColor;
     font?: ButtonFont;
     className?: string;
     center?: boolean;
     wFull?: boolean;
     hoverNone?: boolean;
+    color?: string;
+    bg?:string;
 };
 
 type PolymorphicProps<T extends ElementType, P> = PropsWithChildren<

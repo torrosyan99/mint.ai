@@ -20,7 +20,7 @@ export const PagesTitle = () => {
     const isFilesPage = [PagePaths.VIDEOS, PagePaths.IMAGES, PagePaths.DOCUMENTS, PagePaths.AUDIO].some((path) =>
       matchPath({ path, end: true }, pathname))
 
-    if(isFilesPage) return ( <P font={'medium'} size={'lg'}>
+    if(isFilesPage) return ( <P font={'medium'} size={'lg'} color={'var(--color-10)'}>
         Мои файлы
     </P>)
 

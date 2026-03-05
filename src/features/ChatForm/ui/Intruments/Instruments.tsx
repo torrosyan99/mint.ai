@@ -39,10 +39,12 @@ export const Instruments = ({ text }: InstrumentsProps) => {
                     placement={'bottom'}
                 >
                     <ButtonIcon
-                        className={clsx(cls.add, { [cls.mb]: showCreateImage })}
+                        className={clsx(cls.add, {
+                            [cls.mb]: showCreateImage,
+                            [cls.hasText]: text.length > 0,
+                        })}
                         size={'sm'}
                         radius={'full'}
-                        variant={'ghost'}
                         type={'button'}
                         onClick={addClick}
                     >
@@ -53,16 +55,16 @@ export const Instruments = ({ text }: InstrumentsProps) => {
                     <CreateImage setShowCreateImage={setShowCreateImage} />
                 ) : (
                     <InstrumentsButton
+                        text={text}
                         setShowCreateImage={setShowCreateImage}
                     />
                 )}
             </div>
             <div className={cls.right}>
                 <ButtonIcon
-                    className={cls.microphone}
+                    className={clsx(cls.microphone, {})}
                     size={'lg'}
                     radius={'full'}
-                    variant={'ghost'}
                     type={'button'}
                 >
                     <MicrophoneSvg />
@@ -70,9 +72,8 @@ export const Instruments = ({ text }: InstrumentsProps) => {
                 <ButtonIcon
                     className={clsx(cls.sendButton)}
                     as={'button'}
-                    size={'none'}
+                    size={'lg'}
                     radius={'full'}
-                    variant={'none'}
                     disabled={text.length === 0}
                 >
                     <ArrowUpSvg />

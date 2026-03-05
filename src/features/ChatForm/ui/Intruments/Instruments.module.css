@@ -13,19 +13,42 @@
 .left {
     flex-wrap: wrap;
     margin-right: auto;
+    gap: 12px;
 }
-.add {
-    margin-right: 10px;
+
+.add,
+.instrumentsButton{
+    --instruments-icon-color: var(--color-14);
+    color: var(--color-11);
+    --add-icon-color:  var(--color-14);
 }
+.add:hover,
+.instrumentsButton:hover{
+    color: var(--color-17);
+    background-color: var(--color-1);
+    --add-icon-color:  var(--color-18);
+    --instruments-icon-color: var(--color-18);
+}
+
+.add.hasText,
+.instrumentsButton.hasText{
+  background-color: var(--color-6);
+}
+
+
 
 .microphone {
     margin-left: auto;
     margin-right: 12px;
+    --microphone-icon-color: var(--color-26);
 }
 
+
+.microphone:hover {
+    --microphone-icon-color: var(--color-18);
+    background-color: var(--color-1);
+}
 .sendButton {
-    width: 42px;
-    height: 42px;
     background-color: var(--color-5);
     --up-icon-color: var(--color-3);
 }

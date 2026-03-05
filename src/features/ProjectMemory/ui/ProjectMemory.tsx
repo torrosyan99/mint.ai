@@ -5,20 +5,21 @@ import InfoCircleSvg from '@icons/info-circle.svg?react';
 
 import cls from './ProjectMemory.module.css';
 import {AddButton} from "./AddButton.tsx";
+import {Box} from "@/shared/ui/Box/Box.tsx";
 
 export const ProjectMemory = () => {
     return (
-        <div className={cls.projectMemory}>
-            <P className={cls.title} color={'dark'} size={'lg'} font={'medium'}>
+        <Box className={cls.projectMemory} radius={'md'} padding={'x2l'} bg={'var(--color-3)'}>
+            <P className={cls.title} color={'var(--color-10)'} size={'lg'} font={'medium'}>
                 Память проекта
             </P>
-            <P className={cls.text} color={'secondary'} size={'sm'}>
+            <P className={cls.text} color={'var(--color-13)'} size={'sm'}>
                 Документы и заметки - ваша персональная база знаний. Загружайте
                 файлы, чтобы нейросеть могла мгновенно использовать их контекст
                 в любом чате проекта.
             </P>
             <div className={cls.info}>
-                <P font={'medium'}>Инструкция для проекта</P>
+                <P  color={'var(--color-39)'} font={'medium'}>Инструкция для проекта</P>
                 <InfoCircleSvg />
             </div>
             <Textarea
@@ -31,6 +32,6 @@ export const ProjectMemory = () => {
             <AddButton value={'Файлы'}  />
 
           </div>
-        </div>
+        </Box>
     );
 };

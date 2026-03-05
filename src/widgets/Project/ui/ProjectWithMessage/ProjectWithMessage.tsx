@@ -7,7 +7,7 @@ import { ButtonIcon } from '@/shared/ui/ButtonIcon/ButtonIcon.tsx';
 import { P } from '@/shared/ui/P/P.tsx';
 
 import ArrowRightSvg from '@icons/arrow-rigth-2.svg?react';
-import CountSvg from '@icons/count-icon.svg?react';
+import CountSvg from '@icons/count-icon-2.svg?react';
 import MenuDotsSvg from '@icons/menu-dots.svg?react';
 
 import cls from './ProjectWithMessage.module.css';
@@ -18,12 +18,10 @@ export const ProjectWithMessage = () => {
             <div className={cls.top}>
                 <div className={cls.paths}>
                     <Link className={cls.link} to={PagePaths.PROJECTS}>
-                        <P font={'medium'} size={'lg'}>
-                            Проекты
-                        </P>
+                        Проекты
                     </Link>
                     <ArrowRightSvg />
-                    <P font={'medium'}color={'dark'}  size={'lg'}>
+                    <P font={'medium'} color={'var(--color-10)'} size={'lg'}>
                         Проект тестовый
                     </P>
                 </div>
@@ -36,7 +34,7 @@ export const ProjectWithMessage = () => {
                 </ButtonIcon>
             </div>
             <ChatForm />
-            <P className={cls.text} color={'secondary'} size={'sm'}>
+            <P className={cls.text} color={'var(--color-13)'} size={'sm'}>
                 Стоимость 400 <CountSvg /> за одно сообщение. Нейросеть может
                 ошибаться
             </P>

@@ -1,5 +1,4 @@
 .projects {
-
     gap: 24px;
 }
 
@@ -34,18 +33,10 @@
     gap: 24px;
 }
 
-.itemTitle {
-    color: var(--color-29);
-    margin-bottom: 8px;
-}
 
 .description {
     color: var(--color-13);
-    margin-bottom: 24px;
-}
-
-.date {
-    color: var(--color-26);
+    margin: 8px 0 24px;
 }
 
 .project:hover {
@@ -62,26 +53,28 @@
     flex-direction: column;
     justify-content: space-between;
     align-items: center;
-    --trash-bin-color:#646567 ;
+    --trash-bin-color: #646567;
     --messages-color: #646567;
+}
+
+.messagesButton:hover {
+    --messages-color: var(--color-14);
+}
+
+.deleteButton:hover {
+    --trash-bin-color: var(--color-14);
 }
 
 .project:hover .buttons {
     display: flex;
 }
 
-.modal {
-    padding: 24px;
-}
-
 .modalText {
     margin: 12px 0 24px;
 }
 
-.modalButtons {
-    display: flex;
-    gap: 12px;
-}
+
+
 @media (max-width: 1280px) {
 
     .top {

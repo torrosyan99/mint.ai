@@ -44,7 +44,7 @@ export const AllServices = () => {
             <Wrapper title={'Популярные'}>
                 <ServicesCard
                     icon={
-                        <div className={cls.iconBox}>
+                        <div className={cls.box}>
                             <GlobalSvg />
                         </div>
                     }
@@ -56,7 +56,7 @@ export const AllServices = () => {
                 />
                 <ServicesCard
                     icon={
-                        <div className={cls.iconBox}>
+                        <div className={cls.box}>
                             <CropSvg />
                         </div>
                     }
@@ -67,7 +67,7 @@ export const AllServices = () => {
                 />
                 <ServicesCard
                     icon={
-                        <div className={cls.iconBox}>
+                        <div className={cls.box}>
                             <PieChartSvg />
                         </div>
                     }
@@ -78,7 +78,7 @@ export const AllServices = () => {
                 />
                 <ServicesCard
                     icon={
-                        <div className={cls.iconBox}>
+                        <div className={cls.box}>
                             <VideoSvg />
                         </div>
                     }
@@ -91,7 +91,7 @@ export const AllServices = () => {
             <Wrapper title={'Творчество'}>
                 <ServicesCard
                     icon={
-                        <div className={cls.iconBox}>
+                        <div className={cls.box}>
                             <PenSvg />
                         </div>
                     }
@@ -102,7 +102,7 @@ export const AllServices = () => {
                 />
                 <ServicesCard
                     icon={
-                        <div className={cls.iconBoxSecond}>
+                        <div className={cls.box}>
                             <GlobalSvg />
                         </div>
                     }
@@ -113,7 +113,7 @@ export const AllServices = () => {
                 />
                 <ServicesCard
                     icon={
-                        <div className={cls.iconBox}>
+                        <div className={cls.box}>
                             <GlobalSvg />
                         </div>
                     }
@@ -124,7 +124,7 @@ export const AllServices = () => {
                 />
                 <ServicesCard
                     icon={
-                        <div className={cls.iconBox}>
+                        <div className={cls.box}>
                             <PieChartSvg />
                         </div>
                     }

@@ -16,43 +16,42 @@ interface DropdownProps {
     list?: boolean;
     portal?: boolean;
 }
-
 export const Dropdown = ({
-    children,
-    Button,
-    sideOffset,
-    align,
-    side,
-    isOpen,
-    setIsOpen,
-    dropdownClass,
-    list,
-    portal = true,
-}: PropsWithChildren<DropdownProps>) => {
+                             children,
+                             Button,
+                             sideOffset,
+                             align,
+                             side,
+                             isOpen,
+                             setIsOpen,
+                             dropdownClass,
+                             list,
+                             portal = true,
+                         }: PropsWithChildren<DropdownProps>) => {
     const items = Children.toArray(children);
-    const content = (
-        <DropdownMenu.Content
-            className={clsx(cls.dropdown, dropdownClass)}
-            side={side}
-            align={align}
-            sideOffset={sideOffset}
-        >
-            {list
-                ? items.map((item, index) => (
-                      <DropdownMenu.Item key={index}>{item}</DropdownMenu.Item>
-                  ))
-                : children}
-        </DropdownMenu.Content>
-    );
-    return (
-        <DropdownMenu.Root open={isOpen} onOpenChange={setIsOpen}>
-            <DropdownMenu.Trigger asChild>{Button}</DropdownMenu.Trigger>
+    const isControlled = typeof isOpen === 'boolean' && typeof setIsOpen === 'function';
 
-            {portal ? (
-                <DropdownMenu.Portal>{content}</DropdownMenu.Portal>
-            ) : (
-                content
-            )}
-        </DropdownMenu.Root>
+    const content = (
+      <DropdownMenu.Content
+        className={clsx(cls.dropdown, dropdownClass)}
+        side={side}
+        align={align}
+        sideOffset={sideOffset}
+      >
+          {list
+            ? items.map((item, i) => (
+              <DropdownMenu.Item asChild key={(item as any)?.key ?? i}>
+                  {item as any}
+              </DropdownMenu.Item>
+            ))
+            : children}
+      </DropdownMenu.Content>
+    );
+
+    return (
+      <DropdownMenu.Root {...(isControlled ? { open: isOpen, onOpenChange: setIsOpen } : {})}>
+          <DropdownMenu.Trigger asChild>{Button}</DropdownMenu.Trigger>
+          {portal ? <DropdownMenu.Portal>{content}</DropdownMenu.Portal> : content}
+      </DropdownMenu.Root>
     );
 };

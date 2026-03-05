@@ -10,10 +10,10 @@ export const NoSubscription = () => {
         <div className={cls.noSubscription}>
             <DangerCircleSvg />
             <div className={cls.noSubscriptionMessage}>
-                <P className={cls.errorTitle} font={'semibold'}>
+                <P color={'var(--color-5)'} font={'semibold'}>
                     Для продолжения необходима подписка
                 </P>
-                <P className={cls.errorText} size={'sm'}>
+                <P color={'var(--color-13)'} size={'sm'}>
                     Выбранная модель или помощник доступны только по подписке
                 </P>
             </div>

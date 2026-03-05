@@ -38,7 +38,7 @@ export const Menu = ({ DropdownButton }: MenuProps) => {
                 <ProfileSvg />
                 Профиль
             </Button>
-            <Button {...buttonProps} textColor={'success'}>
+            <Button {...buttonProps} color={'var(--success-color)'}>
                 <TokenSvg />
                 Купить токены
             </Button>
@@ -51,7 +51,7 @@ export const Menu = ({ DropdownButton }: MenuProps) => {
                 Что нового?
             </Button>
             <Line />
-            <Button {...buttonProps} textColor={'cancel'}>
+            <Button {...buttonProps} color={'var(--cancel-color)'}>
                 <ExitSvg />
                 Выход
             </Button>

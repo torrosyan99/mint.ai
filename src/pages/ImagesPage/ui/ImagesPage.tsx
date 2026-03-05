@@ -1,7 +1,8 @@
 import { Tabs } from '@/widgets/Tabs';
 import {Images} from "@/widgets/Images";
 
-export const ImagesPage = () => {
+
+const ImagesPage = () => {
     return (
         <>
             <Tabs />
@@ -9,3 +10,6 @@ export const ImagesPage = () => {
         </>
     );
 };
+
+
+export default ImagesPage;

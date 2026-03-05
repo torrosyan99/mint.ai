@@ -1,3 +1,4 @@
+import { Box } from '@/shared/ui/Box/Box.tsx';
 import { Button } from '@/shared/ui/Button/Button.tsx';
 
 import ChatGptSvg from '@icons/chatgpt.svg?react';
@@ -18,44 +19,53 @@ const buttonProps = {
     className: cls.item,
 } as const;
 
+const boxProps = {
+    className: cls.box,
+    radius: 'md',
+    border: 'var(--primary-border-color)',
+    bg: 'var(--color-9)',
+    shadow: true,
+    padding: 'none',
+} as const;
+
 export const List = () => {
     return (
         <div className={cls.listWrapper}>
             <div className={cls.list}>
                 <Button {...buttonProps}>
-                    <div className={cls.box}>
+                    <Box {...boxProps}>
                         <ChatGptSvg />
-                    </div>
+                    </Box>
                     ChatGPT 5.2
                 </Button>
                 <Button {...buttonProps}>
-                    <div className={cls.box}>
+                    <Box {...boxProps}>
                         <GeminiSvg />
-                    </div>
+                    </Box>
                     Gemini 3 Pro
                 </Button>
                 <Button {...buttonProps}>
-                    <div className={cls.box}>
+                    <Box {...boxProps}>
                         <GrokSvg />
-                    </div>
+                    </Box>
                     Grok-4
                 </Button>
                 <Button {...buttonProps}>
-                    <div className={cls.box}>
+                    <Box {...boxProps} border={'var(--primary-border-color)'}>
                         <ClaudeSvg />
-                    </div>
+                    </Box>
                     Claude
                 </Button>
                 <Button {...buttonProps}>
-                    <div className={cls.box}>
+                    <Box {...boxProps}>
                         <GalleryRoundSvg />
-                    </div>
+                    </Box>
                     Генератор изображений
                 </Button>
                 <Button {...buttonProps}>
-                    <div className={cls.box}>
+                    <Box {...boxProps}>
                         <LogoSvg />
-                    </div>
+                    </Box>
                     Все нейросети{' '}
                 </Button>
             </div>

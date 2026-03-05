@@ -1,10 +1,9 @@
 .header {
-    height: 64px;
     position: relative;
     padding: 0 16px 0 46px;
     display: flex;
     align-items: center;
-    border-bottom: 1px solid var(--sidebar-border);
+    border-bottom: 1px solid var(--primary-border-color);
 }
 
 .button {
@@ -13,7 +12,6 @@
     position: absolute;
     top: 50%;
     --bar-icon-color: var(--color-13)
-
 }
 
 .button:hover {

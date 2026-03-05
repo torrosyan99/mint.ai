@@ -1,11 +1,14 @@
 import {Tabs} from "@/widgets/Tabs";
 import {Videos} from "@/widgets/Videos";
 
-export const VideosPage = () => {
+ const VideosPage = () => {
   return (
     <>
       <Tabs />
-      <Videos />
+      <Videos videos={[]} />
     </>
   );
 };
+
+
+ export default VideosPage;

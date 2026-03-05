@@ -1,5 +1,4 @@
 import { motion } from 'framer-motion';
-import { useState } from 'react';
 
 import { Navigation } from '@/widgets/ServicesPanel/ui/Navigation/Navigation.tsx';
 
@@ -17,11 +16,17 @@ const panelVariants = {
 
 interface ServicesPanelProps {
     isOpen: boolean;
+    isCompact: boolean;
+    setIsCompact: (b: boolean) => void;
     setIsOpen: (b: boolean) => void;
 }
 
-export const ServicesPanel = ({ isOpen, setIsOpen }: ServicesPanelProps) => {
-    const [isCompact, setIsCompact] = useState(false);
+export const ServicesPanel = ({
+    isOpen,
+    setIsOpen,
+    isCompact,
+    setIsCompact,
+}: ServicesPanelProps) => {
     const isMobile = useMediaQuery('(max-width: 1280px)');
     const isCompactEffective = !isMobile && isCompact;
     const content = (
@@ -35,7 +40,11 @@ export const ServicesPanel = ({ isOpen, setIsOpen }: ServicesPanelProps) => {
     );
 
     return isMobile ? (
-        <MobileSheet className={cls.sheet} isOpen={isOpen} setIsOpen={setIsOpen}>
+        <MobileSheet
+            className={cls.sheet}
+            isOpen={isOpen}
+            setIsOpen={setIsOpen}
+        >
             {content}
         </MobileSheet>
     ) : (

@@ -5,7 +5,7 @@ import type { HTMLAttributes, PropsWithChildren } from 'react';
 import cls from './P.module.css';
 
 type BaseProps = {
-    size?: 'xs' | 'sm' | 'md' | 'lg';
+    size?: 'xs' | 'sm' | 'md' | 'lg' | 'lg-always';
     font?: 'regular' | 'medium' | 'semibold';
     className?: string;
     color?: string;

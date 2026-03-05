@@ -23,7 +23,7 @@ export const EmptyBlock = ({
         <div className={clsx(cls.block, className)}>
             {icon}
             <div>
-                <P size={'lg'} font={'semibold'}>
+                <P size={'lg'} font={'semibold'} color={'var(--color-10)'}>
                     {title}
                 </P>
                 <P className={cls.text}>{text}</P>

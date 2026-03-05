@@ -6,6 +6,8 @@
 
 .link {
     color: var(--color-13);
+    font-weight: 500;
+    font-size: 18px;
 }
 
 .menuButton {

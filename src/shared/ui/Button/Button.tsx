@@ -11,12 +11,14 @@ export const Button = <T extends ElementType = 'button'>({
     fontSize = 'none',
     padding = 'xs',
     font = 'medium',
-    textColor='none',
+    textColor = 'none',
     className,
     center,
     children,
     wFull,
-  hoverNone,
+    hoverNone,
+    color,
+  bg,
     as,
     ...others
 }: ButtonProps<T>) => {
@@ -28,17 +30,16 @@ export const Button = <T extends ElementType = 'button'>({
         cls[radius + '-radius'],
         cls[variant],
         cls[font],
-        cls[textColor + '-color'],
         {
             [cls.wFull]: wFull,
             [cls.center]: center,
-            [cls.hoverNone]: hoverNone
+            [cls.hoverNone]: hoverNone,
         },
     ]);
 
     const Component = as || 'button';
     return (
-        <Component className={buttonClass} {...others}>
+        <Component className={buttonClass} style={{color, backgroundColor: bg}} {...others}>
             {children}
         </Component>
     );

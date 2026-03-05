@@ -7,23 +7,26 @@ import { P } from '@/shared/ui/P/P.tsx';
 import { Title } from '@/shared/ui/Title/Title.tsx';
 
 import cls from './EditUser.module.css';
+import {Modal} from "@/shared/ui/Modal/Modal.tsx";
+import {Buttons} from "@/shared/ui/Buttons/Buttons.tsx";
 
 interface EditUserProps {
     onClose: () => void;
+    isOpen: boolean;
 }
 
-export const EditUser = ({onClose}:EditUserProps) => {
+export const EditUser = ({onClose, isOpen}:EditUserProps) => {
     const inputRef = useRef<HTMLInputElement>(null);
     const onClick = () => inputRef.current?.click();
     return (
-        <>
-            <Title h={'h5'}>Профиль</Title>
+        <Modal isOpen={isOpen} onClose={onClose} maxWidth={420}>
+            <Title h={'h5'} color={'var(--color-10)'}>Профиль</Title>
             <form>
                 <div className={cls.top}>
                     <input ref={inputRef} hidden />
                     <img className={cls.avatar} src={avatar} alt={'avatar'} />
                     <div>
-                        <P color={'secondary'} size={'sm'}>
+                        <P color={'var(--color-13)'} size={'sm'}>
                             Поддерживает максимальный размер 800 КБ, JPG, GIF,
                             PNG.
                         </P>
@@ -31,7 +34,7 @@ export const EditUser = ({onClose}:EditUserProps) => {
                             className={cls.button}
                             hSize={'sm'}
                             fontSize={'xs'}
-                            padding="none"
+                            padding="md"
                             variant={'secondary'}
                             onClick={onClick}
                         >
@@ -39,11 +42,11 @@ export const EditUser = ({onClose}:EditUserProps) => {
                         </Button>
                     </div>
                 </div>
-                <P className={cls.nickname} color={'dark'}>
+                <P className={cls.nickname} color={'var(--color-10)'}>
                     Никнейм
                 </P>
                 <Input value={'Юрий Стрельцов'} />
-                <div className={cls.buttons}>
+                <Buttons marginTop={24}>
                     <Button
                         hSize={'xl'}
                         radius={'lg'}
@@ -62,8 +65,8 @@ export const EditUser = ({onClose}:EditUserProps) => {
                     >
                         Подтвердить
                     </Button>
-                </div>
+                </Buttons>
             </form>
-        </>
+        </Modal>
     );
 };

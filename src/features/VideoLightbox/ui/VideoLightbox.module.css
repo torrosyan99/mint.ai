@@ -1,0 +1,17 @@
+.image {
+
+    border-radius: 20px;
+}
+
+.top {
+    display: flex;
+    align-items:flex-start;
+    gap: 8px;
+    margin-bottom: 16px;
+}
+
+.buttons {
+    display: flex;
+    gap: 12px;
+    margin-left: auto;
+}

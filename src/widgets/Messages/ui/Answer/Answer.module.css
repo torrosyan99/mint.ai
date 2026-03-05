@@ -22,13 +22,6 @@
     flex-wrap: wrap;
 }
 
-.errorTitle {
-    color: var(--color-5);
-}
-
-.errorText {
-    color: var(--color-13);
-}
 
 .errorButton {
     margin-left: auto;

@@ -1,18 +1,38 @@
-import { Gpt} from '@/widgets/Chats';
-import {useState} from "react";
-import type {Message} from "@/widgets/Messages";
-import {useAppSelector} from "@/shared/hooks/useAppSelector.tsx";
-import {AI, selectAi} from "@/entities/ai";
-import {KlingMotion} from "@/widgets/Chats/ui/KlingMotion/KlingMotion.tsx";
+import { useState } from 'react';
+
+import { Gpt } from '@/widgets/Chats';
+import { KlingMotion } from '@/widgets/Chats/ui/KlingMotion/KlingMotion.tsx';
+import type { Message } from '@/widgets/Messages';
+
+import { Notification } from '@/features/Notification';
+
+import { AI, selectAi } from '@/entities/ai';
+
+import { useAppSelector } from '@/shared/hooks/useAppSelector.tsx';
+import { HomepageBg } from '@/shared/ui/HomepageBg/HomepageBg.tsx';
 
 const HomePage = () => {
     const [messages, setMessages] = useState<Message[]>([]);
-    const ai = useAppSelector(selectAi)
+    const ai = useAppSelector(selectAi);
     switch (ai) {
         case AI.gpt:
-            return <Gpt messages={messages} setMessages={setMessages} />
+            return (
+                <>
+                    <HomepageBg />
+                    <Notification />
+                    <Gpt messages={messages} setMessages={setMessages} />
+                </>
+            );
         case AI.klingMotion:
-            return <KlingMotion messages={messages} setMessages={setMessages} />
+            return (
+                <>
+                    <HomepageBg />
+                    <KlingMotion
+                        messages={messages}
+                        setMessages={setMessages}
+                    />
+                </>
+            );
     }
 };
 

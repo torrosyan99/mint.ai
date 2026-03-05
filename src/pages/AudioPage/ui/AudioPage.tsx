@@ -1,11 +1,13 @@
-import {Tabs} from "@/widgets/Tabs";
-import {Audio} from "@/widgets/Audio/";
+import { Audio } from '@/widgets/Audio/';
+import { Tabs } from '@/widgets/Tabs';
 
-export const AudioPage = () => {
-  return (
-    <>
-      <Tabs />
-      <Audio />
-    </>
-  );
+const AudioPage = () => {
+    return (
+        <>
+            <Tabs />
+            <Audio audioItems={[]} />
+        </>
+    );
 };
+
+export default AudioPage;

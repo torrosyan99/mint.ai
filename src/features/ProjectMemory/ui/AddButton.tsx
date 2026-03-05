@@ -14,11 +14,11 @@ interface AddButtonProps extends ButtonHTMLAttributes<HTMLButtonElement> {
 export const AddButton = ({ value, ...others }: AddButtonProps) => {
     return (
         <div className={cls.addButton}>
-            <P font={'medium'}>{value}</P>
+            <P font={'medium'} color={'var(--color-39)'}>{value}</P>
             <ButtonIcon
                 className={cls.buttonIcon}
                 radius={'sm'}
-                size={'sm-compact'}
+                size={'smCompact'}
                 {...others}
             >
                 <AddSvg />

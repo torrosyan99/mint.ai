@@ -4,7 +4,6 @@ import { EditUser } from '@/features/EditUser';
 
 import avatar from '@/shared/assets/images/avatar.png';
 import { Button } from '@/shared/ui/Button/Button.tsx';
-import { Modal } from '@/shared/ui/Modal/Modal.tsx';
 import { P } from '@/shared/ui/P/P.tsx';
 
 import PenSvg from '@icons/pen.svg?react';
@@ -18,7 +17,11 @@ export const Header = () => {
     const onOpen = () => setIsOpen(true);
     return (
         <div>
-            <P className={cls.title} font={'medium'} size={'lg'} color={'dark'}>
+            <P
+                font={'medium'}
+                size={'lg-always'}
+                color={'var(--color-10)'}
+            >
                 Мой аккаунт
             </P>
 
@@ -43,9 +46,7 @@ export const Header = () => {
                     <span>Редактировать</span>
                 </Button>
             </Box>
-            <Modal className={cls.modal} isOpen={isOpen} onClose={onClose}>
-                <EditUser onClose={onClose} />
-            </Modal>
+            <EditUser isOpen={isOpen} onClose={onClose} />
         </div>
     );
 };

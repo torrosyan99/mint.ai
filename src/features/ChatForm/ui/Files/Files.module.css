@@ -45,6 +45,17 @@
     padding: 10px 16px;
     border: 1px solid var(--color-19);
     border-radius: 19px;
+    cursor: pointer;
+}
+
+.file:not(.error):hover {
+    background-color: var(--color-6);
+    --close-color: var(--color-13);
+
+}
+
+.file:not(.error):hover .fileIcon {
+    background-color: var(--color-9);
 }
 
 .fileIcon {
@@ -56,8 +67,17 @@
     background: var(--color-4);
 }
 
-.fileButton {
-    height: 20px;
+.close {
+    width: 24px;
+    height: 24px;
+    display: grid;
+    place-items: center;
+    border-radius: 50%;
+}
+
+.close:hover {
+    background-color: var(--color-41);
+    --close-color: var(--color-5);
 }
 
 .fileName {

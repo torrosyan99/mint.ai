@@ -5,6 +5,7 @@ import { P } from '@/shared/ui/P/P.tsx';
 import PinSvg from '@icons/pin.svg?react';
 
 import cls from '../global.module.css';
+import {ButtonIcon} from "@/shared/ui/ButtonIcon/ButtonIcon.tsx";
 
 interface ServicesCardProps {
     icon: ReactNode;
@@ -32,7 +33,9 @@ export const ServicesCard = ({ icon, title, text, unpinned }: ServicesCardProps)
                     {text}
                 </P>
             </div>
-            {unpinned && <PinSvg width={16} height={16} className={cls.pin} />}
+            {unpinned && <ButtonIcon size={'xs'} radius={'xs'} className={cls.pin}>
+                <PinSvg width={16} height={16}  />
+            </ButtonIcon> }
         </Button>
     );
 };

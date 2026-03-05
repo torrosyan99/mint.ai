@@ -1,1 +1,1 @@
-export {VideosPage} from './ui/VideosPage'
+export { VideosPageLazy as VideosPage } from './ui/VideosPage.lazy';

@@ -1,1 +1,1 @@
-export {ImagesPage} from './ui/ImagesPage'
+export { ImagesPageLazy as ImagesPage } from './ui/ImagesPage.lazy.tsx';

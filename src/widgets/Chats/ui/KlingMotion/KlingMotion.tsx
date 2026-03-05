@@ -32,10 +32,10 @@ export const KlingMotion = ({
                 Top={
                     <>
                         <div className={cls.title}>
-                            <Title h={'h5'}>Kling Motion Control</Title>
+                            <Title h={'h5'} color={'var(--color-5)'}>Kling Motion Control</Title>
                             <img src={klingMotion} alt={'kling-motion'} />
                         </div>
-                        <P className={cls.text}>
+                        <P className={cls.text} color={'var(--color-14)'}>
                             Kling Motion Control — нейросеть, которая умеет
                             переносить движения из видео на персонажа с
                             изображения, сохраняя физику тела, ракурс и кадр.
@@ -55,7 +55,7 @@ export const KlingMotion = ({
                     }
                 />
 
-                <P className={cls.bottomText} size={'sm'}>
+                <P className={cls.bottomText} size={'sm'} color={'var(--color-13)'}>
                     Стоимость 400 <CountSvg /> за одно сообщение. Нейросеть
                     может ошибаться
                 </P>

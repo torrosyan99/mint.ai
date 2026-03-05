@@ -38,8 +38,7 @@
     gap: 16px;
 }
 
-.iconBox,.iconBoxSecond,
-.iconBoxWhite {
+.box, .aiBox {
     flex-shrink: 0;
     display: grid;
     place-items: center;
@@ -48,15 +47,33 @@
     border-radius: 16px;
 }
 
-.iconBox {
+.aiBox {
+    background-color: var(--color-35);
+
+}
+.box {
     background-color: var(--color-6);
 }
+
 .iconBoxSecond {
-background-color: var(--color-35);
+    background-color: var(--color-35);
 }
 
 .iconBoxWhite {
     background-color: #fff;
+}
+
+.card:hover {
+    background-color: var(--color-23);
+}
+
+
+.card:hover .aiBox {
+    background-color: #fff;
+}
+
+.card:hover .box {
+    background-color: var(--color-2);
 }
 
 .card {
@@ -74,9 +91,17 @@ background-color: var(--color-35);
     margin-left: auto;
 }
 
+.pin:hover {
+    background-color: var(--color-1);
+    --pin-color: var(--color-14);
+
+}
+
 .info {
     margin-left: 4px;
 }
+
+
 
 .count {
     margin-left: auto;
@@ -88,6 +113,10 @@ background-color: var(--color-35);
 }
 
 @media (max-width: 768px) {
+    .title {
+        font-size: 24px;
+    }
+
     .text.text {
         font-size: 14px;
     }
@@ -95,6 +124,7 @@ background-color: var(--color-35);
     .text br {
         display: none;
     }
+
     .list {
         grid-template-columns: 1fr;
     }

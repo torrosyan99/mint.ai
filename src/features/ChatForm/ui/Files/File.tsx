@@ -17,8 +17,8 @@ export const File = ({ name, status }: FileType) => {
                 <P className={cls.fileName} size={'sm'}>{name}</P>
                 <P className={cls.fileSize} size={'xs'}>PDF · 4.78 Mb</P>
             </div>
-            <button className={cls.fileButton}>
-                <CloseSvg />
+            <button className={cls.close}>
+                <CloseSvg width={14} height={14} />
             </button>
         </div>
     );

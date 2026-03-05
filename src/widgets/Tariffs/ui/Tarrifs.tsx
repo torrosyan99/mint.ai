@@ -37,7 +37,7 @@ export const Tarrifs = () => {
             </P>
 
             <ButtonIcon
-                size={'sm-compact'}
+                size={'smCompact'}
                 radius={'sm'}
                 className={cls.close}
                 onClick={() => setShow(false)}

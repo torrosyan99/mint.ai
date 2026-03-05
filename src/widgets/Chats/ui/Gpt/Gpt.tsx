@@ -30,7 +30,7 @@ export const Gpt = ({ messages, setMessages, sending, files }: GptProps) => {
                             Простой старт в мир{' '}
                             <span className={cls.titleSpan}>нейросетей</span>
                         </Title>
-                        <P className={cls.text} size={'lg'}>
+                        <P className={cls.text} color={'var(--color-14)'} size={'lg'}>
                             Без VPN, зарубежных карт и сложностей
                         </P>
                     </>

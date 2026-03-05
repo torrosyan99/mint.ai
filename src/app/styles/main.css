@@ -11,6 +11,7 @@ body {
     overflow-y: auto;
     overflow-x: hidden;
     scrollbar-gutter: stable;
+    font-synthesis: none;
 }
 
 a {
@@ -27,10 +28,9 @@ svg {
 }
 
 .app {
-   height: 100dvh;
+    height: 100dvh;
     display: flex;
-    overflow-y: auto;
-   overflow: hidden;
+    overflow: hidden;
     position: relative;
 
     --sidebar-width: 250px;
@@ -41,13 +41,16 @@ svg {
     --transform-transition: .3s transform ease-out;
 }
 
+
 .content {
     flex-grow: 1;
     display: flex;
     flex-direction: column;
-    gap: 20px;
+    gap: 16px;
     padding-bottom: 24px;
     overflow-y: auto;
+    position: relative;
+    z-index: 10;
 }
 
 
@@ -63,7 +66,6 @@ svg {
     box-shadow: none;
     border: none;
 }
-
 
 
 @media (max-width: 1280px) {

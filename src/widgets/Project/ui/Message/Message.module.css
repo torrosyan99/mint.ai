@@ -7,6 +7,7 @@
     border: 1px solid var(--primary-border-color);
     background: var(--color-3);
     cursor: pointer;
+    --project-icon-color: #646567
 }
 
 .message:hover {
@@ -55,18 +56,29 @@
 }
 
 .messagesButton {
-    --messages-color: #646567;
     height: 20px;
 }
 
 .deleteButton {
-    --trash-bin-color: #646567;
     height: 20px;
 }
 
 .button {
-    width: 20px;
-    height: 20px;
+    width: 24px;
+    height: 24px;
     display: grid;
     place-items: center;
+}
+
+.button:hover,
+.deleteButton:hover,
+.messagesButton:hover {
+--project-icon-color: var(--color-14)
+}
+
+
+@media (max-width: 1280px) {
+    .message {
+        padding: 16px 24px;
+    }
 }

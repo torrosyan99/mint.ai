@@ -157,13 +157,5 @@
     font-weight: 500;
 }
 
-/*Colors*/
 
-.button.success-color {
-    color: var(--success-color);
-}
-
-.button.cancel-color {
-    color: var(--cancel-color);
-}
 

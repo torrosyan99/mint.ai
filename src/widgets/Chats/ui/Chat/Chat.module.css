@@ -29,7 +29,7 @@
 
 .chatForm {
     width: 100%;
-    transition: margin 0.3s linear; /* не all */
+    transition: margin 0.3s linear;
 }
 
 .content {
@@ -37,6 +37,6 @@
 }
 
 .chatForm.bottom {
-    margin-top: auto; /* прижать вниз */
+    margin-top: auto;
 }
 

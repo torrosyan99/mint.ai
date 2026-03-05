@@ -1,7 +1,7 @@
 .overlay {
     height: 100dvh;
     position: fixed;
-    z-index: 50;
+    z-index: 60;
     width: 100%;
     top: 0;
     left: 0;
@@ -9,17 +9,18 @@
     backdrop-filter: var(--blur);
     flex-direction: column;
     display: flex;
-    justify-content: center;
-    align-items: center;
-    padding: 12px;
+    padding: 40px 12px;
+    overflow-y: auto;
 }
 
 .modal {
-    overflow-y: auto;
     box-shadow: 0 2px 10px 0 rgba(41, 50, 43, 0.10);
     border-radius: 20px;
     background-color: var(--color-3);
     position: relative;
+    z-index: 60;
+    width: 100%;
+    margin: auto;
 }
 
 .modal.xs {
@@ -33,16 +34,31 @@
 .modal.md {
     padding: 24px;
 }
+.modal.hasTitle {
+    padding: 16px 24px 24px;
+}
+
+.title {
+    padding-bottom: 16px;
+    position: relative;
+}
+
+.title::after {
+    content: "";
+    position: absolute;
+    bottom: 0;
+    left: -24px;
+    right: -24px;
+    height: 1px;
+    background-color: var(--color-6);
+}
 
 .close {
-    width: 24px;
-    height: 24px;
-    display: grid;
-    place-items: center;
     border-radius: 50%;
     position: absolute;
     background-color: var(--color-2);
-    right: 16px;
-    top: 16px;
+    right: 12px;
+    top: 12px;
     --close-color: var(--color-11)
 }
+
