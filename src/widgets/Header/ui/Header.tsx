@@ -15,15 +15,15 @@ import { PagesTitle } from './PagesTitle.tsx';
 interface HeaderProps {
     setSidebarIsOpen: (b: boolean) => void;
     setPanelIsOpen: (b: boolean) => void;
-    panelIsCompact: boolean;
-    setPanelIsCompact: (b: boolean) => void;
+    panelIsCompact?: boolean;
+    setPanelIsCompact?: (b: boolean) => void;
 }
 
 export const Header = ({
     setSidebarIsOpen,
     setPanelIsOpen,
-    panelIsCompact,
-  setPanelIsCompact,
+    panelIsCompact = false,
+    setPanelIsCompact = () => null,
 }: HeaderProps) => {
     const sidebarOpenClick = () => setSidebarIsOpen(true);
     const mobileSheetOpenClick = () => setPanelIsOpen(true);

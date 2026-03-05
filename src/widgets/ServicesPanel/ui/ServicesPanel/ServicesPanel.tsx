@@ -16,16 +16,16 @@ const panelVariants = {
 
 interface ServicesPanelProps {
     isOpen: boolean;
-    isCompact: boolean;
-    setIsCompact: (b: boolean) => void;
+    isCompact?: boolean;
+    setIsCompact?: (b: boolean) => void;
     setIsOpen: (b: boolean) => void;
 }
 
 export const ServicesPanel = ({
     isOpen,
     setIsOpen,
-    isCompact,
-    setIsCompact,
+    isCompact = false,
+    setIsCompact = () => null,
 }: ServicesPanelProps) => {
     const isMobile = useMediaQuery('(max-width: 1280px)');
     const isCompactEffective = !isMobile && isCompact;
