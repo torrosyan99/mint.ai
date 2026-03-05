@@ -1,72 +1,87 @@
-.switcher{
-    display:flex;
-    padding:4px;
-    position:relative;
-    width:fit-content;
-    margin:0 auto;
+.switcher {
+    display: flex;
+    padding: 4px;
+    position: relative;
+    width: fit-content;
+    margin: 0 auto;
 }
 
-.switcher.primary{
-    background-color:var(--color-31);
-    border-radius:12px;
+.switcher.primary {
+    background-color: var(--color-31);
+    border-radius: 12px;
 }
 
-.switcher.secondary{
+.switcher.secondary {
     border-radius: 16px;
-    background:var(--color-2);
+    background: var(--color-2);
 }
 
-.bg{
-    position:absolute;
-    left:0;
-    top:4px;
-    bottom:4px;
-    z-index:0;
+.switcher.tertiary {
+    background-color: var(--color-6);
+    border-radius: 20px;
+}
+
+.bg {
+    position: absolute;
+    left: 0;
+    top: 4px;
+    bottom: 4px;
+    z-index: 0;
     transition: transform .2s ease, width .2s ease;
     will-change: transform, width;
 }
 
 .switcher.primary .bg {
-    box-shadow:0 1px 3px 0 rgba(0,0,0,.07);
-    border-radius:12px;
-    background:var(--color-2);
+    box-shadow: 0 1px 3px 0 rgba(0, 0, 0, .07);
+    border-radius: 12px;
+    background: var(--color-2);
 }
 
 .switcher.secondary .bg {
-    border-radius:15px;
-    background:var(--color-36);
+    border-radius: 15px;
+    background: var(--color-36);
+}
+
+.switcher.tertiary .bg {
+    border-radius: 16px;
+    background: var(--color-43);
+    box-shadow: 0 5px 50px 0 rgba(41, 50, 43, 0.04);
 }
 
 
-
-.button{
-    position:relative;
-    z-index:1;
-    height:40px;
-    background:transparent;
-    display:flex;
-    align-items:center;
-    justify-content:center;
-    padding:8px 16px;
-    font-weight:500;
+.button {
+    position: relative;
+    z-index: 1;
+    height: 40px;
+    background: transparent;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 8px 16px;
+    font-weight: 500;
     gap: 8px;
 }
 
-.switcher.primary .button{
+.switcher.primary .button {
     height: 40px;
     color: var(--color-22);
 }
 
-.switcher.secondary .button{
+.switcher.secondary .button {
     height: 36px;
     font-size: 14px;
     color: var(--color-13);
 }
 
+.switcher.tertiary .button {
+    color: var(--color-13);
+}
+
 
 .switcher.primary .button.active,
-.switcher.secondary .button.active{
-    color:var(--color-5);
+.switcher.secondary .button.active,
+.switcher.tertiary .button.active {
+    color: var(--color-5);
 }
 
 .button span {

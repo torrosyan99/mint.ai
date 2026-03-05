@@ -21,6 +21,7 @@ import { ProjectsPage } from '@/pages/ProjectsPage';
 import { ProjectsWithProject } from '@/pages/ProjectsPage/ui/ProjectsWithProject.tsx';
 import { VideosPage } from '@/pages/VideosPage';
 import { VideosWithVideo } from '@/pages/VideosPage/ui/VideosWithVideo.tsx';
+import {HomePageLogin} from "@/pages/HomePage/ui/HomepageLogin.tsx";
 
 export enum PagePaths {
     HOME = '/',
@@ -132,6 +133,10 @@ export const routesConfig: Config = {
             path: 'documents-with-document',
             element: <DocumentsWithDocument />,
         },
+        {
+            path:'homepage-login',
+            element: <HomePageLogin />
+        }
     ],
     withoutPanel: [
         {

@@ -1,0 +1,55 @@
+.title {
+    text-align: center;
+    margin: 24px 0;
+}
+
+.link {
+    font-size: 14px;
+    font-weight: 500;
+}
+
+.form {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+
+.or {
+    display: flex;
+    align-items: center;
+    gap: 16px;
+    color: var(--color-26);
+    margin: 16px 0;
+}
+
+.or:after, .or:before {
+    content: "";
+    flex-grow: 1;
+    height: 1px;
+    background-color: var(--color-19);
+}
+
+.text {
+    text-align: center;
+    color: var(--color-26);
+}
+
+.socials {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 10px;
+    margin-top: 10px;
+}
+
+.social {
+    height: 52px;
+    display: grid;
+    place-items: center;
+    background-color: var(--color-6);
+    border-radius: 30px;
+}
+
+.social:hover {
+    background-color: var(--color-41);
+}
+

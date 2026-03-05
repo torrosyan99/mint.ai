@@ -1,5 +1,6 @@
 .input {
-    padding: 12px 20px;
+    height: 48px;
+    padding: 0 20px;
     border-radius: 16px;
     border: 1px solid var(--color-27);
     background: var(--color-3);
@@ -38,4 +39,20 @@ div.input{
 
 .input.hasMax {
     padding-bottom: 40px;
+}
+
+.wrapper {
+    position: relative;
+}
+
+.button {
+    position: absolute;
+    height: 24px;
+    right: 20px;
+    top: 50%;
+    transform: translateY(-50%);
+}
+
+.wrapper .input {
+    padding-right: 60px;
 }

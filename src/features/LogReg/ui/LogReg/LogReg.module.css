@@ -1,0 +1,40 @@
+.modal {
+    padding: 24px 40px;
+}
+
+.modal.code {
+    padding: 40px 40px 24px;
+}
+
+.switcher {
+    width: 300px
+}
+
+.switcher button {
+    width: 50%;
+}
+
+.top {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin-bottom: 8px;
+}
+
+.text {
+    text-align: center;
+    margin-top: 16px;
+}
+
+.text a,
+.text a:hover {
+    cursor: pointer;
+    color: inherit;
+    text-decoration: underline;
+}
+
+@media (max-width: 480px) {
+    .modal {
+        padding: 50px 20px 20px;
+    }
+}

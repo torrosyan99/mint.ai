@@ -10,7 +10,7 @@ interface Param {
 
 interface SwitcherProps {
     params: [Param, Param];
-    variant?:'primary' | 'secondary';
+    variant?:'primary' | 'secondary' | 'tertiary';
     className?: string;
 }
 export const Switcher = ({ params, variant='primary', className }: SwitcherProps) => {
