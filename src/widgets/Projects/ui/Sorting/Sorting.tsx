@@ -29,6 +29,7 @@ export const Sorting = () => {
                         variant={'none'}
                         fontSize={'xs'}
                         hSize={'sm'}
+                        padding={'sm'}
                         className={clsx(cls.button, {
                             [cls.opened]: isOpen,
                         })}
@@ -43,6 +44,7 @@ export const Sorting = () => {
                     fontSize={'xs'}
                     onClick={() => setActive('Активность')}
                     wFull
+                    padding={'md'}
                     variant={'ghost'}
                     hSize={'sm'}
                 >
@@ -53,6 +55,7 @@ export const Sorting = () => {
                     onClick={() => setActive('Имя')}
                     variant={'ghost'}
                     hSize={'sm'}
+                    padding={'md'}
                     wFull
                 >
                     Имя
