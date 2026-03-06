@@ -6,7 +6,6 @@
     cursor: pointer;
 }
 
-
 .box {
     background-color: var(--color-44);
     width: 64px;
@@ -22,7 +21,6 @@
     gap: 12px;
     margin: 24px 0;
 }
-
 
 .tokens span {
     font-size: 18px;
@@ -55,7 +53,7 @@
     font-size: 12px;
     font-weight: 500;
     color: #fff;
-    background-color: #EC3332;
+    background-color: #ec3332;
     border-radius: 8px;
 }
 

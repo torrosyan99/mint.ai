@@ -5,9 +5,9 @@ import App from '@/app/App.tsx';
 import { ReduxProvider } from '@/app/providers/ReduxProvider';
 
 createRoot(document.getElementById('root')!).render(
-  <ReduxProvider>
-    <BrowserRouter>
-      <App />
-    </BrowserRouter>
-  </ReduxProvider>,
+    <ReduxProvider>
+        <BrowserRouter>
+            <App />
+        </BrowserRouter>
+    </ReduxProvider>,
 );

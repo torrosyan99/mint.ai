@@ -32,7 +32,9 @@ export const KlingMotion = ({
                 Top={
                     <>
                         <div className={cls.title}>
-                            <Title h={'h5'} color={'var(--color-5)'}>Kling Motion Control</Title>
+                            <Title h={'h5'} color={'var(--color-5)'}>
+                                Kling Motion Control
+                            </Title>
                             <img src={klingMotion} alt={'kling-motion'} />
                         </div>
                         <P className={cls.text} color={'var(--color-14)'}>
@@ -55,7 +57,11 @@ export const KlingMotion = ({
                     }
                 />
 
-                <P className={cls.bottomText} size={'sm'} color={'var(--color-13)'}>
+                <P
+                    className={cls.bottomText}
+                    size={'sm'}
+                    color={'var(--color-13)'}
+                >
                     Стоимость 400 <CountSvg /> за одно сообщение. Нейросеть
                     может ошибаться
                 </P>

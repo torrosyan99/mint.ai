@@ -51,7 +51,7 @@ export const Notification = ({ onShowForm, onClose }: NotificationProps) => {
                     variant={'green'}
                     onClick={onClose}
                 >
-                  Сохранить подписку
+                    Сохранить подписку
                 </Button>
             </Buttons>
         </div>

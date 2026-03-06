@@ -1,4 +1,3 @@
-import {lazy} from "react";
+import { lazy } from 'react';
 
-
-export const ProjectPageLazy = lazy(() => import('./ProjectPage.tsx'))
+export const ProjectPageLazy = lazy(() => import('./ProjectPage.tsx'));

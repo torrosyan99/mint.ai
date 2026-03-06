@@ -24,14 +24,18 @@ export const PromocodeForm = ({ isOpen, onClose }: PromocodeForm) => {
             isOpen={isOpen}
             onClose={onClose}
             padding={'none'}
-            title={type === 'FORM' ? {
-              value: 'Введите промокод',
-              h:'h6'
-            } : undefined}
+            title={
+                type === 'FORM'
+                    ? {
+                          value: 'Введите промокод',
+                          h: 'h6',
+                      }
+                    : undefined
+            }
         >
             {type === 'FORM' && <Form type={type} setType={setType} />}
             {type === 'ERROR' && <Form type={type} setType={setType} />}
-            {type === 'SUCCESS' && <Success  />}
+            {type === 'SUCCESS' && <Success />}
         </Modal>
     );
 };

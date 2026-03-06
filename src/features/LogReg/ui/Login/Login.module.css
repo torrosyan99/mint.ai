@@ -22,8 +22,9 @@
     margin: 16px 0;
 }
 
-.or:after, .or:before {
-    content: "";
+.or:after,
+.or:before {
+    content: '';
     flex-grow: 1;
     height: 1px;
     background-color: var(--color-19);
@@ -52,4 +53,3 @@
 .social:hover {
     background-color: var(--color-41);
 }
-

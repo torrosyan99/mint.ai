@@ -1,1 +1,1 @@
-export {AudioSection as Audio} from './ui/AudioSection.tsx'
+export { AudioSection as Audio } from './ui/AudioSection.tsx';

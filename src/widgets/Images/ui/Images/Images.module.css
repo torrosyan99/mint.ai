@@ -52,7 +52,7 @@
 .imageWrapper:hover .instruments {
     display: flex;
 }
-.downloadButton  {
+.downloadButton {
     display: flex;
     align-items: center;
     gap: 8px;

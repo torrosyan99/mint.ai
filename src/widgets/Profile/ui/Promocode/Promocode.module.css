@@ -7,7 +7,6 @@
     margin-left: auto;
 }
 
-
 @media (max-width: 768px) {
     .box {
         flex-direction: column;

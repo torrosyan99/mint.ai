@@ -5,8 +5,8 @@ import { VideoLightbox } from '@/features/VideoLightbox';
 import { P } from '@/shared/ui/P/P.tsx';
 
 import DownloadSvg from '@icons/download.svg?react';
-import TrashBinSvg from '@icons/trash-bin-5.svg?react';
 import PlaySvg from '@icons/play.svg?react';
+import TrashBinSvg from '@icons/trash-bin-5.svg?react';
 
 import cls from './Videos.module.css';
 import type { Video as VideoType } from './Videos.tsx';
@@ -25,7 +25,7 @@ export const Video = ({ src }: VideoType) => {
         <>
             <div className={cls.videoWrapper} onClick={() => setIsOpen(true)}>
                 <img className={cls.video} src={src} alt={'video'} />
-                <PlaySvg className={cls.play}/>
+                <PlaySvg className={cls.play} />
                 <div className={cls.info}>
                     <P className={cls.videoTitle} font={'medium'}>
                         ae69fb08e4987ry750afbsfergr5454654

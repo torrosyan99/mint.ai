@@ -1,9 +1,8 @@
 import { Swiper, SwiperSlide } from 'swiper/react';
 
-import { Tarrif } from '../Tarrif/Tarrif.tsx';
-
 import { Button } from '@/shared/ui/Button/Button.tsx';
 
+import { Tarrif } from '../Tarrif/Tarrif.tsx';
 import cls from './Tarrifs.module.css';
 
 const buttonOptions = {

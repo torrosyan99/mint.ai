@@ -1,1 +1,1 @@
-export {ProjectsPageLazy as ProjectsPage} from './ui/ProjectsPage.lazy.tsx';
+export { ProjectsPageLazy as ProjectsPage } from './ui/ProjectsPage.lazy.tsx';

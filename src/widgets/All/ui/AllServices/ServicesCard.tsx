@@ -1,11 +1,12 @@
 import type { ReactNode } from 'react';
 
 import { Button } from '@/shared/ui/Button/Button.tsx';
+import { ButtonIcon } from '@/shared/ui/ButtonIcon/ButtonIcon.tsx';
 import { P } from '@/shared/ui/P/P.tsx';
+
 import PinSvg from '@icons/pin.svg?react';
 
 import cls from '../global.module.css';
-import {ButtonIcon} from "@/shared/ui/ButtonIcon/ButtonIcon.tsx";
 
 interface ServicesCardProps {
     icon: ReactNode;
@@ -14,7 +15,12 @@ interface ServicesCardProps {
     unpinned?: boolean;
 }
 
-export const ServicesCard = ({ icon, title, text, unpinned }: ServicesCardProps) => {
+export const ServicesCard = ({
+    icon,
+    title,
+    text,
+    unpinned,
+}: ServicesCardProps) => {
     return (
         <Button
             className={cls.card}
@@ -33,9 +39,11 @@ export const ServicesCard = ({ icon, title, text, unpinned }: ServicesCardProps)
                     {text}
                 </P>
             </div>
-            {unpinned && <ButtonIcon size={'xs'} radius={'xs'} className={cls.pin}>
-                <PinSvg width={16} height={16}  />
-            </ButtonIcon> }
+            {unpinned && (
+                <ButtonIcon size={'xs'} radius={'xs'} className={cls.pin}>
+                    <PinSvg width={16} height={16} />
+                </ButtonIcon>
+            )}
         </Button>
     );
 };

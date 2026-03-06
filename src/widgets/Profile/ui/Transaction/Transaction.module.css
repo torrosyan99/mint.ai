@@ -42,7 +42,7 @@
     height: 128px;
     display: grid;
     place-items: center;
-    color: #88898C;
+    color: #88898c;
 }
 
 .dayValue {
@@ -60,7 +60,6 @@
         padding: 16px;
     }
 
-
     .date {
         font-size: 12px;
     }
@@ -70,7 +69,8 @@
     }
 
     .period,
-    .count, .type,
+    .count,
+    .type,
     .itemName {
         font-size: 14px;
     }

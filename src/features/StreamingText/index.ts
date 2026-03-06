@@ -1,1 +1,1 @@
-export {StreamingText} from './ui/StreamingText'
+export { StreamingText } from './ui/StreamingText';

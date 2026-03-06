@@ -1,4 +1,3 @@
-import {lazy} from "react";
+import { lazy } from 'react';
 
-
-export const ImagesPageLazy = lazy(() => import('./ImagesPage'))
+export const ImagesPageLazy = lazy(() => import('./ImagesPage'));

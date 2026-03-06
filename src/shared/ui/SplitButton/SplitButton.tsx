@@ -34,7 +34,6 @@ export const SplitButton = ({
         </span>
     );
 
-
     return (
         <Button
             className={clsx(cls.button, {
@@ -43,7 +42,6 @@ export const SplitButton = ({
             })}
             font={'regular'}
             fontSize={'xs'}
-
             variant={'ghost'}
             hSize={'md'}
             {...others}

@@ -4,7 +4,6 @@
     gap: 12px;
 }
 
-
 .box {
     display: flex;
     align-items: center;
@@ -40,11 +39,11 @@
 
 .button {
     display: none;
-    --icon-color: var(--color-7)
+    --icon-color: var(--color-7);
 }
 
 .button:hover {
-    --icon-color: var(--color-13)
+    --icon-color: var(--color-13);
 }
 
 .box:hover .button {

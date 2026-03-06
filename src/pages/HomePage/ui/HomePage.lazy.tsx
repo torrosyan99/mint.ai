@@ -1,4 +1,3 @@
-import {lazy} from "react";
+import { lazy } from 'react';
 
-
-export const HomePageLazy = lazy(() => import('./HomePage.tsx'))
+export const HomePageLazy = lazy(() => import('./HomePage.tsx'));

@@ -1,4 +1,3 @@
-import {lazy} from "react";
+import { lazy } from 'react';
 
-
-export const AllAiPageAsync = lazy(() => import('./AllAiPage.tsx'))
+export const AllAiPageAsync = lazy(() => import('./AllAiPage.tsx'));

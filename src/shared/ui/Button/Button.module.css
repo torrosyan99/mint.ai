@@ -8,7 +8,6 @@
     text-align: start;
 }
 
-
 .button.wFull {
     width: 100%;
 }
@@ -71,7 +70,6 @@
 
 /* Variants */
 
-
 .button.primary {
     background-color: var(--color-3);
     border: 1px solid var(--primary-border-color);
@@ -95,7 +93,7 @@
 }
 
 .button.green:not(.hoverNone):hover {
-    opacity: .9;
+    opacity: 0.9;
 }
 
 .button.cancel {
@@ -112,7 +110,6 @@
     background-color: var(--color-1);
     color: var(--color-37);
 }
-
 
 /* Font Size */
 
@@ -155,6 +152,3 @@
 .button.medium {
     font-weight: 500;
 }
-
-
-

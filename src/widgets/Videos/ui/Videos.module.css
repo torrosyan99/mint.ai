@@ -8,7 +8,7 @@
     position: relative;
     color: #fff;
     width: 240px;
-    cursor: pointer;;
+    cursor: pointer;
 }
 
 .video {
@@ -18,7 +18,6 @@
     border-radius: 16px;
     object-fit: cover;
 }
-
 
 .play {
     position: absolute;
@@ -71,7 +70,6 @@
 .deleteButton {
     height: 20px;
 }
-
 
 @media (max-width: 480px) {
     .videoWrapper {

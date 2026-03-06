@@ -27,14 +27,11 @@
     display: block;
 }
 
-
-
 .instruments {
     display: flex;
     align-items: center;
     justify-content: space-between;
 }
-
 
 .downloadButton {
     display: flex;
@@ -45,7 +42,7 @@
 }
 
 .deleteButton {
-    --icon-color: var(--color-7)
+    --icon-color: var(--color-7);
 }
 
 .downloadButton:hover,

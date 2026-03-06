@@ -23,8 +23,8 @@ export const MobileSheet = ({
     isOpen,
     setIsOpen,
     children,
-                                innerClassName,
-  className,
+    innerClassName,
+    className,
 }: PropsWithChildren<MobileSheetProps>) => {
     if (!isOpen) return;
 
@@ -45,7 +45,6 @@ export const MobileSheet = ({
     }, []);
 
     const handlers = useSwipeable({
-
         onSwipedDown: () => {
             setShow(false);
             setTimeout(() => setIsOpen(false), 400);
@@ -53,9 +52,7 @@ export const MobileSheet = ({
         delta: 100,
     });
 
-
     const handlersOverlay = useSwipeable({
-
         onSwipedDown: () => {
             setShow(false);
             setTimeout(() => setIsOpen(false), 400);
@@ -76,7 +73,7 @@ export const MobileSheet = ({
                     radius={'sm'}
                     onClick={closeClick}
                 >
-                    <CloseSvg  width={16} height={16}/>
+                    <CloseSvg width={16} height={16} />
                 </ButtonIcon>
             </div>
             <div
@@ -88,7 +85,9 @@ export const MobileSheet = ({
                 <div className={cls.top} {...handlers}>
                     <div className={cls.topLine} />
                 </div>
-                <div className={clsx(cls.inner, innerClassName)}>{children}</div>
+                <div className={clsx(cls.inner, innerClassName)}>
+                    {children}
+                </div>
             </div>
         </>,
         document.body,

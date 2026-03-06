@@ -1,13 +1,13 @@
-import {configureStore} from "@reduxjs/toolkit";
-import { themeReducer } from '@/entities/theme';
-import {aiReducer} from "@/entities/ai";
+import { configureStore } from '@reduxjs/toolkit';
 
+import { aiReducer } from '@/entities/ai';
+import { themeReducer } from '@/entities/theme';
 
 export const store = configureStore({
-  reducer: {
-    theme: themeReducer,
-    ai: aiReducer
-  },
+    reducer: {
+        theme: themeReducer,
+        ai: aiReducer,
+    },
 });
 
 export type RootState = ReturnType<typeof store.getState>;

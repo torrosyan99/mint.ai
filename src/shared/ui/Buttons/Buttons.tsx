@@ -12,7 +12,7 @@ interface ButtonsProps {
 export const Buttons = ({
     children,
     justifyContent = 'start',
-  className,
+    className,
     marginTop,
 }: PropsWithChildren<ButtonsProps>) => {
     return (

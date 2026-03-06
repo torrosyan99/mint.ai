@@ -21,7 +21,7 @@ export const ReplenishmentBalance = ({
     const [activeIndex, setActiveIndex] = useState(0);
     return (
         <Modal
-          className={cls.modal}
+            className={cls.modal}
             isOpen={isOpen}
             onClose={onClose}
             maxWidth={500}

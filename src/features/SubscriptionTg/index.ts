@@ -1,1 +1,1 @@
-export {SubscriptionTg} from './ui/SubscriptionTg'
+export { SubscriptionTg } from './ui/SubscriptionTg';

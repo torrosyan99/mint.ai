@@ -1,5 +1,6 @@
 import chatgpt from '@/shared/assets/images/chatgpt-2.png';
 import chatgptMany from '@/shared/assets/images/chatgpt-4.png';
+import { Button } from '@/shared/ui/Button/Button.tsx';
 import { Modal } from '@/shared/ui/Modal/Modal.tsx';
 import { P } from '@/shared/ui/P/P.tsx';
 import { Title } from '@/shared/ui/Title/Title.tsx';
@@ -9,7 +10,6 @@ import TokenSvg from '@icons/token-3.svg?react';
 
 import { SubscriptionItem } from './SubscriptionItem.tsx';
 import cls from './SubscriptionTg.module.css';
-import {Button} from "@/shared/ui/Button/Button.tsx";
 
 interface SubscriptionTgProps {
     isOpen: boolean;
@@ -38,18 +38,26 @@ export const SubscriptionTg = ({ isOpen, onClose }: SubscriptionTgProps) => {
                     <SubscriptionItem
                         icon={<img src={chatgpt} alt={'chatgpt'} />}
                         count={25}
-                    >ChatGPT 5.2</SubscriptionItem>
+                    >
+                        ChatGPT 5.2
+                    </SubscriptionItem>
                     <SubscriptionItem
-                      icon={<img src={chatgpt} alt={'chatgpt'} />}
-                      count={50}
-                    >ChatGPT 5.2</SubscriptionItem>
+                        icon={<img src={chatgpt} alt={'chatgpt'} />}
+                        count={50}
+                    >
+                        ChatGPT 5.2
+                    </SubscriptionItem>
                     <SubscriptionItem
-                      icon={<img src={chatgptMany} alt={'chatgpt'} />}
-                    >И еще на +10 нейросетей</SubscriptionItem>
+                        icon={<img src={chatgptMany} alt={'chatgpt'} />}
+                    >
+                        И еще на +10 нейросетей
+                    </SubscriptionItem>
                 </div>
             </div>
 
-            <Button hSize={'xl'} radius={'sm'} variant={'green'} wFull center>Забрать бонус</Button>
+            <Button hSize={'xl'} radius={'sm'} variant={'green'} wFull center>
+                Забрать бонус
+            </Button>
         </Modal>
     );
 };

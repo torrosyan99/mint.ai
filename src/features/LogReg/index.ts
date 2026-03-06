@@ -1,1 +1,1 @@
-export {LogReg} from './ui/LogReg/LogReg.tsx'
+export { LogReg } from './ui/LogReg/LogReg.tsx';

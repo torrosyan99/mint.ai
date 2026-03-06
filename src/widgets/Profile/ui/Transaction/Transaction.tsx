@@ -1,26 +1,12 @@
 import { P } from '@/shared/ui/P/P.tsx';
 import { Switcher } from '@/shared/ui/Switcher/Switcher.tsx';
 
-
-
 import { Box } from '../Box/Box.tsx';
 import { Replenishment } from './Replenishment.tsx';
 import { Spending } from './Spending.tsx';
 import cls from './Transaction.module.css';
 
-
-
-
-
-
-
-
-
-
-
-
-
-export const Transaction = ({empty}: { empty:boolean }) => {
+export const Transaction = ({ empty }: { empty: boolean }) => {
     return (
         <div>
             <P font={'medium'} size={'lg'} color={'dark'}>

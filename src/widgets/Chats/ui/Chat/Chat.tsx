@@ -11,7 +11,7 @@ interface ChatProps {
     Top?: ReactNode;
     Bottom?: ReactNode;
     messages: Message[];
-    sending?:boolean
+    sending?: boolean;
 }
 
 const fade = {
@@ -25,7 +25,7 @@ export const Chat = ({
     Bottom,
     children,
     messages,
-  sending
+    sending,
 }: PropsWithChildren<ChatProps>) => {
     return (
         <Container className={cls.chat}>

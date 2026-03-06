@@ -2,10 +2,10 @@ import { Button } from '@/shared/ui/Button/Button.tsx';
 import { Title } from '@/shared/ui/Title/Title.tsx';
 
 import ProAlbumSvg from '@icons/pro-album.svg?react';
-import ProDesktopSvg from '@icons/pro-desktop.svg?react';
-import ProVideoSvg from '@icons/pro-video-libary.svg?react';
 import ProAtomSvg from '@icons/pro-atom.svg?react';
 import ProCheckSvg from '@icons/pro-check.svg?react';
+import ProDesktopSvg from '@icons/pro-desktop.svg?react';
+import ProVideoSvg from '@icons/pro-video-libary.svg?react';
 import TokenSvg from '@icons/token-2.svg?react';
 
 import cls from './About.module.css';
@@ -46,16 +46,18 @@ export const AboutTarrif = () => {
                     Midjourney, Генератор изображений и др.)
                 </li>
                 <li className={cls.item}>
-                    <ProVideoSvg />
-                    9 генераций видео: Kling, «Оживление фото», «Генератор видео»
+                    <ProVideoSvg />9 генераций видео: Kling, «Оживление фото»,
+                    «Генератор видео»
                 </li>
                 <li className={cls.item}>
                     <ProAtomSvg />
-                    Доступ к популярным нейросетям: ChatGPT, Gemini, Claude и т. д.
+                    Доступ к популярным нейросетям: ChatGPT, Gemini, Claude и т.
+                    д.
                 </li>
                 <li className={cls.item}>
                     <ProCheckSvg />
-                    Безлимитный доступ к DeepSeek V3.1, Gemini 2.5 Pro, ChatGPT 5-mini
+                    Безлимитный доступ к DeepSeek V3.1, Gemini 2.5 Pro, ChatGPT
+                    5-mini
                 </li>
             </ul>
         </div>

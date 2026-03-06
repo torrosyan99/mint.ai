@@ -6,7 +6,7 @@ import { TrafficTokens } from '../TrafficTokens/TrafficTokens.tsx';
 import { Transaction } from '../Transaction/Transaction.tsx';
 import cls from './Profile.module.css';
 
-export type Tarrif = 'Free' | 'Pro' | 'Ultima'
+export type Tarrif = 'Free' | 'Pro' | 'Ultima';
 
 export interface ProfileProps {
     tarrif: Tarrif;
@@ -14,13 +14,17 @@ export interface ProfileProps {
     empty?: boolean;
 }
 
-export const Profile = ({tarrif, expired = false, empty=false}: ProfileProps) => {
+export const Profile = ({
+    tarrif,
+    expired = false,
+    empty = false,
+}: ProfileProps) => {
     return (
         <Container className={cls.profile}>
             <Header />
-            <TrafficTokens  tarrif={tarrif}  expired={expired} />
+            <TrafficTokens tarrif={tarrif} expired={expired} />
             <Promocode />
-            <Transaction  empty={empty}  />
+            <Transaction empty={empty} />
         </Container>
     );
 };

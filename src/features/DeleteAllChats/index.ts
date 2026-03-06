@@ -1,1 +1,1 @@
-export {DeleteAllChats} from './ui/DeleteAllChats'
+export { DeleteAllChats } from './ui/DeleteAllChats';

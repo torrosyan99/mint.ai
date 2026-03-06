@@ -47,12 +47,12 @@
     color: #fff;
     border-radius: 12px;
     font-weight: 500;
-    background-color: #0E7D42;
+    background-color: #0e7d42;
     font-size: 12px;
 }
 
 .period.expired {
-    background-color: #EC7F19;
+    background-color: #ec7f19;
 }
 
 .line {
@@ -83,5 +83,4 @@
     .countButton {
         width: 100%;
     }
-
 }

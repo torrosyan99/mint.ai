@@ -1,1 +1,1 @@
-export {ProjectMemory} from './ui/ProjectMemory'
+export { ProjectMemory } from './ui/ProjectMemory';

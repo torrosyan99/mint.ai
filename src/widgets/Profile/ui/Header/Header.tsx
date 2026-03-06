@@ -17,11 +17,7 @@ export const Header = () => {
     const onOpen = () => setIsOpen(true);
     return (
         <div>
-            <P
-                font={'medium'}
-                size={'lg-always'}
-                color={'var(--color-10)'}
-            >
+            <P font={'medium'} size={'lg-always'} color={'var(--color-10)'}>
                 Мой аккаунт
             </P>
 

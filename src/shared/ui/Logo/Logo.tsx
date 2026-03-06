@@ -1,8 +1,9 @@
-import LogoSvg from '@icons/logo.svg?react';
 import clsx from 'clsx';
 import { Link } from 'react-router-dom';
 
 import { PagePaths } from '@/shared/configs/routesConfig/routesConfig.tsx';
+
+import LogoSvg from '@icons/logo.svg?react';
 
 import cls from './Logo.module.css';
 

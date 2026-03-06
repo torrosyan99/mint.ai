@@ -1,1 +1,1 @@
-export {EditUser} from './ui/EditUser.tsx'
+export { EditUser } from './ui/EditUser.tsx';

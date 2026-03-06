@@ -32,11 +32,17 @@ export const Image = ({ src }: ImageType) => {
                     <P size={'sm'}>image - 2.72 MB</P>
                 </div>
                 <div className={cls.instruments}>
-                    <button className={cls.downloadButton} onClick={onDownloadClick}>
+                    <button
+                        className={cls.downloadButton}
+                        onClick={onDownloadClick}
+                    >
                         <DownloadSvg />
                         <P font={'medium'}>Скачать</P>
                     </button>
-                    <button className={cls.deleteButton} onClick={onDeleteClick}>
+                    <button
+                        className={cls.deleteButton}
+                        onClick={onDeleteClick}
+                    >
                         <TrashBinSvg />
                     </button>
                 </div>

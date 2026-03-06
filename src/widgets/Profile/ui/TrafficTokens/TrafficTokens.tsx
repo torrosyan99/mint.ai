@@ -12,7 +12,6 @@ interface TarrifTokensProps {
 }
 
 export const TrafficTokens = ({ tarrif, expired }: TarrifTokensProps) => {
-
     return (
         <div>
             <P color={'var(--color-10)'} font={'medium'} size={'lg-always'}>

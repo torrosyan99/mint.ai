@@ -1,1 +1,1 @@
-export {PromocodeForm} from './ui/PromocodeForm/PromocodeForm.tsx'
+export { PromocodeForm } from './ui/PromocodeForm/PromocodeForm.tsx';

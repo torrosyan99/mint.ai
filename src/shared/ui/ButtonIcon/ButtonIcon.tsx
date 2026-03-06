@@ -53,7 +53,11 @@ export const ButtonIcon = <T extends ElementType = 'button'>({
 
     const Component = as || 'button';
     return (
-        <Component className={buttonClass} style={{ background: bg }} {...others}>
+        <Component
+            className={buttonClass}
+            style={{ background: bg }}
+            {...others}
+        >
             {children}
         </Component>
     );

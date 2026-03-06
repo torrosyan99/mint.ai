@@ -18,7 +18,7 @@ export const Search = ({
     className,
     hSize = 'sm',
     padding = 'xs',
-  inputClassName = '',
+    inputClassName = '',
     ...others
 }: SearchProps) => {
     return (
@@ -30,7 +30,10 @@ export const Search = ({
             ])}
         >
             <SearchSvg className={cls.icon} />
-            <input className={clsx(cls.input, [cls[hSize], inputClassName])} {...others} />
+            <input
+                className={clsx(cls.input, [cls[hSize], inputClassName])}
+                {...others}
+            />
         </div>
     );
 };

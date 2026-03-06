@@ -2,25 +2,27 @@ import { useRef } from 'react';
 
 import avatar from '@/shared/assets/images/avatar.png';
 import { Button } from '@/shared/ui/Button/Button.tsx';
+import { Buttons } from '@/shared/ui/Buttons/Buttons.tsx';
 import { Input } from '@/shared/ui/Input/Input.tsx';
+import { Modal } from '@/shared/ui/Modal/Modal.tsx';
 import { P } from '@/shared/ui/P/P.tsx';
 import { Title } from '@/shared/ui/Title/Title.tsx';
 
 import cls from './EditUser.module.css';
-import {Modal} from "@/shared/ui/Modal/Modal.tsx";
-import {Buttons} from "@/shared/ui/Buttons/Buttons.tsx";
 
 interface EditUserProps {
     onClose: () => void;
     isOpen: boolean;
 }
 
-export const EditUser = ({onClose, isOpen}:EditUserProps) => {
+export const EditUser = ({ onClose, isOpen }: EditUserProps) => {
     const inputRef = useRef<HTMLInputElement>(null);
     const onClick = () => inputRef.current?.click();
     return (
         <Modal isOpen={isOpen} onClose={onClose} maxWidth={420}>
-            <Title h={'h5'} color={'var(--color-10)'}>Профиль</Title>
+            <Title h={'h5'} color={'var(--color-10)'}>
+                Профиль
+            </Title>
             <form>
                 <div className={cls.top}>
                     <input ref={inputRef} hidden />

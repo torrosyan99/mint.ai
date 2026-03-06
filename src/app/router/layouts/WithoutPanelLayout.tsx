@@ -6,6 +6,7 @@ import { ServicesPanel } from '@/widgets/ServicesPanel';
 import { Sidebar } from '@/widgets/Sidebar';
 
 import { useMediaQuery } from '@/shared/hooks/useMediaQuery.tsx';
+import {SimpleBar} from "@/shared/ui/SimpleBar/SimpleBar.tsx";
 
 export const WithoutPanelLayout = () => {
     const [sidebarIsOpen, setSidebarIsOpen] = useState(false);
@@ -14,13 +15,13 @@ export const WithoutPanelLayout = () => {
     return (
         <>
             <Sidebar isOpen={sidebarIsOpen} setIsOpen={setSidebarIsOpen} />
-            <div className={'content'}>
+            <SimpleBar className={'content'}>
                 <Header
                     setSidebarIsOpen={setSidebarIsOpen}
                     setPanelIsOpen={setPanelIsOPen}
                 />
                 <Outlet />
-            </div>
+            </SimpleBar>
             {isMobile && (
                 <ServicesPanel
                     isOpen={panelIsOpen}

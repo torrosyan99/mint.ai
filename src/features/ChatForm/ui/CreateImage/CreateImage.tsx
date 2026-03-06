@@ -46,7 +46,10 @@ export const CreateImage = ({ setShowCreateImage }: CreateImageProps) => {
                 list
                 Button={
                     <Button
-                        className={clsx({ [cls.activeButton]: isSizeActive }, cls.button)}
+                        className={clsx(
+                            { [cls.activeButton]: isSizeActive },
+                            cls.button,
+                        )}
                         variant={'ghost'}
                         padding={'sm'}
                         fontSize={'xs'}
@@ -61,11 +64,11 @@ export const CreateImage = ({ setShowCreateImage }: CreateImageProps) => {
                     Квадратная (1024:1024)
                     <UnreadSvg className={cls.check} />
                 </Button>
-                <Button  variant={'ghost'} fontSize={'xs'} wFull>
+                <Button variant={'ghost'} fontSize={'xs'} wFull>
                     <TableSvg />
                     Горизонтальная (1536:1024)
                 </Button>
-                <Button  variant={'ghost'} fontSize={'xs'} wFull>
+                <Button variant={'ghost'} fontSize={'xs'} wFull>
                     <SmartphoneSvg />
                     Вертикальная (1024:1536)
                 </Button>
@@ -79,9 +82,12 @@ export const CreateImage = ({ setShowCreateImage }: CreateImageProps) => {
                 list
                 Button={
                     <Button
-                        className={clsx({
-                            [cls.activeButton]: isQualityActive,
-                        }, cls.button)}
+                        className={clsx(
+                            {
+                                [cls.activeButton]: isQualityActive,
+                            },
+                            cls.button,
+                        )}
                         fontSize={'xs'}
                         variant={'ghost'}
                         padding={'sm'}
@@ -91,20 +97,20 @@ export const CreateImage = ({ setShowCreateImage }: CreateImageProps) => {
                     </Button>
                 }
             >
-                <Button  variant={'ghost'} fontSize={'xs'} wFull>
+                <Button variant={'ghost'} fontSize={'xs'} wFull>
                     <SaleSquareSvg />
                     Автоматическое качество
                     <UnreadSvg className={cls.check} />
                 </Button>
-                <Button  variant={'ghost'} fontSize={'xs'} wFull>
+                <Button variant={'ghost'} fontSize={'xs'} wFull>
                     <SaleSquareSvg />
                     Низкое качество
                 </Button>
-                <Button  variant={'ghost'} fontSize={'xs'} wFull>
+                <Button variant={'ghost'} fontSize={'xs'} wFull>
                     <SaleSquareSvg />
                     Среднее качество
                 </Button>
-                <Button  variant={'ghost'} fontSize={'xs'} wFull>
+                <Button variant={'ghost'} fontSize={'xs'} wFull>
                     <SaleSquareSvg />
                     Высокое качество
                 </Button>
@@ -118,7 +124,10 @@ export const CreateImage = ({ setShowCreateImage }: CreateImageProps) => {
                 list
                 Button={
                     <Button
-                        className={clsx({ [cls.activeButton]: isBgActive }, cls.button)}
+                        className={clsx(
+                            { [cls.activeButton]: isBgActive },
+                            cls.button,
+                        )}
                         variant={'ghost'}
                         padding={'sm'}
                         fontSize={'xs'}
@@ -128,12 +137,12 @@ export const CreateImage = ({ setShowCreateImage }: CreateImageProps) => {
                     </Button>
                 }
             >
-                <Button  variant={'ghost'} fontSize={'xs'} wFull>
+                <Button variant={'ghost'} fontSize={'xs'} wFull>
                     <SaleSquareSvg />
                     Непрозрачный фон
                     <UnreadSvg className={cls.check} />
                 </Button>
-                <Button  variant={'ghost'} fontSize={'xs'} wFull>
+                <Button variant={'ghost'} fontSize={'xs'} wFull>
                     <SaleSquareSvg />
                     Прозрачный фон
                 </Button>

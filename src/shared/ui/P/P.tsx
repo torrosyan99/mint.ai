@@ -22,10 +22,7 @@ export const P = ({
     className,
 }: PropsWithChildren<PProps>) => {
     return (
-        <p className={clsx(cls[size], cls[font], className)}
-
-        style={{color}}
-        >
+        <p className={clsx(cls[size], cls[font], className)} style={{ color }}>
             {children}
         </p>
     );
@@ -42,7 +39,7 @@ export const MotionP = ({
     return (
         <motion.p
             className={clsx(cls[size], cls[font], className)}
-            style={{color}}
+            style={{ color }}
             {...others}
         >
             {children}

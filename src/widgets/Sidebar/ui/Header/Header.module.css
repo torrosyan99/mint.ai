@@ -9,9 +9,9 @@
     height: 20px;
     position: absolute;
     top: 50%;
-    --bar-icon-color: var(--color-13)
+    --bar-icon-color: var(--color-13);
 }
 
 .button:hover {
-    --bar-icon-color: var(--color-18)
+    --bar-icon-color: var(--color-18);
 }

@@ -8,8 +8,8 @@ import { Message } from '../Message/Message.tsx';
 import cls from './Messages.module.css';
 
 export type Message =
-    | { type: 'send'; message: string, status?:never }
-    | { type: 'answer'; message?: string, status: "done" | 'no-subscription' };
+    | { type: 'send'; message: string; status?: never }
+    | { type: 'answer'; message?: string; status: 'done' | 'no-subscription' };
 
 interface MessagesProps {
     messages: Message[];

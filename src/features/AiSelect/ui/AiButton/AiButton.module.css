@@ -25,14 +25,9 @@
     min-width: 50px;
 }
 
-
-
 .modalTitle {
     color: var(--color-10);
 }
-
-
-
 
 .pinButton {
     background-color: var(--color-2);
@@ -47,5 +42,5 @@
 }
 
 .pinCancel {
-    --pin-color: #A1A4A9;
+    --pin-color: #a1a4a9;
 }

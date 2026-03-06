@@ -38,7 +38,8 @@
     gap: 16px;
 }
 
-.box, .aiBox {
+.box,
+.aiBox {
     flex-shrink: 0;
     display: grid;
     place-items: center;
@@ -49,7 +50,6 @@
 
 .aiBox {
     background-color: var(--color-35);
-
 }
 .box {
     background-color: var(--color-6);
@@ -66,7 +66,6 @@
 .card:hover {
     background-color: var(--color-23);
 }
-
 
 .card:hover .aiBox {
     background-color: #fff;
@@ -94,7 +93,6 @@
 .pin:hover {
     background-color: var(--color-1);
     --pin-color: var(--color-14);
-
 }
 
 .info {

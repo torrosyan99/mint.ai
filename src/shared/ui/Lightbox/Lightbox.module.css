@@ -11,9 +11,7 @@
     padding: 40px 12px;
     overflow-y: auto;
     backdrop-filter: var(--blur);
-
 }
-
 
 .content {
     margin: auto;

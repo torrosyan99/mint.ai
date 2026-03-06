@@ -48,7 +48,7 @@ export const Message = ({ title, date }: MessageProps) => {
                         <MessageSvg width={20} height={20} />
                     </button>
                     <button className={cls.deleteButton}>
-                        <TrashBinSvg width={20} height={20}/>
+                        <TrashBinSvg width={20} height={20} />
                     </button>
                 </div>
             )}

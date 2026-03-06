@@ -1,5 +1,7 @@
 import { useState } from 'react';
 
+import { Block } from '@/widgets/Block/Block.tsx';
+
 import { CreateProject } from '@/features/CreateProject';
 
 import { Button } from '@/shared/ui/Button/Button.tsx';
@@ -12,7 +14,6 @@ import { EmptyProjects } from '../EmptyProjects/EmptyProjects.tsx';
 import { Sorting } from '../Sorting/Sorting.tsx';
 import { Project, type ProjectType } from './Project.tsx';
 import cls from './Projects.module.css';
-import {Block} from "@/widgets/Block/Block.tsx";
 
 interface ProjectsProps {
     projects: ProjectType[];

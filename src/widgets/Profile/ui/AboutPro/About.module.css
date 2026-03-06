@@ -1,6 +1,8 @@
 .box {
     padding: 16px 24px;
-    background: linear-gradient(108deg, #19251E 23.67%, #125D35 72.32%, #0E7D42 100%), #286F5F;
+    background:
+        linear-gradient(108deg, #19251e 23.67%, #125d35 72.32%, #0e7d42 100%),
+        #286f5f;
     border-radius: 20px;
     margin-top: 12px;
     color: #fff;
@@ -22,9 +24,9 @@
 .line {
     height: 32px;
     width: 1px;
-    background: #DBDFE2;
+    background: #dbdfe2;
     border-radius: 10px;
-    opacity: .2;
+    opacity: 0.2;
 }
 
 .count {
@@ -45,7 +47,6 @@
     color: #232425;
 }
 
-
 .list {
     display: flex;
     flex-direction: column;
@@ -55,13 +56,13 @@
     margin-top: 16px;
 }
 .item {
-    --pro-icon-color: #DBDFE2;
+    --pro-icon-color: #dbdfe2;
     font-size: 14px;
-    color: #DBDFE2;
+    color: #dbdfe2;
     display: flex;
     align-items: flex-start;
     gap: 8px;
-    width:calc(50% - 6px);
+    width: calc(50% - 6px);
 }
 
 @media (max-width: 768px) {
@@ -76,7 +77,7 @@
     .item {
         width: 100%;
     }
-    
+
     .line {
         display: none;
     }
@@ -88,5 +89,4 @@
     .button {
         margin-left: 0;
     }
-    
 }

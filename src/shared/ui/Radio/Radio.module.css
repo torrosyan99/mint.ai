@@ -5,15 +5,15 @@
     position: relative;
 }
 
- .radio.active {
-    border: 1px solid #0E7D42;
-    background-color: #0E7D42;
+.radio.active {
+    border: 1px solid #0e7d42;
+    background-color: #0e7d42;
     display: grid;
     place-items: center;
 }
 
 .radio.active:after {
-    content: "";
+    content: '';
     position: absolute;
     width: 10px;
     height: 10px;

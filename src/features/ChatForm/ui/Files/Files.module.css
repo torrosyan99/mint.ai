@@ -51,7 +51,6 @@
 .file:not(.error):hover {
     background-color: var(--color-6);
     --close-color: var(--color-13);
-
 }
 
 .file:not(.error):hover .fileIcon {
@@ -85,11 +84,11 @@
 }
 
 .fileSize {
-    color: #A1A4A9;
+    color: #a1a4a9;
 }
 
 .file.error * {
-    opacity: .8;
+    opacity: 0.8;
 }
 
 .file.error {

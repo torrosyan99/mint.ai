@@ -31,12 +31,7 @@ export const ChatIconsPage = () => {
     const ai = useAppSelector(selectAi);
     switch (ai) {
         case AI.gpt:
-            return (
-                <Gpt
-                    messages={messages}
-                    setMessages={setMessages}
-                />
-            );
+            return <Gpt messages={messages} setMessages={setMessages} />;
         case AI.klingMotion:
             return (
                 <KlingMotion messages={messages} setMessages={setMessages} />

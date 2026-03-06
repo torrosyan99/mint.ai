@@ -7,11 +7,11 @@
     border: 1px solid var(--primary-border-color);
     background: var(--color-3);
     cursor: pointer;
-    --project-icon-color: #646567
+    --project-icon-color: #646567;
 }
 
 .message:hover {
-    box-shadow: 0 2px 5px 0 rgba(41, 50, 43, 0.10);
+    box-shadow: 0 2px 5px 0 rgba(41, 50, 43, 0.1);
 }
 
 .wrapper {
@@ -35,7 +35,6 @@
     color: var(--color-14);
 }
 
-
 .hoverBlock,
 .focusedBlock {
     margin-left: auto;
@@ -49,7 +48,6 @@
     display: flex;
     --close-color: var(--color-26);
 }
-
 
 .message:hover .hoverBlock {
     display: flex;
@@ -73,9 +71,8 @@
 .button:hover,
 .deleteButton:hover,
 .messagesButton:hover {
---project-icon-color: var(--color-14)
+    --project-icon-color: var(--color-14);
 }
-
 
 @media (max-width: 1280px) {
     .message {

@@ -27,10 +27,10 @@
 }
 
 .bottom {
-    /*position: absolute;*/
-    /*bottom: 0;*/
-    /*left: 0;*/
-    /*right: 0;*/
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    right: 0;
     background-color: var(--sidebar-bg);
     padding: 0 16px 16px;
     display: flex;
@@ -41,7 +41,6 @@
 .bottom.isCompact {
     padding: 12px;
 }
-
 
 @media (max-width: 1280px) {
     .sidebar {

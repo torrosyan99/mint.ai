@@ -1,1 +1,1 @@
-export {Notification} from './ui/Notification'
+export { Notification } from './ui/Notification';

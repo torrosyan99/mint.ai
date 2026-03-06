@@ -22,7 +22,6 @@
     height: 0;
 }
 
-
 .list {
     display: grid;
     grid-template-columns: repeat(6, 114px);

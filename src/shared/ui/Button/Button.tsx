@@ -18,7 +18,7 @@ export const Button = <T extends ElementType = 'button'>({
     wFull,
     hoverNone,
     color,
-  bg,
+    bg,
     as,
     ...others
 }: ButtonProps<T>) => {
@@ -39,7 +39,11 @@ export const Button = <T extends ElementType = 'button'>({
 
     const Component = as || 'button';
     return (
-        <Component className={buttonClass} style={{color, backgroundColor: bg}} {...others}>
+        <Component
+            className={buttonClass}
+            style={{ color, backgroundColor: bg }}
+            {...others}
+        >
             {children}
         </Component>
     );

@@ -1,10 +1,11 @@
-import cls from './Line.module.css'
 import clsx from 'clsx';
 
+import cls from './Line.module.css';
+
 interface LineProps {
-    className?:string
+    className?: string;
 }
 
-export const Line = ({className}:LineProps) => {
+export const Line = ({ className }: LineProps) => {
     return <div className={clsx(cls.line, className)} />;
 };

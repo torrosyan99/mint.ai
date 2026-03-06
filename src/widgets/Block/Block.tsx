@@ -1,15 +1,15 @@
-import cls from './Block.module.css'
-import type {PropsWithChildren} from "react";
-import clsx from "clsx";
+import clsx from 'clsx';
+import type { PropsWithChildren } from 'react';
+
+import cls from './Block.module.css';
 
 interface BlockProps {
-  className?: string
+    className?: string;
 }
 
-export const Block = ({children, className}:PropsWithChildren<BlockProps>) => {
-  return (
-    <div className={clsx(cls.block, className)}>
-      {children}
-    </div>
-  );
+export const Block = ({
+    children,
+    className,
+}: PropsWithChildren<BlockProps>) => {
+    return <div className={clsx(cls.block, className)}>{children}</div>;
 };

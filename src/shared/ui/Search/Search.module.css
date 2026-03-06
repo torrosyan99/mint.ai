@@ -37,7 +37,6 @@
     height: 48px;
 }
 
-
 /* Variants */
 
 .search.primary,
@@ -45,13 +44,11 @@
     --search-icon-color: var(--color-11);
 }
 
-
 .search.primary .input {
     background-color: var(--color-6);
     border: 1px solid transparent;
-
 }
-.search.primary .input:hover ,
+.search.primary .input:hover,
 .search.primary .input:focus {
     border: 1px solid var(--color-19);
 }
@@ -64,7 +61,7 @@
     background-color: var(--color-2);
 }
 
-.search.tertiary .input  {
+.search.tertiary .input {
     border: 1px solid var(--color-1);
     background-color: var(--color-23);
 }
@@ -79,7 +76,7 @@
     left: 8px;
 }
 
-.search.sm-padding  .input {
+.search.sm-padding .input {
     padding: 8px 16px 8px 44px;
 }
 

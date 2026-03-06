@@ -63,7 +63,7 @@ export function Lightbox({
                         <CloseSvg width={16} height={16} />
                     </ButtonIcon>
                     <motion.div
-                      className={cls.content}
+                        className={cls.content}
                         role="dialog"
                         aria-modal="true"
                         initial="hidden"

@@ -2,7 +2,7 @@ import type { Dispatch, SetStateAction } from 'react';
 
 import type { Message } from '@/widgets/Messages';
 
-import {type AllFile, ChatForm} from '@/features/ChatForm';
+import { type AllFile, ChatForm } from '@/features/ChatForm';
 
 import { P } from '@/shared/ui/P/P.tsx';
 import { Title } from '@/shared/ui/Title/Title.tsx';
@@ -15,7 +15,7 @@ interface GptProps {
     messages: Message[];
     setMessages: Dispatch<SetStateAction<Message[]>>;
     sending?: boolean;
-    files?: AllFile[]
+    files?: AllFile[];
 }
 
 export const Gpt = ({ messages, setMessages, sending, files }: GptProps) => {
@@ -30,7 +30,11 @@ export const Gpt = ({ messages, setMessages, sending, files }: GptProps) => {
                             Простой старт в мир{' '}
                             <span className={cls.titleSpan}>нейросетей</span>
                         </Title>
-                        <P className={cls.text} color={'var(--color-14)'} size={'lg'}>
+                        <P
+                            className={cls.text}
+                            color={'var(--color-14)'}
+                            size={'lg'}
+                        >
                             Без VPN, зарубежных карт и сложностей
                         </P>
                     </>
@@ -38,7 +42,7 @@ export const Gpt = ({ messages, setMessages, sending, files }: GptProps) => {
                 Bottom={<List />}
             >
                 <ChatForm
-                  files={files}
+                    files={files}
                     className={cls.form}
                     banner={messages.length > 0}
                     onSubmit={(text) =>

@@ -8,7 +8,7 @@ import cls from './Form.module.css';
 export const Error = () => {
     return (
         <div className={cls.error}>
-            <ErrorSvg  />
+            <ErrorSvg />
             <Title className={cls.errorTitle} h={'h5'}>
                 Промокод недействителен
             </Title>

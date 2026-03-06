@@ -1,1 +1,1 @@
-export {ImageLightbox} from './ui/ImageLightbox.tsx'
+export { ImageLightbox } from './ui/ImageLightbox.tsx';

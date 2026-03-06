@@ -26,14 +26,17 @@ const searchVariants = {
 const headerVariants = {
     expanded: { height: 68 },
     compact: { height: 52 },
-}
+};
 
 export const Header = ({ isCompact, setIsCompact }: HeaderProps) => {
     const onClick = () => setIsCompact(!isCompact);
     const isMobile = useMediaQuery('(max-width: 1280px)');
 
     return (
-        <motion.div className={cls.header} {...motionCompactOptions(headerVariants, isCompact)}>
+        <motion.div
+            className={cls.header}
+            {...motionCompactOptions(headerVariants, isCompact)}
+        >
             {!isMobile && (
                 <motion.button
                     onClick={onClick}
@@ -43,8 +46,15 @@ export const Header = ({ isCompact, setIsCompact }: HeaderProps) => {
                     <BarButtonSvg />
                 </motion.button>
             )}
-            <motion.div className={cls.searchWrapper} {...motionHiddenOptions(searchVariants, isCompact)}>
-                <Search className={cls.search} placeholder={'Поиск'} padding={'sm'} />
+            <motion.div
+                className={cls.searchWrapper}
+                {...motionHiddenOptions(searchVariants, isCompact)}
+            >
+                <Search
+                    className={cls.search}
+                    placeholder={'Поиск'}
+                    padding={'sm'}
+                />
             </motion.div>
         </motion.div>
     );

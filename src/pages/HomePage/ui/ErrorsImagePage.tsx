@@ -3,7 +3,6 @@ import { useState } from 'react';
 import { Gpt } from '@/widgets/Chats';
 import type { Message } from '@/widgets/Messages';
 
-
 import img from '@/shared/assets/images/img.png';
 
 export const ErrorsImagePage = () => {
@@ -18,25 +17,25 @@ export const ErrorsImagePage = () => {
         },
     ]);
 
-            return (
-                <Gpt
-                    files={[
-                        {
-                            type: 'image',
-                            status: 'waiting',
-                        },
-                        {
-                            type: 'image',
-                            status: 'waiting',
-                        },
-                        {
-                            type: 'image',
-                            status: 'done',
-                            src: img,
-                        },
-                    ]}
-                    messages={messages}
-                    setMessages={setMessages}
-                />
-            );
+    return (
+        <Gpt
+            files={[
+                {
+                    type: 'image',
+                    status: 'waiting',
+                },
+                {
+                    type: 'image',
+                    status: 'waiting',
+                },
+                {
+                    type: 'image',
+                    status: 'done',
+                    src: img,
+                },
+            ]}
+            messages={messages}
+            setMessages={setMessages}
+        />
+    );
 };

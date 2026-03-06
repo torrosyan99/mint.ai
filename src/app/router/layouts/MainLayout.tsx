@@ -4,6 +4,7 @@ import { Outlet } from 'react-router-dom';
 import { Header } from '@/widgets/Header';
 import { ServicesPanel } from '@/widgets/ServicesPanel';
 import { Sidebar } from '@/widgets/Sidebar';
+import {SimpleBar} from "@/shared/ui/SimpleBar/SimpleBar.tsx";
 
 export const MainLayout = () => {
     const [sidebarIsOpen, setSidebarIsOpen] = useState(false);
@@ -12,7 +13,7 @@ export const MainLayout = () => {
     return (
         <>
             <Sidebar isOpen={sidebarIsOpen} setIsOpen={setSidebarIsOpen} />
-            <div className={'content'}>
+            <SimpleBar className={'content'}>
                 <Header
                     panelIsCompact={panelIsCompact}
                     setPanelIsCompact={setPanelIsCompact}
@@ -20,7 +21,7 @@ export const MainLayout = () => {
                     setPanelIsOpen={setPanelIsOpen}
                 />
                 <Outlet />
-            </div>
+            </SimpleBar>
             <ServicesPanel
                 isOpen={panelIsOpen}
                 setIsOpen={setPanelIsOpen}

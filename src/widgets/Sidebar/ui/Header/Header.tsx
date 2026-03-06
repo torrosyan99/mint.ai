@@ -35,7 +35,10 @@ export const Header = ({ isCompact, setIsCompact, setIsOpen }: HeaderProps) => {
     const isMobile = useMediaQuery('(max-width: 1280px)');
 
     return (
-        <motion.div className={cls.header} {...motionCompactOptions(headerVariant, isCompact)}>
+        <motion.div
+            className={cls.header}
+            {...motionCompactOptions(headerVariant, isCompact)}
+        >
             <motion.div {...motionHiddenOptions(logoVariants, isCompact)}>
                 <Logo />
             </motion.div>

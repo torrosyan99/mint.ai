@@ -23,7 +23,7 @@ export const ReplenishmentItem = ({
     tokens,
     price,
     oldPrice,
-  onClick,
+    onClick,
 }: ReplenishmentItemProps) => {
     return (
         <Box
@@ -38,7 +38,11 @@ export const ReplenishmentItem = ({
                 {icon}
             </Box>
             <div className={cls.info}>
-                <Title className={cls.tokens} h={'h4'} color={'var(--color-10)'}>
+                <Title
+                    className={cls.tokens}
+                    h={'h4'}
+                    color={'var(--color-10)'}
+                >
                     {tokens} <span>токенов</span>
                 </Title>
                 <div className={cls.aboutPrice}>

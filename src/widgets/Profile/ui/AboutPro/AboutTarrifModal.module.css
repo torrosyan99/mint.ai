@@ -17,7 +17,7 @@
     width: 1px;
     background: var(--color-41);
     border-radius: 10px;
-    opacity: .2;
+    opacity: 0.2;
 }
 
 .count {
@@ -46,17 +46,15 @@
     display: flex;
     align-items: flex-start;
     gap: 8px;
-    width:calc(50% - 6px);
+    width: calc(50% - 6px);
 }
 
 .button {
-    background-color: #E9E9E9;
+    background-color: #e9e9e9;
     color: #232425;
 }
 
-
 @media (max-width: 768px) {
-
     .list {
         max-height: 100%;
     }

@@ -2,8 +2,8 @@ import { ButtonIcon } from '@/shared/ui/ButtonIcon/ButtonIcon.tsx';
 import { Lightbox } from '@/shared/ui/Lightbox/Lightbox.tsx';
 import { P } from '@/shared/ui/P/P.tsx';
 
-import GallerySvg from '@icons/gallery-2.svg?react';
 import DownloadSvg from '@icons/download-2.svg?react';
+import GallerySvg from '@icons/gallery-2.svg?react';
 import TrashBinSvg from '@icons/trash-bin-3.svg?react';
 
 import cls from './ImageLightbox.module.css';

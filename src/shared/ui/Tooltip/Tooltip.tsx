@@ -1,9 +1,12 @@
 import {
     autoUpdate,
     flip,
-    offset, safePolygon,
+    offset,
+    safePolygon,
     shift,
-    useFloating, useHover, useInteractions,
+    useFloating,
+    useHover,
+    useInteractions,
 } from '@floating-ui/react';
 import clsx from 'clsx';
 import { type PropsWithChildren, type ReactNode, useState } from 'react';
@@ -36,17 +39,22 @@ interface TooltipProps {
     shiftX?: number;
 }
 export function Tooltip({
-                            children,
-                            message,
-                            offsetSize = 12,
-                            placement = 'bottom',
-                            className,
-                            shiftX,
-                            size = 'sm',
-                        }: PropsWithChildren<TooltipProps>) {
+    children,
+    message,
+    offsetSize = 12,
+    placement = 'bottom',
+    className,
+    shiftX,
+    size = 'sm',
+}: PropsWithChildren<TooltipProps>) {
     const [open, setOpen] = useState(false);
 
-    const { refs, floatingStyles, context, placement: finalPlacement } = useFloating({
+    const {
+        refs,
+        floatingStyles,
+        context,
+        placement: finalPlacement,
+    } = useFloating({
         open,
         onOpenChange: setOpen,
         placement,
@@ -61,7 +69,6 @@ export function Tooltip({
     const hover = useHover(context, {
         move: false,
         handleClose: safePolygon({ buffer: 2 }),
-
     });
 
     const { getReferenceProps, getFloatingProps } = useInteractions([hover]);
@@ -69,24 +76,26 @@ export function Tooltip({
     if (!message) return null;
 
     return (
-      <>
-          <div ref={refs.setReference} {...getReferenceProps()}>
-              {children}
-          </div>
+        <>
+            <div ref={refs.setReference} {...getReferenceProps()}>
+                {children}
+            </div>
 
-          {open &&
-            createPortal(
-              <div
-                ref={refs.setFloating}
-                className={clsx(cls.message, cls[size], className)}
-                style={floatingStyles}
-                {...getFloatingProps()}
-              >
-                  {message}
-                  <TooltipSvg className={clsx(cls.svg, cls[finalPlacement])} />
-              </div>,
-              document.body,
-            )}
-      </>
+            {open &&
+                createPortal(
+                    <div
+                        ref={refs.setFloating}
+                        className={clsx(cls.message, cls[size], className)}
+                        style={floatingStyles}
+                        {...getFloatingProps()}
+                    >
+                        {message}
+                        <TooltipSvg
+                            className={clsx(cls.svg, cls[finalPlacement])}
+                        />
+                    </div>,
+                    document.body,
+                )}
+        </>
     );
 }

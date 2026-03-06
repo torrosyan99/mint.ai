@@ -22,10 +22,9 @@ export const Form = ({ setType, type }: FormProps) => {
     };
     return (
         <form onSubmit={onSubmit}>
-
             {type === 'ERROR' && <Error />}
             <Input
-              className={cls.input}
+                className={cls.input}
                 placeholder={'Промокод'}
                 onChange={(e) => setValue(e.target.value)}
                 value={value}

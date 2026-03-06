@@ -1,3 +1,3 @@
 export interface SidebarComponentProps {
-  isCompact:boolean;
+    isCompact: boolean;
 }

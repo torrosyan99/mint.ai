@@ -6,7 +6,6 @@
     flex-wrap: wrap;
 }
 
-
 .cancel.cancel {
     --close-color: var(--color-13);
     margin-right: 12px;
@@ -25,8 +24,6 @@
 .check {
     margin-left: auto;
 }
-
-
 
 @media (max-width: 768px) {
     .cancel.cancel {

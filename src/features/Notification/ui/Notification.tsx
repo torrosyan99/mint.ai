@@ -18,18 +18,18 @@ const buttonProps = {
 const notificationVariants = {
     initial: {
         y: 15,
-        opacity:0,
-        x:'-50%'
+        opacity: 0,
+        x: '-50%',
     },
     animate: {
         y: 0,
-        opacity:1,
-        x:'-50%'
+        opacity: 1,
+        x: '-50%',
     },
     exit: {
         y: 15,
-        opacity:0,
-        x:'-50%'
+        opacity: 0,
+        x: '-50%',
     },
 };
 export const Notification = () => {
@@ -39,7 +39,7 @@ export const Notification = () => {
         <AnimatePresence mode={'wait'}>
             {isShow && (
                 <motion.div
-                  key={'notification'}
+                    key={'notification'}
                     className={cls.notification}
                     variants={notificationVariants}
                     initial={'initial'}

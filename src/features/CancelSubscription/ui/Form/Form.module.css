@@ -19,8 +19,6 @@
     cursor: pointer;
 }
 
-
-
 .textarea {
     min-height: 120px;
     border: 1px solid var(--color-19);

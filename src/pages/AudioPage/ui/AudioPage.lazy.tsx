@@ -1,5 +1,3 @@
-import {lazy} from "react";
+import { lazy } from 'react';
 
-
-export const AudioPageLazy = lazy(() => import('./AudioPage.tsx'))
-
+export const AudioPageLazy = lazy(() => import('./AudioPage.tsx'));

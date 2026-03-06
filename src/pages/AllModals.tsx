@@ -1,16 +1,17 @@
 import { useState } from 'react';
 
+import { AboutTarrifModal } from '@/widgets/Profile/ui/AboutPro/AboutTarrifModal.tsx';
+
 import { CancelSubscription } from '@/features/CancelSubscription';
+import { DeleteAllChats } from '@/features/DeleteAllChats';
+import { EditUser } from '@/features/EditUser';
+import { LogReg } from '@/features/LogReg';
 import { PaymentSuccess } from '@/features/PaymentSuccess';
 import { PromocodeForm } from '@/features/PromocodeForm';
 import { ReplenishmentBalance } from '@/features/ReplenishmentBalance';
+import { SubscriptionTg } from '@/features/SubscriptionTg';
 
 import { Button } from '@/shared/ui/Button/Button.tsx';
-import {LogReg} from "@/features/LogReg";
-import {DeleteAllChats} from "@/features/DeleteAllChats";
-import {EditUser} from "@/features/EditUser";
-import {SubscriptionTg} from "@/features/SubscriptionTg";
-import {AboutTarrifModal} from "@/widgets/Profile/ui/AboutPro/AboutTarrifModal.tsx";
 
 export const AllModals = () => {
     const [isSubsOpen, setIsSubsOpen] = useState(false);
@@ -78,54 +79,53 @@ export const AllModals = () => {
             </div>
             <div>
                 <Button
-                  variant={'primary'}
-                  onClick={() => setIsLogRegOpen(true)}
+                    variant={'primary'}
+                    onClick={() => setIsLogRegOpen(true)}
                 >
                     Вход{' '}
                 </Button>
                 <LogReg
-                  isOpen={isLogRegOpen}
-                  onClose={() => setIsLogRegOpen(false)}
+                    isOpen={isLogRegOpen}
+                    onClose={() => setIsLogRegOpen(false)}
                 />
             </div>
             <div>
                 <Button
-                  variant={'primary'}
-                  onClick={() => setIsDeleteAllChatsOpen(true)}
+                    variant={'primary'}
+                    onClick={() => setIsDeleteAllChatsOpen(true)}
                 >
                     Удалит все чаты{' '}
                 </Button>
                 <DeleteAllChats
-                  isOpen={isDeleteAllChatsOpen}
-                  onClose={() => setIsDeleteAllChatsOpen(false)}
+                    isOpen={isDeleteAllChatsOpen}
+                    onClose={() => setIsDeleteAllChatsOpen(false)}
                 />
             </div>
             <div>
                 <Button
-                  variant={'primary'}
-                  onClick={() => setIsEditUserOpen(true)}
+                    variant={'primary'}
+                    onClick={() => setIsEditUserOpen(true)}
                 >
                     Изменить профиль
                 </Button>
                 <EditUser
-                  isOpen={isEditUserOpen}
-                  onClose={() => setIsEditUserOpen(false)}
+                    isOpen={isEditUserOpen}
+                    onClose={() => setIsEditUserOpen(false)}
                 />
             </div>
             <div>
                 <Button
-                  variant={'primary'}
-                  onClick={() => setIsSubscriptionTgOpen(true)}
+                    variant={'primary'}
+                    onClick={() => setIsSubscriptionTgOpen(true)}
                 >
-                   Токен за подписку
+                    Токен за подписку
                 </Button>
                 <SubscriptionTg
-                  isOpen={isSubscriptionTgOpen}
-                  onClose={() => setIsSubscriptionTgOpen(false)}
+                    isOpen={isSubscriptionTgOpen}
+                    onClose={() => setIsSubscriptionTgOpen(false)}
                 />
             </div>
             <div>
-
                 <AboutTarrifModal expired={false} />
             </div>
         </div>

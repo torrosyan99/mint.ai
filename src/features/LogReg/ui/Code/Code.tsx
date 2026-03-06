@@ -5,15 +5,17 @@ import { CodeInput } from '@/features/LogReg/ui/Code/CodeInput.tsx';
 import { Button } from '@/shared/ui/Button/Button.tsx';
 import { P } from '@/shared/ui/P/P.tsx';
 import { Title } from '@/shared/ui/Title/Title.tsx';
-import ArrowLeftSvg from "@icons/arrow-left.svg?react"
+
+import ArrowLeftSvg from '@icons/arrow-left.svg?react';
+
 import cls from './Code.module.css';
 import { SecondButton } from './SecondButton.tsx';
 
 interface CodeProps {
-  onBack: () => void;
+    onBack: () => void;
 }
 
-export const Code = ({onBack}:CodeProps) => {
+export const Code = ({ onBack }: CodeProps) => {
     const [value, setValue] = useState('');
 
     return (
@@ -27,14 +29,20 @@ export const Code = ({onBack}:CodeProps) => {
             </P>
             <CodeInput value={value} setValue={setValue} />
             <div className={cls.buttons}>
-                <Button hSize={'xl'} variant={'green'} radius={'sm'} disabled={value.length === 0} center>
+                <Button
+                    hSize={'xl'}
+                    variant={'green'}
+                    radius={'sm'}
+                    disabled={value.length === 0}
+                    center
+                >
                     Подтвердить
                 </Button>
                 <SecondButton />
-              <button className={cls.backButton} onClick={onBack}>
-                <ArrowLeftSvg />
-                Назад
-              </button>
+                <button className={cls.backButton} onClick={onBack}>
+                    <ArrowLeftSvg />
+                    Назад
+                </button>
             </div>
         </>
     );

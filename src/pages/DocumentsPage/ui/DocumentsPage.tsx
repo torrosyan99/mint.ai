@@ -1,7 +1,7 @@
 import { Documents } from '@/widgets/Documents';
 import { Tabs } from '@/widgets/Tabs';
 
- const DocumentsPage = () => {
+const DocumentsPage = () => {
     return (
         <>
             <Tabs />
@@ -10,5 +10,4 @@ import { Tabs } from '@/widgets/Tabs';
     );
 };
 
-
- export default DocumentsPage;
+export default DocumentsPage;

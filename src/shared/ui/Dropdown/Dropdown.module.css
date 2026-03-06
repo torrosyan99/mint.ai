@@ -1,7 +1,7 @@
 .dropdown {
     border-radius: 12px;
     padding: 8px;
-    box-shadow: 0 5px 20px 0 rgba(41, 50, 43, 0.10);
+    box-shadow: 0 5px 20px 0 rgba(41, 50, 43, 0.1);
     background-color: var(--color-3);
     border: 1px solid var(--color-6);
     min-width: var(--radix-dropdown-menu-trigger-width);

@@ -1,1 +1,1 @@
-export {AllServicesPageAsync as AllAiPage} from './ui/AllServicesPage.async.tsx'
+export { AllServicesPageAsync as AllAiPage } from './ui/AllServicesPage.async.tsx';

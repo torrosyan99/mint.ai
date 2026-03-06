@@ -107,7 +107,12 @@ export const AiButton = ({
                     </ButtonIcon>
                 </Tooltip>
             </Button>
-            <Modal maxWidth={343} isOpen={isOpen} onClose={onClose} closeCircleFull>
+            <Modal
+                maxWidth={343}
+                isOpen={isOpen}
+                onClose={onClose}
+                closeCircleFull
+            >
                 <P className={cls.modalTitle} size={'lg'} font={'medium'}>
                     {unpinned
                         ? 'Удалить из избранного?'

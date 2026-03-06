@@ -1,10 +1,10 @@
 .pin {
-  --pin-color: var(--color-13);
+    --pin-color: var(--color-13);
 }
 .innerButton {
---pin-color: var(--color-14)
+    --pin-color: var(--color-14);
 }
 
 .delete {
-  --trash-bin-color:var(--cancel-color-2)
+    --trash-bin-color: var(--cancel-color-2);
 }

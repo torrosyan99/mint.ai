@@ -1,5 +1,4 @@
 .h1 {
-
 }
 
 .h2 {
@@ -45,7 +44,6 @@
         font-size: 22px;
     }
 }
-
 
 @media (max-width: 768px) {
     .h2 {

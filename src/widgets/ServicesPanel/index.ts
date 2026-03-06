@@ -1,1 +1,1 @@
-export {ServicesPanel} from './ui/ServicesPanel/ServicesPanel.tsx'
+export { ServicesPanel } from './ui/ServicesPanel/ServicesPanel.tsx';

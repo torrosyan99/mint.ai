@@ -1,1 +1,1 @@
-export {AiSelect} from './ui/AiSelect/AiSelect.tsx'
+export { AiSelect } from './ui/AiSelect/AiSelect.tsx';

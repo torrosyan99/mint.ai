@@ -12,7 +12,8 @@
     margin-bottom: 12px;
 }
 
-.sum, .date {
+.sum,
+.date {
     display: flex;
     align-items: center;
     justify-content: space-between;

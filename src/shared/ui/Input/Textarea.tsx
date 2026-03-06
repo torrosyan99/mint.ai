@@ -1,5 +1,5 @@
 import clsx from 'clsx';
-import {type TextareaHTMLAttributes, useState} from 'react';
+import { type TextareaHTMLAttributes, useState } from 'react';
 
 import cls from './Input.module.css';
 
@@ -8,17 +8,16 @@ interface TextareaProps extends TextareaHTMLAttributes<HTMLTextAreaElement> {
     max?: number;
 }
 
-
 export const Textarea = ({ className, max, ...others }: TextareaProps) => {
-
-
     const [value, setValue] = useState('');
     return (
-        <div className={clsx(cls.input, className, {
-            [cls.hasMax]: max,
-        })}>
+        <div
+            className={clsx(cls.input, className, {
+                [cls.hasMax]: max,
+            })}
+        >
             <textarea
-              className={cls.textarea}
+                className={cls.textarea}
                 value={value}
                 onChange={(e) => setValue(e.target.value)}
                 {...others}

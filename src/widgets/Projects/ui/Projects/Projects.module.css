@@ -33,14 +33,13 @@
     gap: 24px;
 }
 
-
 .description {
     color: var(--color-13);
     margin: 8px 0 24px;
 }
 
 .project:hover {
-    box-shadow: 0 2px 5px 0 rgba(41, 50, 43, 0.10);
+    box-shadow: 0 2px 5px 0 rgba(41, 50, 43, 0.1);
     background-color: var(--color-3);
 }
 
@@ -73,10 +72,7 @@
     margin: 12px 0 24px;
 }
 
-
-
 @media (max-width: 1280px) {
-
     .top {
         flex-wrap: wrap;
         justify-content: space-between;
@@ -102,9 +98,7 @@
         width: 100%;
     }
 
-
     .buttons {
         display: flex;
     }
-
 }

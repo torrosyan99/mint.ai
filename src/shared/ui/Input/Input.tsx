@@ -1,6 +1,8 @@
 import clsx from 'clsx';
 import { type InputHTMLAttributes, useState } from 'react';
-import GlasSvg from '@icons/glas.svg?react'
+
+import GlasSvg from '@icons/glas.svg?react';
+
 import cls from './Input.module.css';
 
 interface InputProps extends InputHTMLAttributes<HTMLInputElement> {
@@ -18,9 +20,9 @@ export const Input = ({ className, type, ...others }: InputProps) => {
                     type={buttonType}
                     {...others}
                 />
-              <button className={cls.button} onClick={onClick} type='button'>
-                <GlasSvg />
-              </button>
+                <button className={cls.button} onClick={onClick} type="button">
+                    <GlasSvg />
+                </button>
             </div>
         );
     }

@@ -1,6 +1,5 @@
+import { Images } from '@/widgets/Images';
 import { Tabs } from '@/widgets/Tabs';
-import {Images} from "@/widgets/Images";
-
 
 const ImagesPage = () => {
     return (
@@ -10,6 +9,5 @@ const ImagesPage = () => {
         </>
     );
 };
-
 
 export default ImagesPage;

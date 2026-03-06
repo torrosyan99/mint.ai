@@ -12,7 +12,7 @@ interface TabsProps {
     count?: string;
 }
 
-export const Tabs = ({  count }: PropsWithChildren<TabsProps>) => {
+export const Tabs = ({ count }: PropsWithChildren<TabsProps>) => {
     return (
         <div className={cls.tabs}>
             <div className={cls.items}>
@@ -63,14 +63,16 @@ export const Tabs = ({  count }: PropsWithChildren<TabsProps>) => {
                 </P>
                 {count && (
                     <Tooltip
-                      shiftX={6}
+                        shiftX={6}
                         className={cls.tooltip}
                         placement="bottom-end"
                         message={
                             'На вашем тарифе вы можете хранить 20 файлов, чтобы добавлять новые файлы, повысьте тариф или удалите ненужное'
                         }
                     >
-                        <P font={'medium'} className={cls.count}>{count}</P>
+                        <P font={'medium'} className={cls.count}>
+                            {count}
+                        </P>
                     </Tooltip>
                 )}{' '}
             </div>

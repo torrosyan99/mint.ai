@@ -1,1 +1,1 @@
-export {Projects} from './ui/Projects/Projects'
+export { Projects } from './ui/Projects/Projects';

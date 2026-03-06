@@ -1,1 +1,1 @@
-export {Images} from './ui/Images/Images.tsx'
+export { Images } from './ui/Images/Images.tsx';

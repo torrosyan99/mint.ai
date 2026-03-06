@@ -16,7 +16,7 @@
     color: var(--color-28);
 }
 
-div.input{
+div.input {
     display: flex;
     position: relative;
     flex-direction: column;
@@ -35,7 +35,6 @@ div.input{
     color: #646567;
     font-size: 14px;
 }
-
 
 .input.hasMax {
     padding-bottom: 40px;
