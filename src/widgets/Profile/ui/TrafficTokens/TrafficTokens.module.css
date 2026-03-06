@@ -16,7 +16,7 @@
     color: #fff;
 }
 
-.withSubsBox {
+.withSubsBox.withSubsBox {
     display: block;
 }
 
@@ -57,7 +57,7 @@
 
 .line {
     height: 1px;
-    background-color: var(--primary-border-color);
+    background-color: var(--color-19);
     margin: 16px 0;
 }
 
