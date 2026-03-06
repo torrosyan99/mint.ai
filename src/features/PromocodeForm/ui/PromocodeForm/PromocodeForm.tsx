@@ -31,7 +31,7 @@ export const PromocodeForm = ({ isOpen, onClose }: PromocodeForm) => {
         >
             {type === 'FORM' && <Form type={type} setType={setType} />}
             {type === 'ERROR' && <Form type={type} setType={setType} />}
-            {type === 'SUCCESS' && <Success setType={setType} />}
+            {type === 'SUCCESS' && <Success  />}
         </Modal>
     );
 };
