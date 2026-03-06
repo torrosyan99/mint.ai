@@ -1,11 +1,15 @@
 import clsx from 'clsx';
-import {AnimatePresence, motion} from 'framer-motion';
-import {type PropsWithChildren, type ReactNode, useEffect} from 'react';
-import {createPortal} from 'react-dom';
+import { AnimatePresence, motion } from 'framer-motion';
+import {
+  type PropsWithChildren,
+  type ReactNode,
+  useLayoutEffect,
+} from 'react';
+import { createPortal } from 'react-dom';
 
-import {fadeOpacityVariants} from '@/shared/configs/motionConfig/motionConfig.ts';
-import {ButtonIcon} from '@/shared/ui/ButtonIcon/ButtonIcon.tsx';
-import {Title} from '@/shared/ui/Title/Title.tsx';
+import { fadeOpacityVariants } from '@/shared/configs/motionConfig/motionConfig.ts';
+import { ButtonIcon } from '@/shared/ui/ButtonIcon/ButtonIcon.tsx';
+import { Title } from '@/shared/ui/Title/Title.tsx';
 
 import CloseSvg from '@icons/close.svg?react';
 
@@ -18,7 +22,7 @@ interface ModalProps {
     value: string | ReactNode;
     maxWidth?: number;
     h: 'h1' | 'h2' | 'h3' | 'h4' | 'h5' | 'h6';
-    subTitle?: string
+    subTitle?: string;
   };
   className?: string;
   bodyOverflow?: boolean;
@@ -29,8 +33,8 @@ interface ModalProps {
 }
 
 const modalVariants = {
-  hidden: {opacity: 0, y: 24, scale: 0.98},
-  visible: {opacity: 1, y: 0, scale: 1},
+  hidden: { opacity: 0, y: 24, scale: 0.98 },
+  visible: { opacity: 1, y: 0, scale: 1 },
 };
 
 export function Modal({
@@ -44,18 +48,7 @@ export function Modal({
                         maxWidth,
                         closeCircleFull,
                       }: PropsWithChildren<ModalProps>) {
-  useEffect(() => {
-    if (!isOpen) return;
-
-    const onKeyDown = (e: KeyboardEvent) => {
-      if (e.key === 'Escape') onClose();
-    };
-
-    window.addEventListener('keydown', onKeyDown);
-    return () => window.removeEventListener('keydown', onKeyDown);
-  }, [isOpen, onClose]);
-
-  useEffect(() => {
+  useLayoutEffect(() => {
     if (!isOpen) return;
 
     const onKeyDown = (e: KeyboardEvent) => {
@@ -63,8 +56,8 @@ export function Modal({
     };
 
     document.body.classList.add('body-overflow-modal');
-
     window.addEventListener('keydown', onKeyDown);
+
     return () => {
       document.body.classList.remove('body-overflow-modal');
       window.removeEventListener('keydown', onKeyDown);
@@ -79,59 +72,55 @@ export function Modal({
           animate="visible"
           exit="hidden"
           variants={fadeOpacityVariants}
-          transition={{duration: 0.18}}
+          transition={{ duration: 0.18 }}
           onMouseDown={onClose}
           className={cls.overlay}
           aria-hidden={!isOpen}
         >
           <motion.div
-            role="dialog"
-            aria-modal="true"
             initial="hidden"
             animate="visible"
             exit="hidden"
-            style={{maxWidth: maxWidth}}
+            style={{ maxWidth }}
             variants={modalVariants}
             transition={{
-              type: 'spring',
-              stiffness: 520,
-              damping: 38,
+              duration: 0.2,
+              ease: 'easeOut'
             }}
             onMouseDown={(e) => e.stopPropagation()}
             className={clsx(
               cls.modal,
               className,
-              title ? [cls.hasTitle] : [cls[padding]],
+              title ? cls.hasTitle : cls[padding],
             )}
           >
             <ButtonIcon
               size={closeCircleFull ? 'xs' : 'smCompact'}
               radius={closeCircleFull ? 'full' : 'sm'}
-              bg={'--color-2'}
+              bg="--color-2"
               className={clsx(cls.close, closeClass)}
               onClick={onClose}
             >
-              <CloseSvg width={16} height={16}/>
+              <CloseSvg width={16} height={16} />
             </ButtonIcon>
+
             {title && (
-              <>
               <Title
                 className={cls.title}
                 h={title.h}
-                style={{maxWidth: title.maxWidth}}
+                style={{ maxWidth: title.maxWidth }}
               >
                 {title.value}
-                {title.subTitle && <span className={cls.subtitle}>{title.subTitle}</span>}
+                {title.subTitle && (
+                  <span className={cls.subtitle}>{title.subTitle}</span>
+                )}
               </Title>
+            )}
 
-              </>
-
-
-          )}
-          {children}
+            {children}
+          </motion.div>
         </motion.div>
-        </motion.div>
-        )}
+      )}
     </AnimatePresence>,
     document.body,
   );
