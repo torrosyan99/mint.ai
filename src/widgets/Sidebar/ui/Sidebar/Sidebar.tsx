@@ -1,12 +1,11 @@
 import clsx from 'clsx';
 import { motion } from 'framer-motion';
-import {useEffect, useRef, useState} from 'react';
+import {useEffect, useState} from 'react';
 import { useLocation } from 'react-router-dom';
 
 import { UserMenu } from '@/features/UserMenu/ui/UserMenu.tsx';
 
 import { motionCompactOptions } from '@/shared/helpers';
-import { useBlockHeight } from '@/shared/hooks/useBlockHeight.tsx';
 import { useMediaQuery } from '@/shared/hooks/useMediaQuery.tsx';
 import { Line } from '@/shared/ui/Line/Line.tsx';
 
@@ -34,8 +33,6 @@ interface SidebarProps {
 export const Sidebar = ({ isOpen, setIsOpen }: SidebarProps) => {
     const isMobile = useMediaQuery('(max-width: 1280px)');
     const [isCompact, setIsCompact] = useState(false);
-    const bottomRef = useRef<HTMLDivElement>(null);
-    const { height } = useBlockHeight(bottomRef);
     const isCompactEffective = !isMobile && isCompact;
     const isCompactClass = getIsCompactClass(isCompactEffective, cls);
     const sidebarCloseClick = () => setIsOpen(false);
@@ -65,7 +62,6 @@ export const Sidebar = ({ isOpen, setIsOpen }: SidebarProps) => {
                 {...motionCompactOptions(sidebarVariants, isCompactEffective)}
             >
                 <SimpleBar
-                    style={{ paddingBottom: height + 20 }}
                     className={clsx(cls.simpleBar, isCompactClass)}
                 >
                     <Header
@@ -79,7 +75,6 @@ export const Sidebar = ({ isOpen, setIsOpen }: SidebarProps) => {
                     <History isCompact={isCompactEffective} />
                 </SimpleBar>
                 <div
-                    ref={bottomRef}
                     className={clsx(cls.bottom, isCompactClass)}
                 >
                     <Pro isCompact={isCompactEffective} />

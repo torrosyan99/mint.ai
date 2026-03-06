@@ -6,9 +6,11 @@
     left: 50%;
     transform: translateX(-50%);
     padding: 0 16px;
+    z-index: 10;
 }
 
 .box {
+    background: var(--main-bg);
     display: flex;
     justify-content: space-between;
     align-items: center;

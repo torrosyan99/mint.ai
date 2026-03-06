@@ -85,3 +85,9 @@
     /*    others*/
     --input-placeholder-color: #a1a4a9;
 }
+
+.dark .os-theme-custom {
+    --os-handle-bg: #050505;
+    --os-handle-bg-hover: #000000;
+    --os-handle-bg-active: #000000;
+}

@@ -1,6 +1,6 @@
 import type { CSSProperties, PropsWithChildren } from 'react';
-import Bar from 'simplebar-react';
-import 'simplebar-react/dist/simplebar.min.css';
+import { OverlayScrollbarsComponent } from "overlayscrollbars-react";
+import "overlayscrollbars/overlayscrollbars.css";
 
 import './SimpleBar.css';
 
@@ -12,11 +12,21 @@ interface SimpleBarProps {
 export const SimpleBar = ({
     children,
     style,
-    className,
+  className
 }: PropsWithChildren<SimpleBarProps>) => {
     return (
-        <Bar className={className} autoHide={false} style={style}>
+        <OverlayScrollbarsComponent className={className} defer   options={{
+
+          scrollbars: {
+            theme: "os-theme-custom",
+            autoHide: 'leave',
+          },
+          overflow: {
+            x: 'hidden',
+            y: 'scroll'
+          }
+        }}    style={style}>
             {children}
-        </Bar>
+        </OverlayScrollbarsComponent>
     );
 };

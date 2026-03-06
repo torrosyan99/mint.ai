@@ -84,3 +84,9 @@
     /*    others*/
     --input-placeholder-color: #a1a4a9;
 }
+
+.light .os-theme-custom {
+    --os-handle-bg: #b4b3b3;
+    --os-handle-bg-hover: #b5b5b5;
+    --os-handle-bg-active: #9f9f9f;
+}

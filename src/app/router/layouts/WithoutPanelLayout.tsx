@@ -6,7 +6,7 @@ import { ServicesPanel } from '@/widgets/ServicesPanel';
 import { Sidebar } from '@/widgets/Sidebar';
 
 import { useMediaQuery } from '@/shared/hooks/useMediaQuery.tsx';
-import {SimpleBar} from "@/shared/ui/SimpleBar/SimpleBar.tsx";
+import { SimpleBar } from '@/shared/ui/SimpleBar/SimpleBar.tsx';
 
 export const WithoutPanelLayout = () => {
     const [sidebarIsOpen, setSidebarIsOpen] = useState(false);

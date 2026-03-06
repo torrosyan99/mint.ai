@@ -1,3 +1,7 @@
-.simplebar-track.simplebar-vertical {
-    width: 8px;
+
+
+.os-theme-custom {
+    --os-size: 5px;
+    --os-track-bg: transparent;
+    --os-handle-border-radius: 999px;
 }
