@@ -3,6 +3,7 @@ import { Title } from '@/shared/ui/Title/Title.tsx';
 
 import TokenSvg from '@icons/token-2.svg?react';
 
+import { AboutProModal } from '../AboutPro/AboutProModal.tsx';
 import { Box } from '../Box/Box.tsx';
 import { Period } from './Period.tsx';
 import cls from './TrafficTokens.module.css';
@@ -30,18 +31,10 @@ export const WithSubs = ({ tarrif, expired }: WithSubsProps) => {
                         padding={'md'}
                         fontSize={'xs'}
                     >
-                      Восстановить подписку
+                        Восстановить подписку
                     </Button>
                 ) : (
-                    <Button
-                        className={cls.button}
-                        bg={'var(--color-1)'}
-                        center
-                        padding={'md'}
-                        fontSize={'xs'}
-                    >
-                        Подробнее о тарифе
-                    </Button>
+                    <AboutProModal expired={expired} />
                 )}
             </div>
             <div className={cls.line} />

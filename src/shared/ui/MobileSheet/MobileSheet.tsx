@@ -30,7 +30,6 @@ export const MobileSheet = ({
 
     const isDesktop = useMediaQuery('(min-width: 1280px)');
     const [show, setShow] = useState(false);
-    const [height, setHeight] = useState(50);
     const closeClick = () => {
         setShow(false);
         setTimeout(() => setIsOpen(false), 400);
@@ -46,15 +45,18 @@ export const MobileSheet = ({
     }, []);
 
     const handlers = useSwipeable({
-        onSwipedUp: () => {
-            if (height === 80) return;
-            setHeight(80);
-        },
+
         onSwipedDown: () => {
-            if (height === 80) {
-                setHeight(50);
-                return;
-            }
+            setShow(false);
+            setTimeout(() => setIsOpen(false), 400);
+        },
+        delta: 100,
+    });
+
+
+    const handlersOverlay = useSwipeable({
+
+        onSwipedDown: () => {
             setShow(false);
             setTimeout(() => setIsOpen(false), 400);
         },
@@ -67,7 +69,7 @@ export const MobileSheet = ({
 
     return createPortal(
         <>
-            <div className={cls.overlay}>
+            <div className={cls.overlay} {...handlersOverlay}>
                 <ButtonIcon
                     className={cls.closeButton}
                     size={'none'}
@@ -81,7 +83,7 @@ export const MobileSheet = ({
                 className={clsx(cls.content, [cls[border], className], {
                     [cls.showed]: show,
                 })}
-                style={{ height: `${height}%` }}
+                style={{ height: `80%` }}
             >
                 <div className={cls.top} {...handlers}>
                     <div className={cls.topLine} />

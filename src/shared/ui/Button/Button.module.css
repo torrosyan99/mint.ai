@@ -6,7 +6,6 @@
     overflow: hidden;
     position: relative;
     text-align: start;
-    transition: var(--opacity-transition);
 }
 
 

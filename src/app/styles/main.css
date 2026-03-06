@@ -41,7 +41,6 @@ svg {
     --sidebar-compact-width: 64px;
     --radix-dropdown-menu-trigger-width: 0px;
 
-    --opacity-transition: .3s opacity ease-out;
     --transform-transition: .3s transform ease-out;
 }
 

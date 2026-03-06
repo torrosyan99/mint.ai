@@ -22,6 +22,7 @@ import { ProjectsWithProject } from '@/pages/ProjectsPage/ui/ProjectsWithProject
 import { VideosPage } from '@/pages/VideosPage';
 import { VideosWithVideo } from '@/pages/VideosPage/ui/VideosWithVideo.tsx';
 import {HomePageLogin} from "@/pages/HomePage/ui/HomepageLogin.tsx";
+import {SubscriptionTgPage} from "@/pages/HomePage/ui/SubscriptionTgPage.tsx";
 
 export enum PagePaths {
     HOME = '/',
@@ -136,6 +137,10 @@ export const routesConfig: Config = {
         {
             path:'homepage-login',
             element: <HomePageLogin />
+        },
+        {
+            path:'subscription-tg',
+            element: <SubscriptionTgPage  />
         }
     ],
     withoutPanel: [
