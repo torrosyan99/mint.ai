@@ -2,7 +2,7 @@ import { WithSubs } from '@/widgets/Profile/ui/TrafficTokens/WithSubs.tsx';
 
 import { P } from '@/shared/ui/P/P.tsx';
 
-import { AboutPro } from '../AboutPro/AboutPro.tsx';
+import { AboutTarrif } from '../AboutPro/AboutTarrif.tsx';
 import type { Tarrif } from '../Profile/Profile.tsx';
 import { Free } from './Free.tsx';
 
@@ -25,7 +25,7 @@ export const TrafficTokens = ({ tarrif, expired }: TarrifTokensProps) => {
                 <WithSubs tarrif={tarrif} expired={expired} />
             )}
 
-            {tarrif === 'Free' && <AboutPro />}
+            {tarrif === 'Free' && <AboutTarrif />}
         </div>
     );
 };

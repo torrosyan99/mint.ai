@@ -1,6 +1,7 @@
 import type { ReactNode } from 'react';
 
 import { AllAiPage } from '@/pages/AllAiPage';
+import { AllModals } from '@/pages/AllModals.tsx';
 import AllServicesPage from '@/pages/AllServicesPage/ui/AllServicesPage.tsx';
 import { AudioPage } from '@/pages/AudioPage';
 import { AduioWithAudio } from '@/pages/AudioPage/ui/AduioWithAudio.tsx';
@@ -21,8 +22,6 @@ import { ProjectsPage } from '@/pages/ProjectsPage';
 import { ProjectsWithProject } from '@/pages/ProjectsPage/ui/ProjectsWithProject.tsx';
 import { VideosPage } from '@/pages/VideosPage';
 import { VideosWithVideo } from '@/pages/VideosPage/ui/VideosWithVideo.tsx';
-import {HomePageLogin} from "@/pages/HomePage/ui/HomepageLogin.tsx";
-import {SubscriptionTgPage} from "@/pages/HomePage/ui/SubscriptionTgPage.tsx";
 
 export enum PagePaths {
     HOME = '/',
@@ -135,13 +134,9 @@ export const routesConfig: Config = {
             element: <DocumentsWithDocument />,
         },
         {
-            path:'homepage-login',
-            element: <HomePageLogin />
+            path: 'all-modals',
+            element: <AllModals />,
         },
-        {
-            path:'subscription-tg',
-            element: <SubscriptionTgPage  />
-        }
     ],
     withoutPanel: [
         {

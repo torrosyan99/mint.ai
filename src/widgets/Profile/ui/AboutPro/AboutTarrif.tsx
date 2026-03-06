@@ -8,9 +8,9 @@ import ProAtomSvg from '@icons/pro-atom.svg?react';
 import ProCheckSvg from '@icons/pro-check.svg?react';
 import TokenSvg from '@icons/token-2.svg?react';
 
-import cls from './AboutPro.module.css';
+import cls from './About.module.css';
 
-export const AboutPro = () => {
+export const AboutTarrif = () => {
     return (
         <div className={cls.box}>
             <div className={cls.top}>

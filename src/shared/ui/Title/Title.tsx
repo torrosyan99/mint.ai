@@ -7,6 +7,7 @@ interface TitleProps {
     h?: 'h1' | 'h2' | 'h3' | 'h4' | 'h5' | 'h6';
     className?: string;
     color?: string;
+    style?: React.CSSProperties;
 }
 
 export const Title = ({
@@ -14,11 +15,12 @@ export const Title = ({
     className,
     children,
     color,
+    style,
 }: PropsWithChildren<TitleProps>) => {
     const Component = h;
 
     return (
-        <Component className={clsx(h, className)} style={{ color }}>
+        <Component className={clsx(h, className)} style={{ color, ...style }}>
             {children}
         </Component>
     );

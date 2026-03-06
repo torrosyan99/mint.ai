@@ -34,6 +34,7 @@
 .modal.md {
     padding: 24px;
 }
+
 .modal.hasTitle {
     padding: 16px 24px 24px;
 }
@@ -60,5 +61,13 @@
     right: 12px;
     top: 12px;
     --close-color: var(--color-11)
+}
+
+.subtitle {
+    display: block;
+    font-size: 16px;
+    color: var(--color-14);
+    margin-top: 4px;
+    font-weight: 400;
 }
 

@@ -4,7 +4,6 @@ import { useState } from 'react';
 import { Modal } from '@/shared/ui/Modal/Modal.tsx';
 
 import { Form } from '../Form/Form.tsx';
-import { Payment } from '../Payment/Payment.tsx';
 import { Success } from '../Success/Success.tsx';
 import cls from './PromocodeForm.module.css';
 
@@ -13,7 +12,7 @@ interface PromocodeForm {
     onClose: () => void;
 }
 
-export type FormType = 'FORM' | 'ERROR' | 'SUCCESS' | 'PAYMENT';
+export type FormType = 'FORM' | 'ERROR' | 'SUCCESS';
 
 export const PromocodeForm = ({ isOpen, onClose }: PromocodeForm) => {
     const [type, setType] = useState<FormType>('FORM');
@@ -33,7 +32,6 @@ export const PromocodeForm = ({ isOpen, onClose }: PromocodeForm) => {
             {type === 'FORM' && <Form type={type} setType={setType} />}
             {type === 'ERROR' && <Form type={type} setType={setType} />}
             {type === 'SUCCESS' && <Success setType={setType} />}
-            {type === 'PAYMENT' && <Payment />}
         </Modal>
     );
 };

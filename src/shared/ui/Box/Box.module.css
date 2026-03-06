@@ -46,3 +46,6 @@
 .box.md-radius {
     border-radius: 20px;
 }
+.box.lg-radius {
+    border-radius: 24px;
+}

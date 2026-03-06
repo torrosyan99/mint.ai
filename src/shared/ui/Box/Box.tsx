@@ -9,7 +9,7 @@ type BoxProps<T extends ElementType> = {
     className?: string;
     bg?: string;
     padding?:"none" | 'xs' | 'sm' | 'md' | 'lg' | 'xl' | 'x2l';
-    radius?: 'xs' | 'sm' | 'md';
+    radius?: 'xs' | 'sm' | 'md' | 'lg' ;
     shadow?: boolean;
     border?: string;
 } & ComponentProps<T>;

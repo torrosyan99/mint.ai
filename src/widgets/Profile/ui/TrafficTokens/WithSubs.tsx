@@ -3,7 +3,7 @@ import { Title } from '@/shared/ui/Title/Title.tsx';
 
 import TokenSvg from '@icons/token-2.svg?react';
 
-import { AboutProModal } from '../AboutPro/AboutProModal.tsx';
+import { AboutTarrifModal } from '../AboutPro/AboutTarrifModal.tsx';
 import { Box } from '../Box/Box.tsx';
 import { Period } from './Period.tsx';
 import cls from './TrafficTokens.module.css';
@@ -34,7 +34,7 @@ export const WithSubs = ({ tarrif, expired }: WithSubsProps) => {
                         Восстановить подписку
                     </Button>
                 ) : (
-                    <AboutProModal expired={expired} />
+                    <AboutTarrifModal expired={expired} />
                 )}
             </div>
             <div className={cls.line} />

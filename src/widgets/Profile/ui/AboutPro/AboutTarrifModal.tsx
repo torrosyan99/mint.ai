@@ -15,13 +15,13 @@ import ProDesktopSvg from '@icons/pro-desktop.svg?react';
 import ProVideoSvg from '@icons/pro-video-libary.svg?react';
 import TokenSvg from '@icons/token-2.svg?react';
 
-import cls from './AboutProModal.module.css';
+import cls from './AboutTarrifModal.module.css';
 
 interface AboutProps {
     expired: boolean;
 }
 
-export const AboutProModal = (
+export const AboutTarrifModal = (
     { expired }: AboutProps,
     marginTop: number = 24,
 ) => {
