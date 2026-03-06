@@ -86,7 +86,7 @@
 }
 
 .light .os-theme-custom {
-    --os-handle-bg: #b4b3b3;
-    --os-handle-bg-hover: #b5b5b5;
-    --os-handle-bg-active: #9f9f9f;
+    --os-handle-bg: #D1D5DB;
+    --os-handle-bg-hover: #D1D5DB;
+    --os-handle-bg-active: #D1D5DB;
 }

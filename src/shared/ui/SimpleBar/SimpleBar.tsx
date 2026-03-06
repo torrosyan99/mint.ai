@@ -19,7 +19,6 @@ export const SimpleBar = ({
 
           scrollbars: {
             theme: "os-theme-custom",
-            autoHide: 'leave',
           },
           overflow: {
             x: 'hidden',
